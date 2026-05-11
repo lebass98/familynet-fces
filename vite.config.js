@@ -42,7 +42,7 @@ function nunjucksPlugin() {
 export default defineConfig({
   root: srcDir,
   publicDir: resolve(__dirname, 'public'),
-  base: './',
+  base: '/familynet-fces/',
   plugins: [nunjucksPlugin()],
   build: {
     outDir: resolve(__dirname, 'dist'),
