@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "마이페이지 - 비밀번호 변경 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "mypage" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["마이페이지"], ["비밀번호 변경"]]) }}
+
+            <h2 class="page-title">비밀번호 변경</h2>
+
+            <div class="my-page-wrap">
+                <div class="section-title-wrap">
+                    <p class="notice-text">※ 영문, 숫자, 특수문자 포함 8~20자 동일 문자/연속 문자 사용 제한</p>
+                </div>
+                <div class="write-table-wrap">
+                    <table class="write-table">
+                        <colgroup>
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">현재 비밀번호</th>
+                                <td>
+                                    <input type="password" class="write-input" placeholder="현재 비밀번호를 입력해주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새 비밀번호</th>
+                                <td>
+                                    <input type="password" class="write-input" placeholder="새로운 비밀번호를 입력해주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새 비밀번호 확인</th>
+                                <td>
+                                    <input type="password" class="write-input" placeholder="새로운 비밀번호 확인">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="view-btn-group">
+                <button type="button" class="f-btn cancel large">취소</button>
+                <button type="button" class="f-btn primary large">변경</button>
+            </div>
+        </div>
+
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

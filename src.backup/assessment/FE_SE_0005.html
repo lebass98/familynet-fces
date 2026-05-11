@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국건강가정진흥원 평가시스템</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+    <link href="../css/import.css" type="text/css" rel="stylesheet" />
+    <script defer src="../js/ui.js?v=2"></script>
+</head>
+
+<body>
+    <header id="krds-header">
+        <div class="header-in">
+            <div class="header-container">
+                <div class="inner">
+                    <div class="header-utility"></div>
+                    <div class="header-branding">
+                        <h2 class="logo">
+                            <a href="#">
+                                <span class="sr-only">가족센터 평가시스템 기능개발</span>
+                            </a>
+                        </h2>
+                        <div class="header-actions">
+                            <a href="#" class="btn-navi login">로그인</a>
+                            <button type="button" class="btn-navi join">회원가입</button>
+                            <div class="krds-drop-wrap my-drop">
+                                <button type="button" class="btn-navi my drop-btn">나의 GOV</button>
+                                <div class="drop-menu">
+                                    <div class="drop-in">
+                                        <div class="drop-top">
+                                            <p class="my-name">홍길동님</p>
+                                            <dl class="my-time">
+                                                <dt>로그아웃까지 남은 시간</dt>
+                                                <dd>
+                                                    <span class="time">12:00</span>
+                                                    <button type="button" class="krds-btn medium text">시간 연장</button>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <ul class="drop-list">
+                                            <li><a href="#" class="item-link">나의 GOV 홈</a></li>
+                                            <li><a href="#" class="item-link">나의 신청내역</a></li>
+                                            <li><a href="#" class="item-link">나의 생활정보</a></li>
+                                            <li><a href="#" class="item-link">나의 정보관리</a></li>
+                                        </ul>
+                                        <div class="drop-bottom">
+                                            <button type="button" class="krds-btn medium text">
+                                                <i class="svg-icon ico-logout"></i> 로그아웃
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-navi all" aria-controls="mobile-nav">전체메뉴</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="krds-main-menu">
+                <div class="inner">
+                    <ul class="gnb-menu">
+                        <li>
+                            <button type="button" class="gnb-main-trigger" data-trigger="gnb">자체평가</button>
+                            <div class="gnb-toggle-wrap">
+                                <div class="gnb-main-list">
+                                    <div class="gnb-sub-list single-list between">
+                                        <div class="gnb-sub-content">
+                                            <h2 class="sub-title"><span>자체평가</span> <a href="#"
+                                                    class="btn-link">바로가기</a></h2>
+                                            <ul>
+                                                <li><a href="#">평가하기</a></li>
+                                                <li><a href="#">평가결과</a></li>
+                                                <li><a href="#">이의신청</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="gnb-main-trigger" data-trigger="gnb">평가관리</button>
+                            <div class="gnb-toggle-wrap">
+                                <div class="gnb-main-list">
+                                    <div class="gnb-sub-list single-list between">
+                                        <div class="gnb-sub-content">
+                                            <h2 class="sub-title"><span>평가관리</span> <a href="#"
+                                                    class="btn-link">바로가기</a></h2>
+                                            <ul>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="gnb-main-trigger" data-trigger="gnb">알림마당</button>
+                            <div class="gnb-toggle-wrap">
+                                <div class="gnb-main-list">
+                                    <div class="gnb-sub-list single-list between">
+                                        <div class="gnb-sub-content">
+                                            <h2 class="sub-title"><span>알림마당</span> <a href="#"
+                                                    class="btn-link">바로가기</a></h2>
+                                            <ul>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="gnb-main-trigger" data-trigger="gnb">마이페이지</button>
+                            <div class="gnb-toggle-wrap">
+                                <div class="gnb-main-list">
+                                    <div class="gnb-sub-list single-list between">
+                                        <div class="gnb-sub-content">
+                                            <h2 class="sub-title"><span>마이페이지</span> <a href="#"
+                                                    class="btn-link">바로가기</a></h2>
+                                            <ul>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                                <li><a href="#">Last depth</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="mobile-nav" class="krds-main-menu-mobile">
+            <div class="gnb-wrap">
+                <div class="gnb-header">
+                    <div class="gnb-utils">
+                        <ul class="utility-list">
+                            <li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+                            <li><button type="button" class="krds-btn xsmall text">메뉴명</button></li>
+                        </ul>
+                    </div>
+                    <div class="gnb-login">
+                        <button type="button" class="krds-btn large text"><i class="svg-icon ico-log"></i> 로그인을
+                            해주세요</button>
+                    </div>
+                    <div class="gnb-service-menu">
+                        <a href="#" class="link">메뉴명</a>
+                        <a href="#" class="link">메뉴명</a>
+                        <a href="#" class="link">메뉴명</a>
+                        <a href="#" class="link">메뉴명</a>
+                    </div>
+                    <div class="sch-input">
+                        <input type="text" class="krds-input" placeholder="찾고자 하는 메뉴명을 입력해 주세요" title="찾고자 하는 메뉴명 입력" />
+                        <button type="button" class="krds-btn medium icon ico-search">
+                            <span class="sr-only">검색</span>
+                            <i class="svg-icon ico-sch"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gnb-body">
+                    <div class="gnb-menu">
+                        <div class="menu-wrap">
+                            <ul>
+                                <li><a href="#mGnb-anchor1" class="gnb-main-trigger">1Depth</a></li>
+                                <li><a href="#mGnb-anchor2" class="gnb-main-trigger">1Depth</a></li>
+                                <li><a href="#mGnb-anchor3" class="gnb-main-trigger">1Depth</a></li>
+                                <li><a href="#mGnb-anchor4" class="gnb-main-trigger">1Depth</a></li>
+                                <li><a href="#mGnb-anchor5" class="gnb-main-trigger">1Depth</a></li>
+                            </ul>
+                        </div>
+                        <div class="submenu-wrap">
+                            <div class="gnb-sub-list" id="mGnb-anchor1">
+                                <h2 class="sub-title">1Depth</h2>
+                                <ul>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                </ul>
+                            </div>
+                            <div class="gnb-sub-list" id="mGnb-anchor2">
+                                <h2 class="sub-title">1Depth</h2>
+                                <ul>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                </ul>
+                            </div>
+                            <div class="gnb-sub-list" id="mGnb-anchor3">
+                                <h2 class="sub-title">1Depth</h2>
+                                <ul>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li>
+                                        <a href="#" class="gnb-sub-trigger has-depth3">2Depth</a>
+                                        <div class="depth3-wrap">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="depth3-trigger has-depth4">3Depth</a>
+                                                    <div class="depth4-wrap">
+                                                        <div class="depth4-head">
+                                                            <button type="button" class="krds-btn icon trigger-prev">
+                                                                <span class="sr-only">이전화면</span>
+                                                                <i class="svg-icon ico-angle left"></i>
+                                                            </button>
+                                                            <button type="button" class="krds-btn icon trigger-close">
+                                                                <span class="sr-only">전체메뉴 닫기</span>
+                                                                <i class="svg-icon ico-popup-close"></i>
+                                                            </button>
+                                                        </div>
+                                                        <ul class="depth4-body">
+                                                            <h4 class="sub-title">4Depth title</h4>
+                                                            <ul class="depth4-ul">
+                                                                <li><a href="#">depth title</a></li>
+                                                                <li><a href="#">depth title</a></li>
+                                                                <li><a href="#">depth title</a></li>
+                                                                <li><a href="#">depth title</a></li>
+                                                            </ul>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li><a href="#" class="depth3-trigger">3Depth</a></li>
+                                                <li><a href="#" class="depth3-trigger">3Depth</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="gnb-sub-list" id="mGnb-anchor4">
+                                <h2 class="sub-title">1Depth</h2>
+                                <ul>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                </ul>
+                            </div>
+                            <div class="gnb-sub-list" id="mGnb-anchor5">
+                                <h2 class="sub-title">1Depth</h2>
+                                <ul>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                    <li><a href="#" class="gnb-sub-trigger">2Depth</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gnb-bottom">
+                        <a href="#" class="krds-btn medium text">메뉴명 <i class="svg-icon ico-angle right"></i></a>
+                        <a href="#" class="krds-btn medium text" target="_blank" title="새 창 열기"> 메뉴명 <i
+                                class="svg-icon ico-go"></i></a>
+                    </div>
+                </div>
+
+                <button type="button" class="krds-btn medium icon" id="close-nav">
+                    <span class="sr-only">전체메뉴 닫기</span>
+                    <i class="svg-icon ico-popup-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="sub-contents">
+        <div class="inner">
+            <nav class="krds-breadcrumb-wrap" aria-label="브레드크럼">
+                <ol class="breadcrumb">
+                    <li class="home"><a href="#" class="txt">홈</a></li>
+                    <li><a href="#" class="txt">자체평가</a></li>
+                    <li class="current"><a href="#" class="txt">평가하기</a></li>
+                </ol>
+            </nav>
+
+            <h2 class="page-title">자체평가</h2>
+
+            <div class="stepper-wrap">
+                <ol class="stepper">
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="../images/sub/step-icon-01.svg" alt="평가선택">
+                            </dt>
+                            <dd>평가선택</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="../images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                            </dt>
+                            <dd>기관 운영 현황 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="active">
+                            <dt>
+                                <img src="../images/sub/step-icon-03.svg" alt="평가지표 작성">
+                            </dt>
+                            <dd>평가지표 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="../images/sub/step-icon-04.svg" alt="총평 작성">
+                            </dt>
+                            <dd>총평 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="../images/sub/step-icon-05.svg" alt="평가완료">
+                            </dt>
+                            <dd>평가완료</dd>
+                        </dl>
+                    </li>
+                </ol>
+            </div>
+            <div class="content-area">
+                <div class="content-title-wrap">
+                    <h3 class="content-title">3.평가지표 작성</h3>
+                </div>
+                <div class="section-title-wrap">
+                    <h4 class="section-title">평가지표</h4>
+                </div>
+
+                <div class="default-table-wrap mb-40">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                            <col style="width: 100px;">
+                            <col style="width: auto;">
+                            <col style="width: 110px;">
+                            <col style="width: 110px;">
+                            <col style="width: 110px;">
+                            <col style="width: 130px;">
+                            <col style="width: 130px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2" rowspan="2">구분</th>
+                                <th scope="col" colspan="2" rowspan="2">평가지표</th>
+                                <th scope="col" rowspan="2">배점</th>
+                                <th scope="colgroup" colspan="2">평가상태</th>
+                                <th scope="col" rowspan="2">상태</th>
+                                <th scope="col" rowspan="2">평가진행</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">지표별 점수</th>
+                                <th scope="col">총점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">사업계획<br>(Plan)<br>(19)</td>
+                                <td rowspan="3">사업계획<br>수립 및 추진</td>
+                                <td>1-1-1</td>
+                                <td class="text-left">중장기 사업계획 수립의 적정성</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td rowspan="3">6</td>
+                                <td>미평가</td>
+                                <td><button type="button" class="btn-status purple">평가하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>1-1-2</td>
+                                <td class="text-left">센터장의 리더십/추진력</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>완료</td>
+                                <td><button type="button" class="btn-status lavender">수정하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>1-1-3</td>
+                                <td class="text-left">중장기 사업계획에 따른 연간 목표 달성에 대한 성과평가의 적정성</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td>진행중</td>
+                                <td>
+                                    <div class="custom-tooltip-wrap">
+                                        <span>자동산정</span>
+                                        <div class="tooltip-trigger">
+                                            <img src="../images/common/icon-info.svg" alt="도움말"
+                                                style="vertical-align: middle;">
+                                            <div class="tooltip-content">시스템 데이터 기반 자동 계산 항목입니다</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">사업여건<br>(Input)<br>(12)</td>
+                                <td>직원역량</td>
+                                <td>2-1-1</td>
+                                <td class="text-left">직원 교육 이수율</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td rowspan="2">6</td>
+                                <td>신청대기</td>
+                                <td><button type="button" class="btn-status purple">평가하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>지역사회<br>협력</td>
+                                <td>2-1-2</td>
+                                <td class="text-left">지역사회 협력과 발굴 건 수 및 유관기관 공동사업 운영실적</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>완료</td>
+                                <td><button type="button" class="btn-status lavender">수정하기</button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">총계</th>
+                                <td colspan="3"></td>
+                                <td><strong>100<br>(103)</strong></td>
+                                <td><strong>6</strong></td>
+                                <td><strong>6</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap">
+                    <h4 class="section-title">증빙자료</h4>
+                </div>
+
+                <div class="gray-box mb-40">
+                    <div class="box-body">
+                        <p>· 평가항목별로 증빙자료를 업로드할 수 있습니다.</p>
+                        <p>· 파일관리에서 각 서류들을 다중 업로드할 수 있습니다.</p>
+                        <p>· 업로드된 파일은 파일관리 팝업창에서 삭제할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-between align-center mb-10">
+                    <h4 class="section-title mb-0">총 12개 업로드 / 20개 가능</h4>
+                    <button type="button" class="btn-outline purple">파일관리</button>
+                </div>
+
+                <div class="default-table-wrap mb-40">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: 340px;">
+                            <col style="width: 380px;">
+                            <col style="width: auto;">
+                            <col style="width: 160px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">문서유형</th>
+                                <th scope="col">파일명</th>
+                                <th scope="col">지표 연결</th>
+                                <th scope="col">파일 크기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>중장기사업계획서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>연간사업계획서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        연간사업결과보고서.pdf</a></td>
+                                <td class="text-left">[2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">상담실적.xlsx</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2] [2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2] [2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>증빙자료</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 하단 버튼 그룹 -->
+
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn cancel large">취소</button>
+                    <button type="button" class="f-btn prev large">이전</button>
+                    <button type="button" class="f-btn edit large">임시저장</button>
+                    <button type="button" class="f-btn primary large">최종제출</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer id="footer">
+        <div class="inner">
+            <p>© KOREA INSTITUTE FOR HEALTHY FAMILY. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

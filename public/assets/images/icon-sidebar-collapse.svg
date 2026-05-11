@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16.8485 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="live area">
+<g id="Rectangle 2419">
+<mask id="path-1-inside-1_2622_14601" fill="white">
+<path d="M8.84853 0H15.8485C16.4008 0 16.8485 0.447715 16.8485 1V15C16.8485 15.5523 16.4008 16 15.8485 16H8.84853V0Z"/>
+</mask>
+<path d="M8.84853 -1.4H15.8485C17.174 -1.4 18.2485 -0.325483 18.2485 1L15.4485 1.4H8.84853V-1.4ZM18.2485 15C18.2485 16.3255 17.174 17.4 15.8485 17.4H8.84853V14.6H15.4485L18.2485 15ZM15.4485 14.6M8.84853 16V0V16M15.8485 -1.4C17.174 -1.4 18.2485 -0.325483 18.2485 1V15C18.2485 16.3255 17.174 17.4 15.8485 17.4L15.4485 14.6V1.4L15.8485 -1.4Z" fill="var(--stroke-0, #111111)" mask="url(#path-1-inside-1_2622_14601)"/>
+</g>
+<path id="Vector 4" d="M12.8485 8H0.848529" stroke="var(--stroke-0, #111111)" stroke-width="1.4"/>
+<path id="Vector 3" d="M4.34853 4.5L0.848528 8L4.34853 11.5" stroke="var(--stroke-0, #111111)" stroke-width="1.2"/>
+</g>
+</svg>

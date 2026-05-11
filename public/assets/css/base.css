@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+button,
+select,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    font-family: "Pretendard GOV Variable", "Pretendard GOV", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 14px;
+    color: #444;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+fieldset {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+b {
+    font-weight: 600;
+}
+
+img,
+fieldset,
+button {
+    border: 0;
+    padding: 0px;
+}
+
+button {
+    background: none;
+}
+
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+legend {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:link {
+    color: #555;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:active {
+    color: #555;
+}
+
+a:hover {
+    color: #000;
+}
+input[readonly],
+textarea[readonly] {
+  background-color: #F4F4F4;    /* 마우스 커서를 '금지' 모양으로 바꿔 수정 불가 상태임을 강조 */
+}
+
+/* Common Margin Utilities */
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.mt-80 {
+    margin-top: 80px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.mb-80 {
+    margin-bottom: 80px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.ml-20 {
+    margin-left: 20px !important;
+}
+
+.mr-10 {
+    margin-right: 10px !important;
+}
+
+.mr-20 {
+    margin-right: 20px !important;
+}
+
+/* Common Padding Utilities */
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+/* Common Text Utilities */
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-purple {
+    color: #725aa4 !important;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+/* Common Flex Utilities */
+.d-flex {
+    display: flex !important;
+}
+
+.flex-between {
+    justify-content: space-between !important;
+}
+
+.align-center {
+    align-items: center !important;
+}
+
+.flex-direction-col {
+    flex-direction: column !important;
+}
+.border-left-none {
+    border-left:none !important;
+}
+.justify-end {
+    justify-content: flex-end !important;
+}

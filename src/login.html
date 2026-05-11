@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+{% set pageTitle = "로그인 | 한국건강가정진흥원 평가시스템" %}
+{% set isLoggedIn = false %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="main-contents" class="login-main">
+        <div class="login-box">
+            <div class="login-logo-wrap">
+                <img src="/assets/images/icon-logo.svg" alt="가족센터 로고" class="logo-img">
+                <h2 class="login-title">평가시스템 로그인</h2>
+            </div>
+            
+            <div class="login-form-wrap">
+                <div class="login-input-group">
+                    <div class="login-input-item first">
+                        <span class="icon"><img src="/assets/images/icon-user.svg" alt="" aria-hidden="true"></span>
+                        <input type="text" class="login-input" placeholder="아이디" title="아이디 입력">
+                    </div>
+                    <div class="login-input-item last">
+                        <span class="icon"><img src="/assets/images/icon-padlock.svg" alt="" aria-hidden="true"></span>
+                        <input type="password" class="login-input" placeholder="비밀번호" title="비밀번호 입력">
+                    </div>
+                </div>
+                
+                <button type="button" class="btn-login">로그인</button>
+            </div>
+            
+            <div class="login-footer-info">
+                <p>비밀번호를 분실 하신 경우 00-0000-0000로 문의 주시기 바랍니다.</p>
+            </div>
+        </div>
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

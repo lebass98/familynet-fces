@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 이의신청 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["이의신청"]]) }}
+
+            <h2 class="page-title">이의신청</h2>
+
+            <div class="write-table-wrap">
+                <table class="write-table">
+                    <caption>이의신청 등록 양식</caption>
+                    <colgroup>
+                        <col style="width: 200px;">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="required">제목</th>
+                            <td>
+                                <input type="text" class="f-input" placeholder="제목을 입력해주세요.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="required">평가 선택</th>
+                            <td>
+                                <select class="f-select" style="width: 207px;">
+                                    <option>선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="required">내용</th>
+                            <td>
+                                <textarea class="f-textarea" style="height: 500px;" placeholder="내용을 입력해주세요."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">첨부파일</th>
+                            <td>
+                                <div class="file-upload-group">
+                                    <div class="input-group">
+                                        <input type="text" class="f-input" readonly placeholder="첨부파일을 등록해주세요.">
+                                        <button type="button" class="f-btn secondary large">파일선택</button>
+                                    </div>
+                                    <div class="file-list-box">
+                                        <div class="file-item">
+                                            <img src="/assets/images/common/icon-att.svg" alt="">
+                                            <span class="file-name">00센터 연간사업결과보고서.jpg</span>
+                                            <button type="button" class="btn-delete"><span class="sr-only">삭제</span></button>
+                                        </div>
+                                        <div class="file-item">
+                                            <img src="/assets/images/common/icon-att.svg" alt="">
+                                            <span class="file-name">00센터 연간사업결과보고서2.pdf</span>
+                                            <button type="button" class="btn-delete"><span class="sr-only">삭제</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="view-btn-group">
+                <button type="button" class="f-btn cancel large">취소</button>
+                <button type="button" class="f-btn primary large">등록</button>
+            </div>
+        </div>
+
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

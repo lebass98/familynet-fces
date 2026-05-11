@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 평가결과 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["평가결과"]]) }}
+
+            <h2 class="page-title">평가결과</h2>
+            
+            <!-- 평가결과 카드 -->
+            <div class="eval-result-card">
+                <div class="card-left">
+                    <div class="card-title-wrap">
+                        <p class="card-title-main">인천광역시남동구가족센터 <b style="color:#111">평가결과</b></p>
+                    </div>
+                    <div class="card-info-list">
+                        <div class="info-item">
+                            <div class="info-label">평가명</div>
+                            <div class="info-value">평가보고는 평가지표에서 제시하는 기준에 따라 자체적으로 기관 및 사업운영</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">센터명</div>
+                            <div class="info-value">인천광역시남동구가족센터</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">평가기간</div>
+                            <div class="info-value">2026.03.20 ~ 2026.04.20</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">제출일</div>
+                            <div class="info-value">2026.03.25</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">진행상태</div>
+                            <div class="info-value">평가완료</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <p class="grade-label">최종 등급</p>
+                    <div class="grade-value-wrap">
+                        <p class="grade-value">S</p>
+                        <p class="grade-unit">등급</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 평가 결과 테이블 영역 -->
+            <div class="eval-result-section">
+                <!-- 사업 계획 -->
+                <div class="eval-table-block">
+                    <div class="table-title-wrap">
+                        <img src="/assets/images/sub/ico-business-plan.svg" alt="" />
+                        <h3 class="table-title">사업 계획</h3>
+                    </div>
+                    <div class="default-table-wrap">
+                        <table class="default-table">
+                            <colgroup>
+                                <col style="width: 200px;" />
+                                <col style="width: auto;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">강점 사항</th>
+                                </tr>
+                                <tr>
+                                    <th>전체</th>
+                                    <td class="text-left">
+                                        <p>이견 없음.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 검토 사업</th>
+                                    <td class="text-left">
+                                        <p>한국건강가정진흥원은 건강가정기본법 제34조의2에 따라 다양한 가족의 삶의 질 제고 및 가족역량 강화를 위한 가족정책을 효율적이고 체계적으로 지원하기 위하여 설립된 성평등가족부 산하 공공기관입니다.<br><br>가족정책서비스의 핵심 기관인 우리원은 저출생 극복 등 정책 이행을 위해 국내외 유관기관과의 협력 체계를 강화하고 국민에게 필요한 서비스 발굴하고 지원할 수 있도록 최선을 다하겠습니다.<br>앞으로 한국건강가정진흥원은 전문성과 역량을 더욱더 강화하고 혁신과 창의성을 바탕으로 개선 및 발전하도록 노력하겠습니다.<br>여러분의 많은 관심과 격려 부탁드립니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 보완 사항 -->
+                <div class="eval-table-block">
+                    <div class="default-table-wrap">
+                        <table class="default-table">
+                            <colgroup>
+                                <col style="width: 200px;" />
+                                <col style="width: auto;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">보완 사항</th>
+                                </tr>
+                                <tr>
+                                    <th>전체</th>
+                                    <td class="text-left">
+                                        <p>이견 없음.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 검토 사업</th>
+                                    <td class="text-left">
+                                        <p>가족정책서비스의 핵심 기관인 우리원은 저출생 극복 등 정책 이행을 위해 국내외 유관기관과의 협력 체계를 강화하고 국민에게 필요한 서비스 발굴하고 지원할 수 있도록 최선을 다하겠습니다.<br>앞으로 한국건강가정진흥원은 전문성과 역량을 더욱더 강화하고 혁신과 창의성을 바탕으로 개선 및 발전하도록 노력하겠습니다.<br>여러분의 많은 관심과 격려 부탁드립니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 총평 -->
+                <div class="eval-table-block">
+                    <div class="default-table-wrap">
+                        <table class="default-table">
+                            <colgroup>
+                                <col style="width: 200px;" />
+                                <col style="width: auto;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th colspan="2">총평</th>
+                                </tr>
+                                <tr>
+                                    <th>전체</th>
+                                    <td class="text-left">
+                                        <p>이견 없음.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 검토 사업</th>
+                                    <td class="text-left">
+                                        <p>가족정책서비스의 핵심 기관인 우리원은 저출생 극복 등 정책 이행을 위해 국내외 유관기관과의 협력 체계를 강화하고 국민에게 필요한 서비스 발굴하고 지원할 수 있도록 최선을 다하겠습니다. 앞으로 한국건강가정진흥원은 전문성과 역량을 더욱더 강화하고 혁신과 창의성을 바탕으로 개선 및 발전하도록 노력하겠습니다.가족정책서비스의 핵심 기관인 우리원은 저출생 극복 등 정책 이행을 위해 국내외 유관기관과의 협력 체계를 강화하고 국민에게 필요한 서비스 발굴하고 지원할 수 있도록 최선을 다하겠습니다.<br>앞으로 한국건강가정진흥원은 전문성과 역량을 더욱더 강화하고 혁신과 창의성을 바탕으로 개선 및 발전하도록 노력하겠습니다.<br>여러분의 많은 관심과 격려 부탁드립니다.가족정책서비스의 핵심 기관인 우리원은 저출생 극복 등 정책 이행을 위해 국내외 유관기관과의 협력 체계를 강화하고 국민에게 필요한 서비스 발굴하고 지원할 수 있도록 최선을 다하겠습니다. 앞으로 한국건강가정진흥원은 전문성과 역량을 더욱더 강화하고 혁신과 창의성을 바탕으로 개선 및 발전하도록 노력하겠습니다.<br>여러분의 많은 관심과 격려 부탁드립니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 하단 버튼 그룹 -->
+
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn edit large">목록</button>
+                    <button type="button" class="f-btn primary large">의의신청하기</button>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

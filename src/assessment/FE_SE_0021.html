@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 이의신청 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["이의신청"]]) }}
+
+            <h2 class="page-title">이의신청</h2>
+            
+            <div class="eval-result-wrap">
+                <div class="eval-result-top">
+                    <div class="eval-result-total">총 <strong>40</strong>건</div>
+                    <div class="eval-result-search">
+                        <div class="search-item">
+                            <span class="label">답변상태</span>
+                            <div class="select-box">
+                                <select title="답변상태 선택">
+                                    <option>전체</option>
+                                    <option>대기</option>
+                                    <option>답변완료</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-item">
+                            <span class="label">검색구분</span>
+                            <div class="select-box">
+                                <select title="검색구분 선택">
+                                    <option>전체</option>
+                                    <option>평가명</option>
+                                    <option>제목</option>
+                                </select>
+                            </div>
+                            <div class="search-keyword">
+                                <div class="input-search-wrap">
+                                    <input type="text" class="krds-input" placeholder="검색어를 입력해 주세요." title="검색어 입력">
+                                    <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: 400px;">
+                            <col style="width: auto;">
+                            <col style="width: 120px;">
+                            <col style="width: 160px;">
+                            <col style="width: 160px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>평가명</th>
+                                <th>제목</th>
+                                <th>첨부파일</th>
+                                <th>답변상태</th>
+                                <th>등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td class="text-left">평가보고는 평가지표에서 제시하는 기준</td>
+                                <td class="text-left">전국 가족센터의 기관과 사업에 대한 평가를 통해 운영 관리의 체...</td>
+                                <td></td>
+                                <td>대기</td>
+                                <td>2026-04-28</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="text-left">기준에 따라 자체적으로 기관</td>
+                                <td class="text-left">평가를 통해 운영 관리의 체계성 향상 및 사업 역량의 질적 향상</td>
+                                <td>
+                                    <div class="attach-file-wrap">
+                                        <i class="ico-file"></i>
+                                        <span class="count">1</span>
+                                    </div>
+                                </td>
+                                <td>답변완료</td>
+                                <td>2026-04-28</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="text-left">기관과 사업에 대한 평가를 통해 운영 관리의 체계성...</td>
+                                <td class="text-left">평가를 통해 운영 관리의 체계성 향상 및 사업</td>
+                                <td>
+                                    <div class="attach-file-wrap">
+                                        <i class="ico-file"></i>
+                                        <span class="count">3</span>
+                                    </div>
+                                </td>
+                                <td>답변완료</td>
+                                <td>2026-04-28</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="text-left">기준에 따라 자체적으로 기관</td>
+                                <td class="text-left">평가를 통해 운영 관리의 체계성 향상 및 사업 역량</td>
+                                <td></td>
+                                <td>답변완료</td>
+                                <td>2026-04-28</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="text-left">기준에 따라 자체적으로 기관</td>
+                                <td class="text-left">평가를 통해 운영 관리의 체계성 향상</td>
+                                <td>
+                                    <div class="attach-file-wrap">
+                                        <i class="ico-file"></i>
+                                        <span class="count">10</span>
+                                    </div>
+                                </td>
+                                <td>답변완료</td>
+                                <td>2026-04-28</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="6" class="no-data border-left-none">검색 결과가 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 페이징 -->
+                <div class="eval-result-pagination">
+                    <button type="button" class="btn-page first"><span class="sr-only">처음 페이지</span></button>
+                    <button type="button" class="btn-page prev"><span class="sr-only">이전 페이지</span></button>
+                    <div class="pages">
+                        <button type="button" class="page">1</button>
+                        <button type="button" class="page active" aria-current="page">2</button>
+                        <button type="button" class="page">3</button>
+                        <span class="ellipsis">...</span>
+                        <button type="button" class="page">9</button>
+                        <button type="button" class="page">10</button>
+                    </div>
+                    <button type="button" class="btn-page next"><span class="sr-only">다음 페이지</span></button>
+                    <button type="button" class="btn-page last"><span class="sr-only">마지막 페이지</span></button>
+                </div>
+
+                <!-- 하단 버튼 -->
+                <div class="view-btn-group justify-end">
+                    <button type="button" class="f-btn primary large">이의신청</button>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

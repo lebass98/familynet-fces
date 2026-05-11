@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import datepicker, breadcrumb %}
+
+{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+
+            <h2 class="page-title">자체평가</h2>
+
+            <div class="stepper-wrap">
+                <ol class="stepper">
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
+                            </dt>
+                            <dd>평가선택</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="active">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                            </dt>
+                            <dd>기관 운영 현황 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
+                            </dt>
+                            <dd>평가지표 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
+                            </dt>
+                            <dd>총평 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
+                            </dt>
+                            <dd>평가완료</dd>
+                        </dl>
+                    </li>
+                </ol>
+            </div>
+            <div class="content-area">
+                <div class="content-title-wrap">
+                    <h3 class="content-title">2. 기관 운영 현황 작성</h3>
+                </div>
+
+                <!-- 센터 정보 입력 섹션 -->
+                <div class="section-title-wrap">
+                    <h4 class="section-title">센터 정보 입력</h4>
+                    <p class="essential-text">* 표시는 필수입력입니다.</p>
+                </div>
+                <div class="write-table-wrap">
+                    <table class="write-table">
+                        <caption>센터 정보 입력 양식</caption>
+                        <colgroup>
+                            <col style="width: 150px;">
+                            <col style="width: 150px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">센터명</th>
+                                <td>인천광역시지역가족센터</td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">통합전환연도</th>
+                                <td>
+                                    <select class="krds-form-select" style="width: 200px;">
+                                        <option value="">선택하세요.</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">개소년월일</th>
+                                <td>
+                                    {{ datepicker(placeholder="YYYY-MM-DD", readonly=false, sronly="달력 선택") }}
+                                                    <button type="button" class="krds-btn medium icon btn-cal-move next"><span class="sr-only">다음달</span></button>
+                                                </div>
+                                                <div class="calendar-body">
+                                                    <div class="calendar-table-wrap">
+                                                        <table class="calendar-tbl">
+                                                            <caption>2026년 04월</caption>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col" class="sun">일</th>
+                                                                    <th scope="col">월</th>
+                                                                    <th scope="col">화</th>
+                                                                    <th scope="col">수</th>
+                                                                    <th scope="col">목</th>
+                                                                    <th scope="col">금</th>
+                                                                    <th scope="col" class="sat">토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="old"><button type="button" class="btn-set-date">29</button></td>
+                                                                    <td class="old"><button type="button" class="btn-set-date">30</button></td>
+                                                                    <td class="old"><button type="button" class="btn-set-date">31</button></td>
+                                                                    <td><button type="button" class="btn-set-date">1</button></td>
+                                                                    <td><button type="button" class="btn-set-date">2</button></td>
+                                                                    <td><button type="button" class="btn-set-date">3</button></td>
+                                                                    <td class="sat"><button type="button" class="btn-set-date">4</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="sun"><button type="button" class="btn-set-date">5</button></td>
+                                                                    <td><button type="button" class="btn-set-date">6</button></td>
+                                                                    <td><button type="button" class="btn-set-date">7</button></td>
+                                                                    <td><button type="button" class="btn-set-date">8</button></td>
+                                                                    <td><button type="button" class="btn-set-date">9</button></td>
+                                                                    <td><button type="button" class="btn-set-date">10</button></td>
+                                                                    <td class="sat"><button type="button" class="btn-set-date">11</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="sun"><button type="button" class="btn-set-date">12</button></td>
+                                                                    <td><button type="button" class="btn-set-date">13</button></td>
+                                                                    <td><button type="button" class="btn-set-date">14</button></td>
+                                                                    <td><button type="button" class="btn-set-date">15</button></td>
+                                                                    <td><button type="button" class="btn-set-date">16</button></td>
+                                                                    <td><button type="button" class="btn-set-date">17</button></td>
+                                                                    <td class="sat"><button type="button" class="btn-set-date">18</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="sun"><button type="button" class="btn-set-date">19</button></td>
+                                                                    <td class="today period start end"><button type="button" class="btn-set-date" aria-pressed="true">20</button></td>
+                                                                    <td><button type="button" class="btn-set-date">21</button></td>
+                                                                    <td><button type="button" class="btn-set-date">22</button></td>
+                                                                    <td><button type="button" class="btn-set-date">23</button></td>
+                                                                    <td><button type="button" class="btn-set-date">24</button></td>
+                                                                    <td class="sat"><button type="button" class="btn-set-date">25</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="sun"><button type="button" class="btn-set-date">26</button></td>
+                                                                    <td><button type="button" class="btn-set-date">27</button></td>
+                                                                    <td><button type="button" class="btn-set-date">28</button></td>
+                                                                    <td><button type="button" class="btn-set-date">29</button></td>
+                                                                    <td><button type="button" class="btn-set-date">30</button></td>
+                                                                    <td class="new"><button type="button" class="btn-set-date">1</button></td>
+                                                                    <td class="sat new"><button type="button" class="btn-set-date">2</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="calendar-footer">
+                                                    <div class="calendar-btn-wrap">
+                                                        <button type="button" class="krds-btn medium text" id="get-today">오늘</button>
+                                                        <button type="button" class="krds-btn medium primary">확인</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">운영형태</th>
+                                <td>
+                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px;">
+                                        <label class="eval-radio">
+                                            <input type="radio" name="oper_type" checked>
+                                            <span class="radio-mark">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                            </span>
+                                            <span class="radio-text">직영</span>
+                                        </label>
+                                        <label class="eval-radio">
+                                            <input type="radio" name="oper_type">
+                                            <span class="radio-mark">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                            </span>
+                                            <span class="radio-text">위탁운영</span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">국비지원율</th>
+                                <td>
+                                    <div class="input-group">
+                                        <span class="tilde">국비</span>
+                                        <input type="text" class="krds-input text-right" style="width: 150px;" value="0">
+                                        <span class="unit">%</span>
+                                        <span class="tilde" style="margin-left: 20px;">지방비</span>
+                                        <input type="text" class="krds-input text-right" style="width: 150px;" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">센터 주소</th>
+                                <td>
+                                    <div class="multi-row-wrap">
+                                        <div class="input-group">
+                                            <input type="text" class="krds-input" style="width: 200px;" placeholder="우편번호">
+                                            <button type="button" class="btn-search-addr">주소검색</button>
+                                        </div>
+                                        <input type="text" class="krds-input" style="width: 100%;" placeholder="도로명주소">
+                                        <input type="text" class="krds-input" style="width: 100%;" placeholder="상세주소를 입력해 주세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" rowspan="2">센터연락처</th>
+                                <th class="sub-th">전화</th>
+                                <td>
+                                    <div class="input-group">
+                                        <select class="krds-form-select" style="width: 120px;">
+                                            <option value="">선택</option>
+                                        </select>
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="sub-th">팩스</th>
+                                <td>
+                                    <div class="input-group">
+                                        <select class="krds-form-select" style="width: 120px;">
+                                            <option value="">선택</option>
+                                        </select>
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">센터장명</th>
+                                <td>
+                                    <input type="text" class="krds-input" style="width: 300px;" placeholder="센터장명을 입력해주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" colspan="2">상근여부</th>
+                                <td>
+                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px;">
+                                        <label class="eval-radio">
+                                            <input type="radio" name="work_type" checked>
+                                            <span class="radio-mark">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                            </span>
+                                            <span class="radio-text">상근</span>
+                                        </label>
+                                        <label class="eval-radio">
+                                            <input type="radio" name="work_type">
+                                            <span class="radio-mark">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                            </span>
+                                            <span class="radio-text">비상근</span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" rowspan="2">센터장 연락처</th>
+                                <th class="sub-th">전화</th>
+                                <td>
+                                    <div class="input-group">
+                                        <select class="krds-form-select" style="width: 120px;">
+                                            <option value="">선택</option>
+                                        </select>
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 120px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="sub-th">이메일</th>
+                                <td>
+                                    <div class="input-group">
+                                        <input type="text" class="krds-input" style="width: 200px;">
+                                        <span class="tilde">@</span>
+                                        <input type="text" class="krds-input" style="width: 200px;">
+                                        <select class="krds-form-select" style="width: 200px;">
+                                            <option value="">직접입력</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 센터 현황 입력 섹션 -->
+                <div class="section-title-wrap">
+                    <h4 class="section-title">센터 현황 입력</h4>
+                    <p class="essential-text">* 표시는 필수입력입니다.</p>
+                </div>
+                <div class="write-table-wrap">
+                    <table class="write-table">
+                        <caption>센터 현황 입력 양식</caption>
+                        <colgroup>
+                            <col style="width: 150px;">
+                            <col style="width: 150px;">
+                            <col style="width: 458px;">
+                            <col style="width: 130px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="required">인력현황</th>
+                                <th class="sub-th">상근직원수</th>
+                                <td colspan="3">
+                                    <div class="input-group">
+                                        <input type="text" class="krds-input text-right" style="width: 200px;" value="0">
+                                        <span class="unit">명</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required" rowspan="2">위탁현황 (직영/위탁)</th>
+                                <th class="sub-th">법인명</th>
+                                <td>
+                                    <input type="text" class="krds-input" style="width: 100%;" placeholder="법인명을 입력해주세요.">
+                                </td>
+                                <th class="sub-th" style="border-left:1px solid #e0e0e0">위탁기간</th>
+                                <td>
+                                    <div class="input-group">
+                                        <div class="input-date-wrap">
+                                            <input type="text" class="krds-input form-btn-datepicker datepicker" placeholder="YYYY-MM-DD">
+                                            <button type="button" class="btn-cal form-btn-datepicker"><span class="sr-only">날짜 선택</span></button>
+                                        </div>
+                                        <span class="tilde">~</span>
+                                        <div class="input-date-wrap">
+                                            <input type="text" class="krds-input form-btn-datepicker datepicker" placeholder="YYYY-MM-DD">
+                                            <button type="button" class="btn-cal form-btn-datepicker"><span class="sr-only">날짜 선택</span></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="sub-th">대표자명</th>
+                                <td>
+                                    <input type="text" class="krds-input" style="width: 100%;" placeholder="대표자명을 입력해주세요.">
+                                </td>
+                                <th class="sub-th" style="border-left:1px solid #e0e0e0">연락처</th>
+                                <td>
+                                    <div class="input-group">
+                                        <select class="krds-form-select" style="width: 120px;">
+                                            <option value="">선택</option>
+                                        </select>
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 100px;">
+                                        <span class="tilde">-</span>
+                                        <input type="text" class="krds-input" style="width: 100px;">
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 예산현황 2023년 -->
+                            <tr>
+                                <th class="required" rowspan="6">예산현황</th>
+                                <th class="sub-th" rowspan="2">2023년</th>
+                                <td class="budget-total" rowspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">총액</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                    </div>
+                                </td>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금 외</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 예산현황 2024년 -->
+                            <tr>
+                                <th class="sub-th" rowspan="2">2024년</th>
+                                <td class="budget-total" rowspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">총액</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                    </div>
+                                </td>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금 외</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- 예산현황 2025년 -->
+                            <tr>
+                                <th class="sub-th" rowspan="2">2025년</th>
+                                <td class="budget-total" rowspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">총액</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                    </div>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="budget-sub" colspan="2">
+                                    <div class="input-group">
+                                        <span class="budget-label">보조금 외</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">천원</span>
+                                        <input type="text" class="krds-input text-right" value="0">
+                                        <span class="unit">%</span>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="required" colspan="2">기타 특이사항</th>
+                                <td colspan="3">
+                                    <textarea class="krds-textarea"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- 하단 버튼 그룹 -->
+
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn cancel large">취소</button>
+                    <button type="button" class="f-btn prev large">이전</button>
+                    <button type="button" class="f-btn edit large">임시저장</button>
+                    <button type="button" class="f-btn primary large">최종제출</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

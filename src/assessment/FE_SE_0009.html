@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+
+            <h2 class="page-title">자체평가</h2>
+
+            <div class="stepper-wrap">
+                <ol class="stepper">
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
+                            </dt>
+                            <dd>평가선택</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                            </dt>
+                            <dd>기관 운영 현황 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="active">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
+                            </dt>
+                            <dd>평가지표 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
+                            </dt>
+                            <dd>총평 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
+                            </dt>
+                            <dd>평가완료</dd>
+                        </dl>
+                    </li>
+                </ol>
+            </div>
+            <div class="content-area">
+                <div class="content-title-wrap">
+                    <h3 class="content-title"><img src="/assets/images/common/icon-subtit-dot.svg" />평가지표 작성</h3>
+                </div>
+                <div class="section-title-wrap">
+                    <h4 class="section-title">사업 계획</h4>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>구분</th>
+                                <td class="text-left">1-1 사업계획 수립 및 추진</td>
+                            </tr>
+                            <tr>
+                                <th>평가지표</th>
+                                <td class="text-left">1-1-1 중장기 사업계획 수립의 적정성</td>
+                            </tr>
+                            <tr>
+                                <th>지표유형</th>
+                                <td class="text-left">정성지표</td>
+                            </tr>
+                            <tr>
+                                <th>평가방식</th>
+                                <td class="text-left">절대평가</td>
+                            </tr>
+                            <tr>
+                                <th>평가목표</th>
+                                <td class="text-left">중장기 사업계획, 사업체계 및 실현가능성 등에 대한 실제 적절성 평가</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">배점 기준</h4>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 33.33%;">
+                            <col style="width: 33.33%;">
+                            <col style="width: 33.33%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>등급</th>
+                                <th>배점</th>
+                                <th>총점 범위</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>S</td>
+                                <td>7점</td>
+                                <td>21점~25점</td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>6점</td>
+                                <td>21점~25점</td>
+                            </tr>
+                            <tr>
+                                <td>D</td>
+                                <td>5점</td>
+                                <td>21점~25점</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap flex-between" style="margin-top: 40px;">
+                    <h4 class="section-title">평가 내용</h4>
+                    <div class="input-group">
+                        <span class="budget-label" style="min-width: auto; margin-right: 8px;">총점 :</span>
+                        <input type="text" class="krds-input text-right" style="width: 246px;" value="0" readonly>
+                        <span class="unit">점</span>
+                    </div>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: auto;">
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="text-left" style="padding-left: 24px;">중장기 사업계획을 적정하게 수립하였는가?</th>
+                                <th>매우미흡(1)</th>
+                                <th>미흡(2)</th>
+                                <th>보통(3)</th>
+                                <th>우수(4)</th>
+                                <th>매우우수(5)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">① 전 직원의 참여 하에 중장기 사업계획이 수립되었다.</td>
+                                <td><label class="eval-radio"><input type="radio" name="eval1" checked><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval1"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval1"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval1"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval1"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">② 전 직원의 참여 하에 중장기 사업계획이 수립되었다.</td>
+                                <td><label class="eval-radio"><input type="radio" name="eval2"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval2"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval2" checked><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval2"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval2"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">③ 설정된 중장기 사업계획이 연도별로 실행·관리되고 있다.</td>
+                                <td><label class="eval-radio"><input type="radio" name="eval3"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval3" checked><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval3"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval3"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                                <td><label class="eval-radio"><input type="radio" name="eval3"><span class="radio-mark"><img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off"><img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on"></span></label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">평가 근거</h4>
+                </div>
+                <div class="gray-box mb-20">
+                    <p>각 항목의 점수 부여 근거 제시(중장기 사업계획 수립, 중장기 수립 관련 회의 및 세미나 진행 등/ 2줄 이내 작성)<br>※ 평가내용을 기준으로 평가위원이 이해하기 용이하도록 간단하게 주요 실적내용 기술</p>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>평가 항목 및 내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="text-left" style="padding: 24px; white-space: normal !important;">
+                                    <p style="font-weight: 400; margin-bottom: 12px; font-size: 16px;">1. 사업 운영 및 관리 점검 이행 적절성 확인(200자 이내)</p>
+                                    <textarea class="krds-textarea" placeholder="내용을 입력해 주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="text-left" style="padding: 24px; white-space: normal !important;">
+                                    <p style="font-weight: 400; margin-bottom: 12px; font-size: 16px;">2. 사업 운영 및 관리 점검 이행 적절성 확인(200자 이내)</p>
+                                    <textarea class="krds-textarea" placeholder="내용을 입력해 주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="text-left" style="padding: 24px; white-space: normal !important;">
+                                    <p style="font-weight: 400; margin-bottom: 12px; font-size: 16px;">3. 사업 운영과정에 대한 체계적인 기록 적절성 확인(200자 이내)</p>
+                                    <textarea class="krds-textarea" placeholder="내용을 입력해 주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">증빙자료 목록</h4>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: 300px;">
+                            <col style="width: auto;">
+                            <col style="width: 150px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>문서유형</th>
+                                <th>파일명</th>
+                                <th>파일 크기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>중장기사업계획서</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 중장기사업계획서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>연간사업계획서</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 연간사업결과보고서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">상담실적.xlsx</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 중장기사업계획서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>증빙자료</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 중장기사업계획서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn cancel large">취소</button>
+                    <button type="button" class="f-btn edit large">임시저장</button>
+                    <button type="button" class="f-btn primary large">다음</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

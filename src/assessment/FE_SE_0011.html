@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+
+            <h2 class="page-title">자체평가</h2>
+
+            <div class="stepper-wrap">
+                <ol class="stepper">
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
+                            </dt>
+                            <dd>평가선택</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                            </dt>
+                            <dd>기관 운영 현황 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="active">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
+                            </dt>
+                            <dd>평가지표 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
+                            </dt>
+                            <dd>총평 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
+                            </dt>
+                            <dd>평가완료</dd>
+                        </dl>
+                    </li>
+                </ol>
+            </div>
+            <div class="content-area">
+                <div class="content-title-wrap">
+                    <h3 class="content-title"><img src="/assets/images/common/icon-subtit-dot.svg" />평가지표 작성</h3>
+                </div>
+                <div class="section-title-wrap">
+                    <h4 class="section-title">사업 계획</h4>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>구분</th>
+                                <td class="text-left">1-1 사업계획 수립 및 추진</td>
+                            </tr>
+                            <tr>
+                                <th>평가지표</th>
+                                <td class="text-left">1-1-1 중장기 사업계획 수립의 적정성</td>
+                            </tr>
+                            <tr>
+                                <th>지표유형</th>
+                                <td class="text-left">정성지표</td>
+                            </tr>
+                            <tr>
+                                <th>평가방식</th>
+                                <td class="text-left">절대평가</td>
+                            </tr>
+                            <tr>
+                                <th>평가목표</th>
+                                <td class="text-left">중장기 사업계획, 사업체계 및 실현가능성 등에 대한 실제 적절성 평가</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">배점 기준</h4>
+                </div>
+                <div class="gray-box mb-20">
+                    <p>※ 배점방식 : 산정식에 의해 산출된 직원 교육 이수율을 평가기준에 따라 배점</p>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 50%;">
+                            <col style="width: 50%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>기준</th>
+                                <th>배점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>90% 이상</td>
+                                <td>6점</td>
+                            </tr>
+                            <tr>
+                                <td>60% 미만</td>
+                                <td>1점</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">평가 내용</h4>
+                </div>
+                <div class="line-box mb-20">
+                    <p>센터의 직원은 자신의 역량 증진을 위해 직무교육을 이수하였는가?</p>
+                </div>
+                <div class="line-box mb-20">
+                    <p>센터의 직원은 지침에 따른 법정의무교육을 이수하였는가?</p>
+                </div>
+
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="text-left" style="background:#f8f8f8; padding-left: 20px;">1) 상근직원</th>
+                            </tr>
+                            <tr>
+                                <th>2023년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2024년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2025년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center" style="padding: 15px;">
+                                    <div class="input-group" style="justify-content: center;">
+                                        <span style="font-weight:700; margin-right: 16px;">자동계산</span>
+                                        <span>총 이수율</span> <input type="text" class="eval-input" style="width: 100px; margin: 0 8px;" value="0" readonly> %
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="default-table-wrap" style="margin-top: 20px;">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" class="text-left" style="background:#f8f8f8; padding-left: 20px;">2) 별도지원사업 전담인력 및 지원인력</th>
+                            </tr>
+                            <tr>
+                                <th>2023년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2024년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>2025년</th>
+                                <td class="text-left" style="padding: 10px 20px;">
+                                    <div class="input-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">전체직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">상근직원수</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">교육이수자</span>
+                                            <input type="text" class="eval-input" value="0">
+                                            <span class="unit">%</span>
+                                        </div>
+                                        <div class="eval-rate-wrap" style="display:flex; align-items:center; gap:8px;">
+                                            <span style="color:#111; font-size:15px;">이수율</span>
+                                            <input type="text" class="eval-input" value="0" readonly>
+                                            <span class="unit">%</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center" style="padding: 15px;">
+                                    <div class="input-group" style="justify-content: center;">
+                                        <span style="font-weight:700; margin-right: 16px;">자동계산</span>
+                                        <span>총 이수율</span> <input type="text" class="eval-input" style="width: 100px; margin: 0 8px;" value="0" readonly> %
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="gray-box" style="margin-top: 20px; text-align: center; padding: 24px;">
+                    <div class="input-group" style="justify-content: center; flex-wrap: wrap; gap: 16px;">
+                        <span style="font-weight:700; font-size:18px; color:#725AA4; margin-right: 8px;">자동계산</span>
+                        <div style="display:flex; align-items:center;">
+                            <span>직원 교육 이수율</span> <input type="text" class="eval-input" style="width: 100px; margin: 0 8px;" value="0" readonly> %
+                        </div>
+                        <div style="display:flex; align-items:center; margin-left: 16px;">
+                            <span>평가점수</span> <input type="text" class="eval-input" style="width: 100px; margin: 0 8px;" value="0" readonly> 점
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">평가 근거</h4>
+                </div>
+                <div class="gray-box mb-20">
+                    <p style="font-size: 15px; line-height: 1.6;">각 점수 부여 근거 제시(연도별 사업 성과 평가계획 수립 등/ 2줄 이내 작성)<br>
+                    ※ 상근직원 이수율: (교육 이수시간 30시간 이상인 직원 수/상근직원 수) * 100 * 상근직원 수/전체 직원 수<br>
+                    ※ 별도지원사업 전담인력 및 지원인력 이수율: (별도지원사업별 교육시간을 이수한 전담인력 수/별도지원사업 직원 수) * 100 * 별도지원사업 전담인력 수/전체 직원 수</p>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: auto;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th colspan="2">평가 항목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="text-left" colspan="2" style="padding: 24px; white-space: normal !important;">
+                                    <p style="font-weight: 400; margin-bottom: 12px; font-size: 16px;">1. 사업 운영 및 관리 점검 이행 적절성 확인(200자 이내)</p>
+                                    <textarea class="krds-textarea" placeholder="내용을 입력해 주세요. 내용을 입력해 주세요. 내용을 입력해 주세요."></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="text-left" colspan="2" style="padding: 24px; white-space: normal !important;">
+                                    <p style="font-weight: 400; margin-bottom: 12px; font-size: 16px;">5. 사업 운영과정에 대한 체계적인 기록 적절성 확인(200자 이내)</p>
+                                    <textarea class="krds-textarea" placeholder="내용을 입력해 주세요. 내용을 입력해 주세요. 내용을 입력해 주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap" style="margin-top: 40px;">
+                    <h4 class="section-title">증명자료 목록</h4>
+                </div>
+                <div class="default-table-wrap">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: 300px;">
+                            <col style="width: auto;">
+                            <col style="width: 150px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>문서유형</th>
+                                <th>파일명</th>
+                                <th>파일 크기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 중장기사업계획서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>증빙자료</td>
+                                <td class="text-left"><a href="#" class="link" style="color:#5E4BC8; text-decoration: underline;">00센터 중장기사업계획서.pdf</a></td>
+                                <td>147.7 KB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn cancel large">취소</button>
+                    <button type="button" class="f-btn edit large">임시저장</button>
+                    <button type="button" class="f-btn primary large">다음</button>
+                </div>
+            </div>
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+</body>
+
+</html>

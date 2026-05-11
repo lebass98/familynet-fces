@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% from "_inc/components.html" import breadcrumb %}
+
+{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
+{% set currentSection = "self-eval" %}
+{% include "_inc/head.html" %}
+
+<body>
+  {% include "_inc/header.html" %}
+
+    <main id="sub-contents">
+        <div class="inner">
+      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+
+            <h2 class="page-title">자체평가</h2>
+
+            <div class="stepper-wrap">
+                <ol class="stepper">
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
+                            </dt>
+                            <dd>평가선택</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="complete">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                            </dt>
+                            <dd>기관 운영 현황 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl class="active">
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
+                            </dt>
+                            <dd>평가지표 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
+                            </dt>
+                            <dd>총평 작성</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
+                            </dt>
+                            <dd>평가완료</dd>
+                        </dl>
+                    </li>
+                </ol>
+            </div>
+            <div class="content-area">
+                <div class="content-title-wrap">
+                    <h3 class="content-title">3.평가지표 작성</h3>
+                </div>
+                <div class="section-title-wrap">
+                    <h4 class="section-title">평가지표</h4>
+                </div>
+
+                <div class="default-table-wrap mb-40">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 120px;">
+                            <col style="width: 120px;">
+                            <col style="width: 100px;">
+                            <col style="width: auto;">
+                            <col style="width: 110px;">
+                            <col style="width: 110px;">
+                            <col style="width: 110px;">
+                            <col style="width: 130px;">
+                            <col style="width: 130px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2" rowspan="2">구분</th>
+                                <th scope="col" colspan="2" rowspan="2">평가지표</th>
+                                <th scope="col" rowspan="2">배점</th>
+                                <th scope="colgroup" colspan="2">평가상태</th>
+                                <th scope="col" rowspan="2">상태</th>
+                                <th scope="col" rowspan="2">평가진행</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">지표별 점수</th>
+                                <th scope="col">총점</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">사업계획<br>(Plan)<br>(19)</td>
+                                <td rowspan="3">사업계획<br>수립 및 추진</td>
+                                <td>1-1-1</td>
+                                <td class="text-left">중장기 사업계획 수립의 적정성</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td rowspan="3">6</td>
+                                <td>미평가</td>
+                                <td><button type="button" class="btn-status purple">평가하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>1-1-2</td>
+                                <td class="text-left">센터장의 리더십/추진력</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>완료</td>
+                                <td><button type="button" class="btn-status lavender">수정하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>1-1-3</td>
+                                <td class="text-left">중장기 사업계획에 따른 연간 목표 달성에 대한 성과평가의 적정성</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td>진행중</td>
+                                <td>
+                                    <div class="custom-tooltip-wrap">
+                                        <span>자동산정</span>
+                                        <div class="tooltip-trigger">
+                                            <img src="/assets/images/common/icon-info.svg" alt="도움말"
+                                                style="vertical-align: middle;">
+                                            <div class="tooltip-content">시스템 데이터 기반 자동 계산 항목입니다</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">사업여건<br>(Input)<br>(12)</td>
+                                <td>직원역량</td>
+                                <td>2-1-1</td>
+                                <td class="text-left">직원 교육 이수율</td>
+                                <td>7</td>
+                                <td>-</td>
+                                <td rowspan="2">6</td>
+                                <td>신청대기</td>
+                                <td><button type="button" class="btn-status purple">평가하기</button></td>
+                            </tr>
+                            <tr>
+                                <td>지역사회<br>협력</td>
+                                <td>2-1-2</td>
+                                <td class="text-left">지역사회 협력과 발굴 건 수 및 유관기관 공동사업 운영실적</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>완료</td>
+                                <td><button type="button" class="btn-status lavender">수정하기</button></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">총계</th>
+                                <td colspan="3"></td>
+                                <td><strong>100<br>(103)</strong></td>
+                                <td><strong>6</strong></td>
+                                <td><strong>6</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="section-title-wrap">
+                    <h4 class="section-title">증빙자료</h4>
+                </div>
+
+                <div class="gray-box mb-40">
+                    <div class="box-body">
+                        <p>· 평가항목별로 증빙자료를 업로드할 수 있습니다.</p>
+                        <p>· 파일관리에서 각 서류들을 다중 업로드할 수 있습니다.</p>
+                        <p>· 업로드된 파일은 파일관리 팝업창에서 삭제할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-between align-center mb-10">
+                    <h4 class="section-title mb-0">총 12개 업로드 / 20개 가능</h4>
+                    <button type="button" class="btn-outline purple">파일관리</button>
+                </div>
+
+                <div class="default-table-wrap mb-40">
+                    <table class="default-table">
+                        <colgroup>
+                            <col style="width: 100px;">
+                            <col style="width: 340px;">
+                            <col style="width: 380px;">
+                            <col style="width: auto;">
+                            <col style="width: 160px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">문서유형</th>
+                                <th scope="col">파일명</th>
+                                <th scope="col">지표 연결</th>
+                                <th scope="col">파일 크기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>5</td>
+                                <td>중장기사업계획서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>연간사업계획서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        연간사업결과보고서.pdf</a></td>
+                                <td class="text-left">[2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">상담실적.xlsx</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2] [2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>연간사업결과보고서</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2] [2-2-1]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>증빙자료</td>
+                                <td class="text-left"><a href="#" class="text-purple text-underline">00센터
+                                        중장기사업계획서.pdf</a></td>
+                                <td class="text-left">[1-1-1] [1-1-2]</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="view-btn-group">
+                    <button type="button" class="f-btn cancel large">취소</button>
+                    <button type="button" class="f-btn prev large">이전</button>
+                    <button type="button" class="f-btn edit large">임시저장</button>
+                    <button type="button" class="f-btn primary large">최종제출</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+  {% include "_inc/footer.html" %}
+    <!-- 파일관리 모달 -->
+    <div class="modal-overlay active" id="modal-file-manage">
+        <div class="modal-container" style="max-width: 1024px;">
+            <div class="modal-header">
+                <h2 class="modal-title">파일관리</h2>
+                <button type="button" class="btn-close-modal" title="닫기"></button>
+            </div>
+            <div class="modal-content">
+
+                <!-- 안내 박스 -->
+                <div class="gray-box mb-20">
+                    <div class="box-body">
+                        <p>· 파일추가 버튼을 통해 파일을 업로드해주세요.</p>
+                        <p>· 업로드 완료 후 문서유형, 지표 연결을 선택 후 저장해주세요.</p>
+                    </div>
+                </div>
+
+                <!-- 카운트 + 버튼 영역 -->
+                <div class="file-upload-header mb-10">
+                    <p class="upload-count">총 1개 업로드 / 20개 가능</p>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn-delete">선택삭제</button>
+                        <button type="button" class="btn-add-file">파일추가</button>
+                    </div>
+                </div>
+
+                <!-- 파일 목록 테이블 -->
+                <div class="modal-table-wrap">
+                    <table class="modal-table" style="border-top: 1px solid #111;">
+                        <colgroup>
+                            <col style="width: 60px;">
+                            <col style="width: 200px;">
+                            <col style="width: 200px;">
+                            <col style="width: auto;">
+                            <col style="width: 100px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <input type="checkbox" id="check-all" title="전체선택">
+                                </th>
+                                <th scope="col">문서유형 <span style="color:#E63946;">*</span></th>
+                                <th scope="col">지표 연결 <span style="color:#E63946;">*</span></th>
+                                <th scope="col">파일명</th>
+                                <th scope="col">파일크기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 선택된 행 (체크됨) -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" checked title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="tag-chip-wrap">
+                                        <span class="tag-chip">
+                                            <button type="button" class="btn-tag-remove" title="제거">×</button>[1-1-1]
+                                        </span>
+                                        <span class="tag-chip">
+                                            <button type="button" class="btn-tag-remove" title="제거">×</button>[1-1-1]
+                                        </span>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <!-- 미선택 행 1 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option value="">선택</option>
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="지표 연결 선택">
+                                            <option value="">선택</option>
+                                            <option>1-1-1</option>
+                                            <option>1-1-2</option>
+                                            <option>2-1-1</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <!-- 미선택 행 2 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option value="">선택</option>
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="지표 연결 선택">
+                                            <option value="">선택</option>
+                                            <option>1-1-1</option>
+                                            <option>1-1-2</option>
+                                            <option>2-1-1</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <!-- 미선택 행 3 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option value="">선택</option>
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="지표 연결 선택">
+                                            <option value="">선택</option>
+                                            <option>1-1-1</option>
+                                            <option>1-1-2</option>
+                                            <option>2-1-1</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <!-- 미선택 행 3 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option value="">선택</option>
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="지표 연결 선택">
+                                            <option value="">선택</option>
+                                            <option>1-1-1</option>
+                                            <option>1-1-2</option>
+                                            <option>2-1-1</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                            <!-- 미선택 행 3 -->
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="row-check" title="행 선택">
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="문서유형 선택">
+                                            <option value="">선택</option>
+                                            <option>중장기사업계획서</option>
+                                            <option>연간사업계획서</option>
+                                            <option>연간사업결과보고서</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="select-wrap">
+                                        <select class="krds-select" title="지표 연결 선택">
+                                            <option value="">선택</option>
+                                            <option>1-1-1</option>
+                                            <option>1-1-2</option>
+                                            <option>2-1-1</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td class="text-left">00센터 중장기사업계획서.pdf</td>
+                                <td>147.7 KB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="view-btn-group">
+                <button type="button" class="f-btn cancel large">취소</button>
+                <button type="button" class="f-btn primary large">저장</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  &__inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 16px 20px; }
+  &__logo { font-size: 18px; font-weight: 700; }
+}
+
+.gnb {
+  ul { display: flex; gap: 24px; }
+  a { display: inline-block; padding: 8px 4px; font-weight: 500; }
+}
+
+.footer {
+  margin-top: 80px;
+  padding: 24px 0;
+  background: #f7f7f7;
+  &__inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  &__copy { color: #666; font-size: 12px; }
+}
+
+main { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
