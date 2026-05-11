@@ -26,15 +26,15 @@ Vite 와 Nunjucks 템플릿을 결합하여, **공통 영역(head / header / foo
 
 ## 기술 스택
 
-| 항목 | 버전 | 비고 |
-|---|---|---|
-| Node.js | 18+ | 권장 LTS |
-| Vite | 5.4.x | 멀티페이지 빌드 + 개발 서버 |
-| Nunjucks | 3.2.x | HTML 템플릿팅 (`{% include %}`, `{% macro %}`) |
-| Sass | 1.77+ | `modern-compiler` API 사용 |
-| Prettier | 3.x | 코드 포매팅 |
-| KRDS | — | 정부 디자인 시스템 (`public/assets/css/krds.min.css`) |
-| Pretendard GOV | v1.3.9 | CDN 로드 (`<link>` in head) |
+| 항목           | 버전   | 비고                                                  |
+| -------------- | ------ | ----------------------------------------------------- |
+| Node.js        | 18+    | 권장 LTS                                              |
+| Vite           | 5.4.x  | 멀티페이지 빌드 + 개발 서버                           |
+| Nunjucks       | 3.2.x  | HTML 템플릿팅 (`{% include %}`, `{% macro %}`)        |
+| Sass           | 1.77+  | `modern-compiler` API 사용                            |
+| Prettier       | 3.x    | 코드 포매팅                                           |
+| KRDS           | —      | 정부 디자인 시스템 (`public/assets/css/krds.min.css`) |
+| Pretendard GOV | v1.3.9 | CDN 로드 (`<link>` in head)                           |
 
 ---
 
@@ -68,13 +68,13 @@ npm run preview
 
 ## 명령어
 
-| 명령 | 설명 |
-|---|---|
-| `npm run dev` | 개발 서버 실행. HTML / SCSS / JS / include 파일 저장 시 자동 리로드 |
-| `npm run build` | `dist/` 에 최종 HTML 생성 (Nunjucks include 가 모두 인라인으로 펼쳐짐) |
-| `npm run preview` | `dist/` 결과를 HTTP 서버로 띄워 확인 (절대경로 정상 동작) |
-| `npm run format` | Prettier 로 `src/` 전체 포매팅 |
-| `npm run format:check` | 포매팅 차이만 확인 (CI 용) |
+| 명령                   | 설명                                                                   |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `npm run dev`          | 개발 서버 실행. HTML / SCSS / JS / include 파일 저장 시 자동 리로드    |
+| `npm run build`        | `dist/` 에 최종 HTML 생성 (Nunjucks include 가 모두 인라인으로 펼쳐짐) |
+| `npm run preview`      | `dist/` 결과를 HTTP 서버로 띄워 확인 (절대경로 정상 동작)              |
+| `npm run format`       | Prettier 로 SCSS / JS / md / 설정 파일 포매팅 (HTML 제외)              |
+| `npm run format:check` | 포매팅 차이만 확인 (CI 용)                                             |
 
 ---
 
@@ -137,6 +137,7 @@ npm run preview
 ```
 
 > **`public/` vs `src/assets/`**
+>
 > - `public/assets/` 에 둔 파일은 Vite 가 절대 손대지 않고 `dist/assets/` 로 복사만 합니다. KRDS 미니파이드 CSS 처럼 가공하면 안 되는 파일을 둡니다.
 > - `src/assets/scss`, `src/assets/js/main.js` 는 Vite 가 번들링합니다. 커스텀 SCSS / 동적 JS 를 둡니다.
 
@@ -154,44 +155,42 @@ npm run preview
 ```html
 <!DOCTYPE html>
 <html lang="ko">
-{% from "_inc/components.html" import datepicker, breadcrumb, pagination, stepper %}
-{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
-{% set currentSection = "self-eval" %}
-{% include "_inc/head.html" %}
+  {% from "_inc/components.html" import datepicker, breadcrumb, pagination, stepper %} {% set pageTitle = "자체평가 -
+  평가하기 | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "self-eval" %} {% include "_inc/head.html" %}
 
-<body>
-  {% include "_inc/header.html" %}
+  <body>
+    {% include "_inc/header.html" %}
 
-  <main id="sub-contents">
-    <div class="inner">
-      {{ breadcrumb([["홈", "/index.html"], ["자체평가", "#"], ["평가하기"]]) }}
+    <main id="sub-contents">
+      <div class="inner">
+        {{ breadcrumb([["홈", "/index.html"], ["자체평가", "#"], ["평가하기"]]) }}
 
-      <h2 class="page-title">평가하기</h2>
+        <h2 class="page-title">평가하기</h2>
 
-      <!-- 페이지 고유 콘텐츠 -->
-    </div>
-  </main>
+        <!-- 페이지 고유 콘텐츠 -->
+      </div>
+    </main>
 
-  {% include "_inc/footer.html" %}
-</body>
+    {% include "_inc/footer.html" %}
+  </body>
 </html>
 ```
 
 ### 페이지 단위 변수
 
-| 변수 | 타입 | 기본값 | 설명 |
-|---|---|---|---|
-| `pageTitle` | string | `한국건강가정진흥원` | `<title>` 태그에 들어갈 텍스트. SEO / 브라우저 탭 표시 |
-| `currentSection` | string | _unset_ | GNB 활성화 표시. `self-eval` / `eval-mgmt` / `notice` / `mypage` 중 하나 |
-| `isLoggedIn` | boolean | `true` | 헤더 우측 영역. `false` 면 로그인 / 회원가입 버튼이 노출 (로그인 페이지에서 사용) |
+| 변수             | 타입    | 기본값               | 설명                                                                              |
+| ---------------- | ------- | -------------------- | --------------------------------------------------------------------------------- |
+| `pageTitle`      | string  | `한국건강가정진흥원` | `<title>` 태그에 들어갈 텍스트. SEO / 브라우저 탭 표시                            |
+| `currentSection` | string  | _unset_              | GNB 활성화 표시. `self-eval` / `eval-mgmt` / `notice` / `mypage` 중 하나          |
+| `isLoggedIn`     | boolean | `true`               | 헤더 우측 영역. `false` 면 로그인 / 회원가입 버튼이 노출 (로그인 페이지에서 사용) |
 
 ### include 와 macro 의 차이
 
-| | include | macro |
-|---|---|---|
-| 정의 | 한 파일을 통째로 삽입 | 함수처럼 파라미터를 받음 |
+|      | include                                      | macro                                                               |
+| ---- | -------------------------------------------- | ------------------------------------------------------------------- |
+| 정의 | 한 파일을 통째로 삽입                        | 함수처럼 파라미터를 받음                                            |
 | 용도 | head / header / footer 처럼 항상 동일한 영역 | datepicker / breadcrumb 처럼 호출 위치마다 내용이 달라지는 컴포넌트 |
-| 호출 | `{% include "_inc/header.html" %}` | `{{ datepicker(title="시작일") }}` |
+| 호출 | `{% include "_inc/header.html" %}`           | `{{ datepicker(title="시작일") }}`                                  |
 
 ---
 
@@ -207,16 +206,16 @@ npm run preview
 
 KRDS 캘린더 datepicker 한 개를 출력합니다.
 
-| 파라미터 | 타입 | 기본값 | 설명 |
-|---|---|---|---|
-| `title` | string | `"날짜"` | input 의 `title` 속성. `sronly` 미지정 시 sr-only 텍스트로도 사용 (`"{title} 선택"`) |
-| `value` | string | `""` | 초기값 (예: `"2026.04.20"`) |
-| `placeholder` | string | `"YYYY.MM.DD"` | input placeholder |
-| `readonly` | bool | `true` | `false` 면 readonly 속성 제외 (직접 입력 가능) |
-| `sronly` | string | `""` | 캘린더 버튼의 sr-only 텍스트 커스텀 |
-| `style` | string | `""` | input 인라인 style (예: `"width:200px"`) |
-| `year` | number | `2026` | 표시할 연도 |
-| `month` | number | `4` | 표시할 월 (1~12) |
+| 파라미터      | 타입   | 기본값         | 설명                                                                                 |
+| ------------- | ------ | -------------- | ------------------------------------------------------------------------------------ |
+| `title`       | string | `"날짜"`       | input 의 `title` 속성. `sronly` 미지정 시 sr-only 텍스트로도 사용 (`"{title} 선택"`) |
+| `value`       | string | `""`           | 초기값 (예: `"2026.04.20"`)                                                          |
+| `placeholder` | string | `"YYYY.MM.DD"` | input placeholder                                                                    |
+| `readonly`    | bool   | `true`         | `false` 면 readonly 속성 제외 (직접 입력 가능)                                       |
+| `sronly`      | string | `""`           | 캘린더 버튼의 sr-only 텍스트 커스텀                                                  |
+| `style`       | string | `""`           | input 인라인 style (예: `"width:200px"`)                                             |
+| `year`        | number | `2026`         | 표시할 연도                                                                          |
+| `month`       | number | `4`            | 표시할 월 (1~12)                                                                     |
 
 **예시:**
 
@@ -228,8 +227,8 @@ KRDS 캘린더 datepicker 한 개를 출력합니다.
   {{ datepicker(title="종료일", value="2026.04.24") }}
 </div>
 
-{# 테이블 셀 내부에서 좁게 #}
-{{ datepicker(placeholder="YYYY-MM-DD", readonly=false, sronly="달력 선택", style="width:200px;") }}
+{# 테이블 셀 내부에서 좁게 #} {{ datepicker(placeholder="YYYY-MM-DD", readonly=false, sronly="달력 선택",
+style="width:200px;") }}
 ```
 
 > 캘린더 본체(달력 표)는 4월 레이아웃 기준으로 출력됩니다. 사용자가 다른 달로 이동하면 `ui.js` 가 클릭 시점에 동적으로 갱신하므로 초기 표시만 차이가 있습니다.
@@ -268,12 +267,12 @@ KRDS 캘린더 datepicker 한 개를 출력합니다.
 
 서브 페이지는 도메인 약어 + 일련번호 형식을 사용합니다. 파일명 접두어로 `currentSection` 이 자동 결정됩니다.
 
-| 접두어 | 영역 | `currentSection` | 예시 |
-|---|---|---|---|
-| `FE_SE_` | 자체평가 (Self-Evaluation) | `self-eval` | `FE_SE_0001.html` ~ `FE_SE_0024.html` |
-| `FE_EV_` | 평가관리 (Evaluation) | `eval-mgmt` | `FE_EV_0001.html` ~ `FE_EV_0030.html` |
-| `FE_NT_` | 알림마당 (Notice) | `notice` | `FE_NT_0001.html` ~ `FE_NT_0014.html` |
-| `FE_MY_` | 마이페이지 (My) | `mypage` | `FE_MY_0001.html` ~ `FE_MY_0003.html` |
+| 접두어   | 영역                       | `currentSection` | 예시                                  |
+| -------- | -------------------------- | ---------------- | ------------------------------------- |
+| `FE_SE_` | 자체평가 (Self-Evaluation) | `self-eval`      | `FE_SE_0001.html` ~ `FE_SE_0024.html` |
+| `FE_EV_` | 평가관리 (Evaluation)      | `eval-mgmt`      | `FE_EV_0001.html` ~ `FE_EV_0030.html` |
+| `FE_NT_` | 알림마당 (Notice)          | `notice`         | `FE_NT_0001.html` ~ `FE_NT_0014.html` |
+| `FE_MY_` | 마이페이지 (My)            | `mypage`         | `FE_MY_0001.html` ~ `FE_MY_0003.html` |
 
 파생 페이지는 `-1`, `-2` 등 하이픈 suffix 로 구분합니다 (예: `FE_SE_0001-1.html`).
 
@@ -285,23 +284,27 @@ KRDS 캘린더 datepicker 한 개를 출력합니다.
 
 ```html
 <!-- 이미지 -->
-<img src="/assets/images/icon-logo.svg" alt="로고">
-<img src="/assets/images/sub/step-icon-01.svg" alt="단계 아이콘">
+<img src="/assets/images/icon-logo.svg" alt="로고" />
+<img src="/assets/images/sub/step-icon-01.svg" alt="단계 아이콘" />
 
 <!-- CSS / JS (head.html 에서 처리됨) -->
-<link href="/assets/css/krds.min.css" rel="stylesheet">
+<link href="/assets/css/krds.min.css" rel="stylesheet" />
 <script defer src="/assets/js/ui.js"></script>
 ```
 
 **Don't** ❌
+
 ```html
-<img src="../images/icon-logo.svg">     <!-- 페이지 깊이마다 깨짐 -->
-<img src="images/icon-logo.svg">        <!-- 위와 동일 -->
+<img src="../images/icon-logo.svg" />
+<!-- 페이지 깊이마다 깨짐 -->
+<img src="images/icon-logo.svg" />
+<!-- 위와 동일 -->
 ```
 
 **Do** ✅
+
 ```html
-<img src="/assets/images/icon-logo.svg">
+<img src="/assets/images/icon-logo.svg" />
 ```
 
 ---
@@ -366,6 +369,7 @@ dist/
 ```
 
 **개발팀 전달 시:**
+
 - `dist/` 전체를 압축해서 전달
 - `dist/index.html` 을 루트로 보고 통합 (모든 자산 경로가 절대경로 기준)
 - 파일 단독 더블클릭(`file://`)으로는 절대경로가 풀리지 않으므로, 미리보기는 HTTP 서버로 (`npm run preview` 또는 정적 서버)
@@ -396,15 +400,14 @@ insert_final_newline = true
   "singleQuote": true,
   "trailingComma": "es5",
   "htmlWhitespaceSensitivity": "ignore",
-  "overrides": [
-    { "files": "*.html", "options": { "printWidth": 200 } }
-  ]
+  "overrides": [{ "files": "*.html", "options": { "printWidth": 200 } }]
 }
 ```
 
-- HTML 은 한 줄 제한 200자로 완화 (긴 KRDS 클래스 체인 대응)
+- **HTML 은 Prettier 포매팅 대상에서 제외** — Nunjucks 템플릿 문법(`<li{% if %}>` 같은 태그 내 조건문)을 Prettier HTML 파서가 잘못 인식하기 때문. HTML 은 `.editorconfig` 규칙으로만 관리
+- 포매팅 대상: SCSS, JS, 스크립트, 루트 설정 파일 (`*.json`, `*.md` 등)
 - 적용: `npm run format`
-- 차이만 확인: `npm run format:check`
+- 차이만 확인: `npm run format:check` (CI 에서 실행)
 - 무시 대상은 `.prettierignore` (KRDS minified CSS, ui.js, src.backup 등)
 
 ---

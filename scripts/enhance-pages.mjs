@@ -99,10 +99,7 @@ function enhance(file) {
 
   // currentSection 삽입
   if (section && !txt.includes('{% set currentSection')) {
-    txt = txt.replace(
-      /(\{% set pageTitle = "[^"]*" %\}\n)/,
-      `$1{% set currentSection = "${section}" %}\n`
-    );
+    txt = txt.replace(/(\{% set pageTitle = "[^"]*" %\}\n)/, `$1{% set currentSection = "${section}" %}\n`);
   }
 
   // breadcrumb 매크로 변환
@@ -114,16 +111,16 @@ function enhance(file) {
   const importMatch = txt.match(importRe);
   if (replaced) {
     if (importMatch) {
-      const names = importMatch[1].split(',').map((s) => s.trim()).filter(Boolean);
+      const names = importMatch[1]
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean);
       if (!names.includes('breadcrumb')) {
         names.push('breadcrumb');
         txt = txt.replace(importRe, `{% from "_inc/components.html" import ${names.join(', ')} %}`);
       }
     } else {
-      txt = txt.replace(
-        /(<html lang="ko">\n)/,
-        '$1{% from "_inc/components.html" import breadcrumb %}\n'
-      );
+      txt = txt.replace(/(<html lang="ko">\n)/, '$1{% from "_inc/components.html" import breadcrumb %}\n');
     }
   }
 

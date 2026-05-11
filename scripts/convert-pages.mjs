@@ -61,22 +61,13 @@ function convert(file) {
   const origTitle = titleMatch ? titleMatch[1].trim() : '한국건강가정진흥원';
   const pageTitle = `${name} | ${origTitle.replace(/^한국건강가정진흥원\s*/, '').trim() || '한국건강가정진흥원'}`;
 
-  txt = txt.replace(
-    /<head>[\s\S]*?<\/head>/,
-    `{% set pageTitle = "${pageTitle}" %}\n{% include "_inc/head.html" %}`
-  );
+  txt = txt.replace(/<head>[\s\S]*?<\/head>/, `{% set pageTitle = "${pageTitle}" %}\n{% include "_inc/head.html" %}`);
 
   // 2. <header id="krds-header">...</header>
-  txt = txt.replace(
-    /[ \t]*<header id="krds-header">[\s\S]*?<\/header>/,
-    '  {% include "_inc/header.html" %}'
-  );
+  txt = txt.replace(/[ \t]*<header id="krds-header">[\s\S]*?<\/header>/, '  {% include "_inc/header.html" %}');
 
   // 3. <footer id="footer">...</footer>
-  txt = txt.replace(
-    /[ \t]*<footer id="footer">[\s\S]*?<\/footer>/,
-    '  {% include "_inc/footer.html" %}'
-  );
+  txt = txt.replace(/[ \t]*<footer id="footer">[\s\S]*?<\/footer>/, '  {% include "_inc/footer.html" %}');
 
   // 4. ../images/, ../css/, ../js/ → /assets/...
   txt = txt.replace(/(["'])\.\.\/images\//g, '$1/assets/images/');
@@ -96,10 +87,7 @@ function convert(file) {
 
   // macro import 추가 (datepicker 사용하는 경우만)
   if (hasDatepicker && !txt.includes('import datepicker')) {
-    txt = txt.replace(
-      /(<html lang="ko">\n)/,
-      '$1{% from "_inc/components.html" import datepicker %}\n'
-    );
+    txt = txt.replace(/(<html lang="ko">\n)/, '$1{% from "_inc/components.html" import datepicker %}\n');
   }
 
   writeFileSync(file, txt);
