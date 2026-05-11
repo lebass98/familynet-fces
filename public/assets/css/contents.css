@@ -152,6 +152,11 @@ main .inner {
   flex-direction: column;
   padding: 40px;
   color: #fff;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.18);
+}
+
+.purple-card:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.18);
 }
 
 .purple-card .card-title {
@@ -2470,6 +2475,18 @@ main .inner {
     margin: 0 auto;
   }
 
+  .slogan-wrap .sub-slogan {
+    font-size: 20px;
+  }
+
+  .slogan-wrap .main-slogan {
+    font-size: 48px;
+  }
+
+  .slogan-wrap .desc {
+    font-size: 16px;
+  }
+
   .card-group {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -2486,7 +2503,24 @@ main .inner {
     width: 100%;
     max-width: none;
     height: auto;
-    min-height: 280px;
+    min-height: 214px;
+    padding: 24px 32px;
+  }
+
+  .white-card {
+    padding: 24px 32px;
+  }
+
+  .purple-card .card-title {
+    font-size: 36px;
+  }
+
+  .purple-card .card-desc {
+    font-size: 16px;
+  }
+
+  .white-card .card-title {
+    font-size: 19px;
   }
 
   .notice-card {
@@ -2494,7 +2528,7 @@ main .inner {
     width: 100%;
     max-width: none;
     height: auto;
-    min-height: 280px;
+    min-height: 214px;
   }
 
   .archive-card,
