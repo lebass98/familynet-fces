@@ -430,7 +430,7 @@ main .inner {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap:24px;
+  gap: 24px;
 }
 
 .eval-input-wrap {
@@ -878,10 +878,13 @@ main .inner {
 
 .default-table td.text-left {
   text-align: left;
-  padding-left: 24px;
-  padding-right: 24px;
   white-space: normal;
   word-break: keep-all;
+}
+
+a.file-link {
+  color: #725AA4;
+  text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -2825,6 +2828,16 @@ main .inner {
   cursor: pointer;
 }
 
+.f-select.select-readonly {
+  pointer-events: none;
+  border: 1px solid #C6C6C6;
+  /* 클릭 안됨 */
+  background-color: #F4F4F4;
+  /* 읽기 전용 느낌의 배경색 */
+  user-select: none;
+
+}
+
 .f-btn {
   display: inline-flex;
   align-items: center;
@@ -3180,7 +3193,8 @@ main .inner {
 .faq-header .arrow-icon {
   width: 36px;
   height: 36px;
-  background: url('../images/common/icon-faq-ar.svg'); no-repeat center;
+  background: url('../images/common/icon-faq-ar.svg');
+  no-repeat center;
   transition: transform 0.3s ease;
   margin-left: 20px;
 }
@@ -4648,12 +4662,15 @@ main .inner {
   .write-table>tbody>tr.tablet-row.border-bottom-none {
     border-bottom: none !important;
   }
+
   .write-table>tbody>tr.tablet-row.pt-20 {
-    padding-top:20px !important;
+    padding-top: 20px !important;
   }
+
   .write-table>tbody>tr.tablet-row.pb-20 {
-    padding-bottom:20px !important;
+    padding-bottom: 20px !important;
   }
+
   .write-table>tbody>tr.tablet-row.padding-bottom-none {
     padding-bottom: 0 !important;
   }
