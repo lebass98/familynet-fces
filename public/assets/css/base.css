@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+* {
+    transition: all 0.2s;
+}
+
 body,
 dl,
 dt,
@@ -68,6 +72,9 @@ caption {
 b {
     font-weight: 600;
 }
+:hover {
+    transition: all 0.2s;
+}
 
 img,
 fieldset,
@@ -99,26 +106,11 @@ legend {
 }
 
 a {
-    color: #555;
+    color: inherit;
     text-decoration: none;
     cursor: pointer;
 }
 
-a:link {
-    color: #555;
-}
-
-a:visited {
-    color: inherit;
-}
-
-a:active {
-    color: #555;
-}
-
-a:hover {
-    color: #000;
-}
 input[readonly],
 textarea[readonly] {
   background-color: #F4F4F4;    /* 마우스 커서를 '금지' 모양으로 바꿔 수정 불가 상태임을 강조 */
