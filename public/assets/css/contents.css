@@ -394,7 +394,7 @@ main .inner {
 }
 
 .line-box p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   color: #111;
   line-height: 1.5;
@@ -679,14 +679,13 @@ main .inner {
    ========================================================================== */
 /* Content Area */
 .content-area {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .content-title-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
 }
 
 .content-title {
@@ -790,7 +789,7 @@ main .inner {
 /* Select Box */
 .krds-form-select {
   width: 160px;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23111' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background: #fff url('../images/common/icon-sel-ar-down.svg') no-repeat right 12px center;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -803,7 +802,7 @@ main .inner {
 
 .input-search-wrap {
   position: relative;
-  width: 320px;
+  width: 360px;
 }
 
 .input-search-wrap .krds-input {
@@ -1048,7 +1047,7 @@ main .inner {
   color: #111;
   background-color: #fff;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url('../images/common/icon-sel-ar-down.svg');
   background-repeat: no-repeat;
   background-position: right 10px center;
   cursor: pointer;
@@ -1489,7 +1488,7 @@ main .inner {
   justify-content: flex-start;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
 }
 
 .section-title {
@@ -2003,7 +2002,7 @@ main .inner {
 .eval-result-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 16px;
 }
 
@@ -2054,14 +2053,14 @@ main .inner {
 }
 
 .eval-result-search .select-box select {
-  width: 120px;
+  width: 140px;
   height: 48px;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 0 32px 0 16px;
   font-size: 15px;
   color: #111;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M4.3 5.3l3.7 3.7 3.7-3.7 1 1-4.7 4.7-4.7-4.7z'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background: #fff url('../images/common/icon-sel-ar-down.svg') no-repeat right 12px center;
   appearance: none;
   -webkit-appearance: none;
 }
@@ -2185,6 +2184,12 @@ main .inner {
   background-color: #776C9B;
   color: #FFF;
   font-weight: 600;
+}
+
+.eval-result-pagination .page.active:hover {
+  text-decoration: none !important;
+  font-weight: 600;
+  color: #fff;
 }
 
 .eval-result-pagination .ellipsis {
@@ -2812,7 +2817,7 @@ main .inner {
   border-radius: 6px;
   font-size: 17px;
   color: #111;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7 10L12 15L17 10' stroke='%23111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 12px center / 24px;
+  background: #fff url('../images/common/icon-sel-ar-down.svg') no-repeat right 12px center / 24px;
   appearance: none;
   font-family: 'Pretendard GOV', sans-serif;
   box-sizing: border-box;
@@ -3137,8 +3142,8 @@ main .inner {
 }
 
 .faq-header .q-icon {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 500;
   color: #111;
   margin-right: 40px;
   width: 24px;
@@ -3146,7 +3151,7 @@ main .inner {
 }
 
 .faq-header .category {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   color: #725AA4;
   width: 80px;
@@ -3155,7 +3160,7 @@ main .inner {
 }
 
 .faq-header .subject {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 500;
   color: #111;
   flex: 1;
@@ -3172,9 +3177,9 @@ main .inner {
 }
 
 .faq-header .arrow-icon {
-  width: 24px;
-  height: 24px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23111' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+  width: 36px;
+  height: 36px;
+  background: url('../images/common/icon-faq-ar.svg'); no-repeat center;
   transition: transform 0.3s ease;
   margin-left: 20px;
 }
@@ -3199,21 +3204,20 @@ main .inner {
   padding-top: 40px;
   padding-bottom: 40px;
   opacity: 1;
-  border: 1px solid #E0E0E0;
   border-radius: 16px;
   margin-top: 8px;
 }
 
 .faq-content .a-icon {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 400;
   color: #725AA4;
   width: 24px;
   flex-shrink: 0;
 }
 
 .faq-content .answer-text {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   color: #111;
   flex: 1;
