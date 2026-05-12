@@ -2810,6 +2810,7 @@ a.file-link {
   resize: none;
   box-sizing: border-box;
   line-height: 1.5;
+  vertical-align: top;
 }
 
 .f-textarea::placeholder {
