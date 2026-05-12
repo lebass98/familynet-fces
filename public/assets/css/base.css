@@ -272,8 +272,10 @@ textarea[readonly] {
     white-space: nowrap !important;
 }
 
-.bg-f8_font-w700 {
+.bg-f8 {
     background-color: #f8f8f8;
+}
+.font-w700 {
     font-weight: 700;
 }
 
