@@ -7605,7 +7605,6 @@ legend {
     padding-top: var(--krds-gap-3);
     padding-bottom: var(--krds-gap-3);
     padding: 0 20px;
-    border-bottom: var(--krds-light-border-width-static-regular) solid var(--krds-light-color-divider-gray-light);
   }
 
   #krds-header .header-container .header-utility {

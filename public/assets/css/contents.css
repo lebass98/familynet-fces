@@ -2507,12 +2507,13 @@ box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.28);
     width: 100%;
     max-width: none;
     height: auto;
-    min-height: 214px;
+    min-height: 200px;
     padding: 24px 32px;
   }
 
   .white-card {
-    padding: 24px 32px;
+    padding: 30px 32px;
+    height:186px;
   }
 
   .purple-card .card-title {
@@ -2532,7 +2533,7 @@ box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.28);
     width: 100%;
     max-width: none;
     height: auto;
-    min-height: 214px;
+    min-height: 200px;
   }
 
   .archive-card,
