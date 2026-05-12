@@ -253,6 +253,11 @@ textarea[readonly] {
 .justify-end {
     justify-content: flex-end !important;
 }
+.text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap !important;
+}
 
 @media screen and (max-width: 1024px) {
     .tablet_justify-start {
