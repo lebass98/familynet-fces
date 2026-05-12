@@ -4569,3 +4569,34 @@ box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.28);
   color: #725AA4;
   border: 1px solid #E6E0F8;
 }
+
+/* 메인 페이지 카드 버튼 호버 시 아이콘 교체
+   - 공지사항 .btn-more     → icon-main-card-more.svg (보라 헥사곤 + 흰 +)
+   - 자료실/FAQ/Q&A .btn-go → icon-main-card-ar.svg   (보라 헥사곤 + 흰 화살표) */
+.notice-card .btn-more,
+.archive-card .btn-go,
+.faq-card .btn-go,
+.qna-card .btn-go {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: background-image 0.15s ease;
+}
+
+.notice-card:hover .btn-more,
+.notice-card:focus-within .btn-more {
+  background-image: url('../images/main/icon-main-card-more.svg');
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+
+.archive-card:hover .btn-go,
+.archive-card:focus-within .btn-go,
+.faq-card:hover .btn-go,
+.faq-card:focus-within .btn-go,
+.qna-card:hover .btn-go,
+.qna-card:focus-within .btn-go {
+  background-image: url('../images/main/icon-main-card-ar.svg');
+  background-color: transparent;
+  background-size: 100% 100%;
+}
