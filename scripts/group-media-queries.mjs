@@ -48,7 +48,10 @@ while (i < src.length) {
   i++;
 }
 
-let body = out.join('').replace(/\n{3,}/g, '\n\n').trimEnd();
+let body = out
+  .join('')
+  .replace(/\n{3,}/g, '\n\n')
+  .trimEnd();
 
 const grouped =
   '\n\n' +

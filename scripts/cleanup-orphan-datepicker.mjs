@@ -60,7 +60,9 @@ console.log(`- 정리 완료: ${cleaned.length}개`);
 console.log(`- 매치 안됨(고아 있으나 패턴 다름): ${noMatch.length}개`);
 
 for (const r of cleaned) {
-  console.log(`  ✓ ${relative(process.cwd(), r.file)} — 고아 ${r.removed}개 제거 (남은 calendar-body: ${r.bodyCountAfter})`);
+  console.log(
+    `  ✓ ${relative(process.cwd(), r.file)} — 고아 ${r.removed}개 제거 (남은 calendar-body: ${r.bodyCountAfter})`
+  );
 }
 for (const r of noMatch) {
   console.log(`  ! ${relative(process.cwd(), r.file)} — calendar-body ${r.bodyCountBefore}개 잔존 (수동 점검 필요)`);
