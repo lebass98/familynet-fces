@@ -123,8 +123,16 @@ textarea[readonly] {
     margin-top: 0 !important;
 }
 
+.mt-8 {
+    margin-top: 8px !important;
+}
+
 .mt-10 {
     margin-top: 10px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
 }
 
 .mt-20 {

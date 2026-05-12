@@ -388,9 +388,9 @@ main .inner {
 
 .line-box {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px 24px;
+  border: 1px solid #C6C6C6;
+  border-radius: 12px;
+  padding: 24px;
 }
 
 .line-box p {
@@ -429,13 +429,14 @@ main .inner {
 .eval-flex-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap:24px;
 }
 
 .eval-input-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .input-unit-wrap {
@@ -474,7 +475,7 @@ main .inner {
 
 .info-calc-label {
   width: 120px;
-  font-size: 18px;
+  font-size: 24px;
   color: #725aa4;
   text-align: center;
   font-weight: 600;
@@ -506,7 +507,7 @@ main .inner {
 
 .info-eval-label {
   width: 120px;
-  font-size: 18px;
+  font-size: 24px;
   color: #725aa4;
   margin-top: 9px;
   text-align: center;
@@ -533,7 +534,7 @@ main .inner {
   margin-bottom: 8px;
   color: #111;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .text-guide {
