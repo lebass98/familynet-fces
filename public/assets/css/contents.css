@@ -2401,9 +2401,9 @@ a.file-link {
   left: 16px;
   background-color: #725AA4;
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 500;
-  padding: 0 4px;
+  padding: 2px 4px;
   min-width: 16px;
   height: 16px;
   border-radius: 99px;
@@ -2531,12 +2531,13 @@ a.file-link {
 }
 
 .view-header .info-item dt {
-  color: #222;
+  color: #454545;
   flex-shrink: 0;
 }
 
 .view-header .info-item dd {
   font-weight: 400;
+  color:#111;
 }
 
 .view-header .separator {
@@ -2609,13 +2610,13 @@ a.file-link {
 }
 
 .nav-item .nav-label {
-  width: 140px;
+  padding-left:30px;
+  padding-right:30px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
-  color: #222;
-  background-color: #fcfcfc;
+  color: #545454;
   height: 100%;
 }
 
@@ -2623,7 +2624,7 @@ a.file-link {
   flex: 1;
   padding: 0 24px;
   font-size: 17px;
-  color: #111;
+  color: #333;
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
@@ -2715,7 +2716,7 @@ a.file-link {
 
 /* 답변 섹션 (Objection Answer) */
 .answer-section {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 .answer-section .answer-title-wrap {

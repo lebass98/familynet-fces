@@ -823,7 +823,7 @@ button.swiper-pagination-bullet {
   --krds-color-light-gray-70: #464c53;
   --krds-color-light-gray-80: #33363d;
   --krds-color-light-gray-90: #1e2124;
-  --krds-color-light-gray-95: #131416;
+  --krds-color-light-gray-95: #111111;
   --krds-color-light-gray-100: #000000;
   --krds-color-light-alpha-black100: #000000;
   --krds-color-light-alpha-black75: #000000bf;
@@ -1081,7 +1081,7 @@ button.swiper-pagination-bullet {
   --krds-light-color-divider-gray-darker: var(--krds-color-light-gray-90);
   --krds-light-color-divider-point: var(--krds-color-light-point-50);
   --krds-light-color-text-bolder: var(--krds-color-light-gray-95);
-  --krds-light-color-text-subtle: var(--krds-color-light-gray-70);
+  --krds-light-color-text-subtle: var(--krds-color-light-gray-95);
   --krds-light-color-text-disabled: var(--krds-color-light-gray-40);
   --krds-light-color-text-disabled-on: var(--krds-color-light-gray-50);
   --krds-light-color-text-primary: var(--krds-color-light-primary-60);
