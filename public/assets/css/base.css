@@ -72,6 +72,7 @@ caption {
 b {
     font-weight: 600;
 }
+
 :hover {
     transition: all 0.2s;
 }
@@ -113,7 +114,8 @@ a {
 
 input[readonly],
 textarea[readonly] {
-  background-color: #F4F4F4;    /* 마우스 커서를 '금지' 모양으로 바꿔 수정 불가 상태임을 강조 */
+    background-color: #F4F4F4;
+    /* 마우스 커서를 '금지' 모양으로 바꿔 수정 불가 상태임을 강조 */
 }
 
 /* Common Margin Utilities */
@@ -243,9 +245,25 @@ textarea[readonly] {
 .flex-direction-col {
     flex-direction: column !important;
 }
+
 .border-left-none {
-    border-left:none !important;
+    border-left: none !important;
 }
+
 .justify-end {
     justify-content: flex-end !important;
 }
+
+@media screen and (max-width: 1024px) {
+    .tablet_justify-start {
+        justify-content: flex-start !important;
+    }
+    .tablet_pb-0 {
+        padding-bottom:0 !important;
+    }
+    .tablet_pt-0 {
+        padding-top:0 !important;
+    }
+    .tablet_border-bt-none {
+        border-bottom:none !important;
+    }
