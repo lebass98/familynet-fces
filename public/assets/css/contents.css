@@ -674,6 +674,10 @@ main .inner {
 .stepper li:last-child::after {
   display: none;
 }
+.list-info .total {
+  font-size:20px;
+  color:#111;
+}
 
 /* ==========================================================================
    [3] 검색, 필터 및 폼 요소 (Search, Filter & Form Inputs)

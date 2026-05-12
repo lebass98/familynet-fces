@@ -265,22 +265,31 @@ textarea[readonly] {
 .justify-end {
     justify-content: flex-end !important;
 }
+
 .text-overflow {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap !important;
 }
 
+.bg-f8_font-w700 {
+    background-color: #f8f8f8;
+    font-weight: 700;
+}
+
 @media screen and (max-width: 1024px) {
     .tablet_justify-start {
         justify-content: flex-start !important;
     }
+
     .tablet_pb-0 {
-        padding-bottom:0 !important;
+        padding-bottom: 0 !important;
     }
+
     .tablet_pt-0 {
-        padding-top:0 !important;
+        padding-top: 0 !important;
     }
+
     .tablet_border-bt-none {
-        border-bottom:none !important;
+        border-bottom: none !important;
     }
