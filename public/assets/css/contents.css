@@ -110,14 +110,14 @@ main .inner {
 .sub-slogan {
   font-size: 24px;
   font-weight: 600;
-  color: #1d1d1d;
+  color: #111;
   margin-bottom: 12px;
 }
 
 .main-slogan {
   font-size: 64px;
   font-weight: 700;
-  color: #1d1d1d;
+  color: #111;
   margin-bottom: 30px;
   letter-spacing: -0.02em;
 }
@@ -125,7 +125,7 @@ main .inner {
 .desc {
   font-size: 17px;
   line-height: 1.5;
-  color: #1D1D1D;
+  color: #111;
   opacity: 0.9;
 }
 
@@ -196,7 +196,7 @@ main .inner {
 }
 
 .white-card .card-title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
   color: #1d1d1d;
 }
@@ -216,7 +216,7 @@ main .inner {
 .btn-more {
   width: 32px;
   height: 32px;
-  background: #f1f3f5 url('../images/main/ico-plus.svg') no-repeat center center;
+  background: url('../images/main/ico-plus.svg') no-repeat center center;
   border-radius: 50%;
 }
 
@@ -267,7 +267,7 @@ main .inner {
 .btn-go {
   width: 32px;
   height: 32px;
-  background: #f1f3f5 url('../images/main/ico-arrow.svg') no-repeat center center;
+  background: url('../images/main/ico-arrow.svg') no-repeat center center;
   border-radius: 50%;
   position: absolute;
   top: 30px;
@@ -674,9 +674,10 @@ main .inner {
 .stepper li:last-child::after {
   display: none;
 }
+
 .list-info .total {
-  font-size:20px;
-  color:#111;
+  font-size: 20px;
+  color: #111;
 }
 
 /* ==========================================================================
@@ -1371,6 +1372,9 @@ a.file-link {
 
 .modal-table td .link {
   color: #111;
+}
+
+.modal-table td .link:hover {
   text-decoration: underline;
 }
 
@@ -1491,14 +1495,6 @@ a.file-link {
 }
 
 /* 섹션 타이틀 & 필수 표시 텍스트 */
-.section-title-wrap {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 17px;
-}
-
 .section-title {
   font-size: 24px;
   font-weight: 700;
@@ -2537,7 +2533,7 @@ a.file-link {
 
 .view-header .info-item dd {
   font-weight: 400;
-  color:#111;
+  color: #111;
 }
 
 .view-header .separator {
@@ -2610,8 +2606,8 @@ a.file-link {
 }
 
 .nav-item .nav-label {
-  padding-left:30px;
-  padding-right:30px;
+  padding-left: 30px;
+  padding-right: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3305,10 +3301,10 @@ a.file-link {
 
 .section-title-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
   margin-bottom: 16px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .notice-text {
