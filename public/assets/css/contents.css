@@ -4522,7 +4522,6 @@ a.file-link {
 
   .f-textarea {
     font-size: 15px;
-    height: 300px !important;
   }
 
   /* 입력 테이블 스택 레이아웃 (Tablet & Mobile) */
@@ -4582,15 +4581,13 @@ a.file-link {
   }
 
   .view-btn-group .f-btn {
-    flex: 1;
     height: 48px;
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .f-textarea {
-    height: 250px !important;
   }
 
   .file-upload-group .file-item {
@@ -4671,16 +4668,17 @@ a.file-link {
 
 @media screen and (max-width: 1024px) {
   .section-title {
-    align-items: center;
-    gap: 4px;
-    flex-direction: row;
   }
 
+  .section-title .title-sub-text br {
+    display: none;
+  }
   .title-sub-text {
-    display: block;
-    width: 100%;
     margin-left: 22px;
-    margin-top: 4px;
+  }
+  .write-table>thead>tr>th {
+    background-color:#fff;
+    border:none;
   }
 }
 
