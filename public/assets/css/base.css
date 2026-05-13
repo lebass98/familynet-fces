@@ -175,6 +175,11 @@ textarea[readonly] {
     margin-bottom: 0 !important;
 }
 
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
+
 .mb-10 {
     margin-bottom: 10px !important;
 }

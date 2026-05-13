@@ -2127,8 +2127,8 @@ a.file-link {
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
-  color: #6C30DA;
-  background-color: #F0EAFB;
+  color: #725AA4;
+  background-color: #E0D9F0;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -2140,8 +2140,8 @@ a.file-link {
 
 .btn-result.disabled,
 .btn-result:disabled {
-  color: #999;
-  background-color: #F5F5F5;
+  color: #A0A0A0;
+  background-color: #EAEAEA;
   cursor: not-allowed;
 }
 
@@ -3548,7 +3548,7 @@ a.file-link {
    [추가] 서브 페이지 공통 스타일 (인라인 스타일 대체)
    ========================================================================== */
 .eval-title-desc {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
   font-weight: 400;
   margin-left: 12px;
