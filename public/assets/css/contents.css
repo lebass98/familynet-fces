@@ -4960,3 +4960,11 @@ a.file-link {
     flex: 0 0 auto !important;
   }
 }
+@media screen and (max-width: 1024px) {
+  /* content-title-wrap 안에 content-title 가 있을 때 세로 정렬 */
+  .content-title-wrap:has(.content-title) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
