@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-  {% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination %} {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "self-eval" %} {% include
+  {% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination, search_filter, filter_daterange, filter_select, filter_select_keyword %} {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "self-eval" %} {% include
   "_inc/head.html" %}
 
   <body>
@@ -30,34 +30,10 @@
         <div class="content-area">
           <div class="content-title-wrap">
             <h3 class="content-title"><img src="/assets/images/common/icon-subtit-dot.svg" alt="" />평가선택</h3>
-            <div class="eval-result-search">
-              <div class="search-item">
-                <span class="label">평가기간</span>
-                <div class="date-group">
-                  {{ datepicker(title="시작일", value="2026.04.20") }}
-                  <span class="dash">~</span>
-                  {{ datepicker(title="종료일", value="2026.04.24") }}
-                </div>
-              </div>
-              <div class="search-item">
-                <span class="label">진행상태</span>
-                <div class="select-box">
-                  <select title="진행상태 선택">
-                    <option>전체</option>
-                    <option>미평가</option>
-                    <option>진행중</option>
-                    <option>보완요청</option>
-                    <option>평가완료</option>
-                  </select>
-                </div>
-                <div class="search-keyword">
-                  <div class="input-search-wrap">
-                    <input type="text" class="krds-input" placeholder="평가명을 검색해주세요." title="검색어 입력" />
-                    <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                        {% call search_filter() %}
+              {{ filter_daterange("평가기간", "2026.04.20", "2026.04.24") }}
+              {{ filter_select_keyword("진행상태", ["전체", "미평가", "진행중", "보완요청", "평가완료"], "평가명을 검색해주세요.") }}
+            {% endcall %}
           </div>
 
           <div class="default-table-wrap">

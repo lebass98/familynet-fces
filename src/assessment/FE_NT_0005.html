@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-  {% from "_inc/components.html" import breadcrumb, pagination %} {% set pageTitle = "알림마당 - FAQ | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "notice" %} {% include "_inc/head.html" %}
+  {% from "_inc/components.html" import breadcrumb, pagination, search_filter, filter_daterange, filter_select, filter_select_keyword %} {% set pageTitle = "알림마당 - FAQ | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "notice" %} {% include "_inc/head.html" %}
 
   <body>
     {% include "_inc/header.html" %}
@@ -20,30 +20,10 @@
               <strong>40</strong>
               건
             </div>
-            <div class="eval-result-search">
-              <div class="search-item">
-                <span class="label">문의유형</span>
-                <div class="select-box">
-                  <select title="문의유형 선택">
-                    <option>전체</option>
-                  </select>
-                </div>
-              </div>
-              <div class="search-item">
-                <span class="label">검색구분</span>
-                <div class="select-box">
-                  <select title="검색구분 선택">
-                    <option>전체</option>
-                  </select>
-                </div>
-                <div class="search-keyword">
-                  <div class="input-search-wrap">
-                    <input type="text" class="krds-input" placeholder="검색어를 입력해 주세요." title="검색어 입력" />
-                    <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                        {% call search_filter() %}
+              {{ filter_select("문의유형", ["전체"]) }}
+              {{ filter_select_keyword("검색구분", ["전체"], "검색어를 입력해 주세요.") }}
+            {% endcall %}
           </div>
 
           <ul class="faq-list">

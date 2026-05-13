@@ -178,3 +178,64 @@
   </div>
 </div>
 {% endmacro %}
+
+
+{# ============================================
+   검색 필터 (eval-result-search)
+   사용 예:
+     {% call search_filter() %}
+       {{ filter_daterange("평가기간", "2026.04.20", "2026.04.24") }}
+       {{ filter_select_keyword("진행상태", ["전체","평가중","평가완료"], "평가명을 검색해주세요.") }}
+     {% endcall %}
+   ============================================ #}
+{% macro search_filter() %}
+<div class="eval-result-search">
+{{ caller() }}
+</div>
+{% endmacro %}
+
+{# 날짜 범위 필터 항목 #}
+{% macro filter_daterange(label, startValue, endValue, startTitle="시작일", endTitle="종료일") %}
+<div class="search-item">
+  <span class="label">{{ label }}</span>
+  <div class="date-group">
+    {{ datepicker(title=startTitle, value=startValue) }}
+    <span class="dash">~</span>
+    {{ datepicker(title=endTitle, value=endValue) }}
+  </div>
+</div>
+{% endmacro %}
+
+{# 셀렉트 박스 필터 항목 (키워드 검색 없음) #}
+{% macro filter_select(label, options) %}
+<div class="search-item">
+  <span class="label">{{ label }}</span>
+  <div class="select-box">
+    <select title="{{ label }} 선택">
+      {% for opt in options %}
+      <option>{{ opt }}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>
+{% endmacro %}
+
+{# 셀렉트 박스 + 키워드 검색 필터 항목 #}
+{% macro filter_select_keyword(label, options, placeholder="검색어를 입력해주세요.") %}
+<div class="search-item">
+  <span class="label">{{ label }}</span>
+  <div class="select-box">
+    <select title="{{ label }} 선택">
+      {% for opt in options %}
+      <option>{{ opt }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="search-keyword">
+    <div class="input-search-wrap">
+      <input type="text" class="krds-input" placeholder="{{ placeholder }}" title="검색어 입력" />
+      <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+    </div>
+  </div>
+</div>
+{% endmacro %}
