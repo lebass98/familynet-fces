@@ -410,6 +410,11 @@ main .inner {
   margin-top: 4px;
 }
 
+.box-body p {
+  font-size:16px;
+  color:#111;
+  line-height:1.5;
+}
 .gray-box {
   background-color: #f8f8fa;
   border-radius: 16px;
