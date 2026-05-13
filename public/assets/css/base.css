@@ -279,6 +279,10 @@ textarea[readonly] {
     border-left: none !important;
 }
 
+.border-bottom-none {
+    border-bottom: none !important;
+}
+
 .justify-end {
     justify-content: flex-end !important;
 }
