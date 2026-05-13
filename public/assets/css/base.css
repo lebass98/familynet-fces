@@ -284,8 +284,12 @@ textarea[readonly] {
     background-color: #f8f8f8;
 }
 
+.font-w600 {
+    font-weight: 600 !important;
+}
+
 .font-w700 {
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .min-w110 {
