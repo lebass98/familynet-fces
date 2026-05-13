@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-{% from "_inc/components.html" import datepicker, breadcrumb, stepper %}
+{% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination %}
 
 {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
 {% set currentSection = "self-eval" %}
@@ -178,62 +178,7 @@
                     </table>
                 </div>
 
-                <div class="eval-result-pagination">
-                    <button type="button" class="btn-page first"><span class="sr-only">처음 페이지</span></button>
-                    <button type="button" class="btn-page prev"><span class="sr-only">이전 페이지</span></button>
-                    <div class="pages">
-                        <button type="button" class="page active">1</button>
-                        <button type="button" class="page">2</button>
-                        <button type="button" class="page">3</button>
-                        <button type="button" class="page">4</button>
-                        <button type="button" class="page">5</button>
-                        <button type="button" class="page">6</button>
-                        <button type="button" class="page">7</button>
-                        <button type="button" class="page">8</button>
-                        <button type="button" class="page">9</button>
-                        <button type="button" class="page">10</button>
-                    </div>
-                    <button type="button" class="btn-page next"><span class="sr-only">다음 페이지</span></button>
-                    <button type="button" class="btn-page last"><span class="sr-only">마지막 페이지</span></button>
-                </div>
-
-                <!-- 상세 테이블 영역: 모바일 반응형 가로 스크롤을 위한 wrap 추가 -->
-                <div class="modal-detail-table-wrap">
-                    <table class="modal-detail-table">
-                        <caption>보완 요청 상세 내용</caption>
-                        <colgroup>
-                            <col width="160px" />
-                            <col />
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">제목</th>
-                                <td>증빙자료 일부 누락되었습니다.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">평가자</th>
-                                <td>홍**평가자</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">유형</th>
-                                <td>자료누락</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">보완요청일</th>
-                                <td>2026.03.02</td>
-                            </tr>
-                            <tr class="content-row">
-                                <th scope="row">내용</th>
-                                <td>
-                                    증빙자료 일부 누락되었습니다.<br>
-                                    특히 1-1-2 항목 관련 자료를 보완해주세요.<br><br>
-                                    또한 사업계획서 최신본으로 수정 바랍니다.
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                {{ pagination(current=1, total=10) }}
             <div class="modal-footer">
                 <button type="button" class="btn-modal-close">닫기</button>
             </div>

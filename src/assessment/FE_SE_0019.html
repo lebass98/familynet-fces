@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-{% from "_inc/components.html" import datepicker, breadcrumb %}
+{% from "_inc/components.html" import datepicker, breadcrumb, pagination %}
 
 {% set pageTitle = "자체평가 - 평가결과 | 한국건강가정진흥원 평가시스템" %}
 {% set currentSection = "self-eval" %}
@@ -116,21 +116,7 @@
                     </table>
                 </div>
 
-                <div class="eval-result-pagination">
-                    <button type="button" class="btn-page first"><span class="sr-only">처음 페이지</span></button>
-                    <button type="button" class="btn-page prev"><span class="sr-only">이전 페이지</span></button>
-                    <div class="pages">
-                        <button type="button" class="page">1</button>
-                        <button type="button" class="page active" aria-current="page">2</button>
-                        <button type="button" class="page">3</button>
-                        <span class="ellipsis">...</span>
-                        <button type="button" class="page">9</button>
-                        <button type="button" class="page">10</button>
-                    </div>
-                    <button type="button" class="btn-page next"><span class="sr-only">다음 페이지</span></button>
-                    <button type="button" class="btn-page last"><span class="sr-only">마지막 페이지</span></button>
-                </div>
-            </div>
+                {{ pagination(current=2, total=10) }}
 
     </main>
 

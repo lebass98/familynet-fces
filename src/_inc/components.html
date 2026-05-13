@@ -23,18 +23,31 @@
 </nav>
 {% endmacro %}
 
-{# pagination: current = 현재 페이지(1-base), total = 총 페이지 수 #}
+{# pagination
+   current : 현재 페이지 (1-base)
+   total   : 총 페이지 수
+   표시 규칙: total <= 5 이면 전체 표시, 그 외에는 1,2,3,...,total-1,total #}
 {% macro pagination(current=1, total=10) %}
 <div class="eval-result-pagination">
-  <button type="button" class="btn-pagination first"{% if current == 1 %} disabled{% endif %}><span class="sr-only">처음</span></button>
-  <button type="button" class="btn-pagination prev"{% if current == 1 %} disabled{% endif %}><span class="sr-only">이전</span></button>
-  <ul class="page-list">
-    {% for n in range(1, total + 1) %}
-    <li><button type="button"{% if n == current %} class="active" aria-current="page"{% endif %}>{{ n }}</button></li>
-    {% endfor %}
-  </ul>
-  <button type="button" class="btn-pagination next"{% if current == total %} disabled{% endif %}><span class="sr-only">다음</span></button>
-  <button type="button" class="btn-pagination last"{% if current == total %} disabled{% endif %}><span class="sr-only">마지막</span></button>
+  <button type="button" class="btn-page first"{% if current == 1 %} disabled{% endif %}><span class="sr-only">처음 페이지</span></button>
+  <button type="button" class="btn-page prev"{% if current == 1 %} disabled{% endif %}><span class="sr-only">이전 페이지</span></button>
+  <div class="pages">
+    {%- if total <= 5 -%}
+      {% for i in range(1, total + 1) %}
+      <button type="button" class="page{% if i == current %} active{% endif %}"{% if i == current %} aria-current="page"{% endif %}>{{ i }}</button>
+      {% endfor %}
+    {%- else -%}
+      {% for i in [1, 2, 3] %}
+      <button type="button" class="page{% if i == current %} active{% endif %}"{% if i == current %} aria-current="page"{% endif %}>{{ i }}</button>
+      {% endfor %}
+      <span class="ellipsis">...</span>
+      {% for i in [total - 1, total] %}
+      <button type="button" class="page{% if i == current %} active{% endif %}"{% if i == current %} aria-current="page"{% endif %}>{{ i }}</button>
+      {% endfor %}
+    {%- endif -%}
+  </div>
+  <button type="button" class="btn-page next"{% if current == total %} disabled{% endif %}><span class="sr-only">다음 페이지</span></button>
+  <button type="button" class="btn-page last"{% if current == total %} disabled{% endif %}><span class="sr-only">마지막 페이지</span></button>
 </div>
 {% endmacro %}
 
