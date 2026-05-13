@@ -25,7 +25,7 @@
 
 {# pagination: current = 현재 페이지(1-base), total = 총 페이지 수 #}
 {% macro pagination(current=1, total=10) %}
-<div class="krds-pagination">
+<div class="eval-result-pagination">
   <button type="button" class="btn-pagination first"{% if current == 1 %} disabled{% endif %}><span class="sr-only">처음</span></button>
   <button type="button" class="btn-pagination prev"{% if current == 1 %} disabled{% endif %}><span class="sr-only">이전</span></button>
   <ul class="page-list">
