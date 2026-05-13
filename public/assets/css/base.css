@@ -279,11 +279,81 @@ textarea[readonly] {
 .bg-f8 {
     background-color: #f8f8f8;
 }
+
 .font-w700 {
     font-weight: 700;
 }
+
+.min-w110 {
+    min-width:110px;
+}
 .min-w-auto {
     min-width: auto !important;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.pl-24 {
+    padding-left: 24px !important;
+}
+
+/* 테이블 컬럼 폭 유틸리티 (<col class="col-w-100" /> 형태로 사용) */
+.col-w-100 {
+    width: 100px;
+}
+
+.col-w-120 {
+    width: 120px;
+}
+
+.col-w-150 {
+    width: 150px;
+}
+
+.col-w-200 {
+    width: 200px;
+}
+
+.col-w-246 {
+    width: 246px;
+}
+
+.col-w-300 {
+    width: 300px;
+}
+
+.col-w-auto {
+    width: auto;
+}
+
+.col-w-third {
+    width: 33.33%;
+}
+
+
+/* 보라색 강조 링크 (파일/문서 링크 등) */
+.link-purple {
+    color: #5e4bc8;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
