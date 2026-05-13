@@ -1353,8 +1353,8 @@ a.file-link {
 /* 각 열 너비 (colgroup 대체) */
 .modal-table thead tr th:nth-child(1),
 .modal-table tbody tr td:nth-child(1) {
-  width: 60px;
-  min-width: 60px;
+  width: 100px;
+  min-width: 100px;
   flex-shrink: 0;
 }
 
@@ -1380,36 +1380,65 @@ a.file-link {
 
 .modal-table thead tr th:nth-child(5),
 .modal-table tbody tr td:nth-child(5) {
-  width: 100px;
-  min-width: 100px;
+  width: 240px;
+  min-width: 240px;
   flex-shrink: 0;
 }
 
-.modal-table.horizontal-table tbody tr {
-  display: table-row;
+
+.modal-horizontal-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-.modal-table.horizontal-table tbody th,
-.modal-table.horizontal-table tbody td {
-  display: table-cell;
+.modal-horizontal-table th {
+  background-color: #f8f8f8;
+  height: 60px;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  font-size: 17px;
+  position:relative;
+  text-align:left;
+  font-weight: 500;
+  color: #111;
+  vertical-align: middle;
+  padding: 0 24px;
 }
 
-.modal-table.horizontal-table tbody tr td {
-  width:100%;
-  height: 50px;
-  padding:0 16px;
-  text-align: left;
+.modal-horizontal-table th:first-child {
+  border-left: none;
 }
 
-.modal-table.horizontal-table tbody tr th {
-  width: 180px;
-  min-width:180px;
-  text-align: left;
-  height: 50px;
-  padding:0 16px;
+.modal-horizontal-table th:last-child {
+  border-right: none;
 }
 
+.modal-horizontal-table td:last-child {
+  border-right: none;
+  border-left: 1px solid #e1e1e1;
+}
 
+.modal-horizontal-table td {
+  height: 60px;
+  border: 1px solid #e1e1e1;
+  border-left: none;
+  font-size: 17px;
+  color: #111;
+  font-weight: 400;
+  vertical-align: middle;
+  padding: 12px 20px;
+}
+.modal-horizontal-table tr:last-child th {
+    border-bottom: 1px solid #e0e0e0;
+}
+.modal-horizontal-table th.required::after {
+    content: '*';
+    color: #E63946;
+    margin-left: 4px;
+    font-size: 17px;
+    font-weight: 700;
+}
 
 /* ================================================
    Figma 기반 커스텀 스크롤바 (보라색)

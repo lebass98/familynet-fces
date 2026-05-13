@@ -1,136 +1,138 @@
 <!doctype html>
 <html lang="ko">
-  {% from "_inc/components.html" import breadcrumb, pagination, search_filter, filter_daterange, filter_select, filter_select_keyword %} {% set pageTitle = "알림마당 - FAQ | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "notice" %} {% include "_inc/head.html" %}
+{% from "_inc/components.html" import breadcrumb, pagination, search_filter, filter_daterange, filter_select,
+filter_select_keyword %} {% set pageTitle = "알림마당 - FAQ | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "notice" %} {%
+include "_inc/head.html" %}
 
-  <body>
-    {% include "_inc/header.html" %}
+<body>
+  {% include "_inc/header.html" %}
 
-    <main id="sub-contents">
-      <div class="inner">
-        {{ breadcrumb([["홈"], ["알림마당"], ["FAQ"]]) }}
+  <main id="sub-contents">
+    <div class="inner">
+      {{ breadcrumb([["홈"], ["알림마당"], ["FAQ"]]) }}
 
-        <div class="page-title-wrap">
-          <h2 class="page-title">FAQ</h2>
+      <div class="page-title-wrap">
+        <h2 class="page-title">FAQ</h2>
+      </div>
+
+      <div class="eval-result-wrap">
+        <div class="eval-result-top">
+          <div class="eval-result-total">
+            총
+            <strong>40</strong>
+            건
+          </div>
+          {% call search_filter() %}
+          {{ filter_select("문의유형", ["전체","시스템","자체평가","센터평가","보완요청","결과/등급","자료/증빙","기타"]) }}
+          {{ filter_select_keyword("검색구분", ["전체","제목","내용"], "검색어를 입력해 주세요.") }}
+          {% endcall %}
         </div>
 
-        <div class="eval-result-wrap">
-          <div class="eval-result-top">
-            <div class="eval-result-total">
-              총
-              <strong>40</strong>
-              건
+        <ul class="faq-list">
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">시스템</span>
+              <span class="subject">
+                로그인이 되지 않거나 접속이 원활하지 않습니다.
+                <span class="badge-new">N</span>
+              </span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">
+                본 시스템은 별도의 회원가입 기능이 없으며, 계정은 기관을 통해 발급됩니다.
+                <br />
+                아이디/비밀번호 분실 시 담당자 또는 관리자에게 문의해주시기 바랍니다.
+              </div>
             </div>
-                        {% call search_filter() %}
-              {{ filter_select("문의유형", ["전체"]) }}
-              {{ filter_select_keyword("검색구분", ["전체"], "검색어를 입력해 주세요.") }}
-            {% endcall %}
-          </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">자체평가</span>
+              <span class="subject">아이디 또는 비밀번호를 잊어버렸습니다. 어떻게 해야 하나요?</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">
+                본 시스템은 별도의 회원가입 기능이 없으며, 계정은 기관을 통해 발급됩니다.
+                <br />
+                아이디/비밀번호 분실 시 담당자 또는 관리자에게 문의해주시기 바랍니다. 법인세법 시행령 제39조 및 상속세 및 증여세법 제50조의3에 의거, 국세청의 홈페이지에 게시한 2025년
+                한국건강가정진흥원의 공익법인 결산서류 등(기부금 모집 및 지출내용 포함)을 공개합니다.
+                <br />
+                <br />
+                한국건강가정진흥원은 5월 가정의 달을 계기로, &lt;함께해서 행복한 "우리가족 숏폼" 영상 올리기&gt; 이벤트를 진행합니다.
+                <br />
+                여러분이 소중한 가족과 함께하며 행복을 느끼는 이유는 무엇인가요? 숏폼영상을 구글폼으로 공유해주세요! 추첨을 통해 20가족을 선정하여 경품을 드립니다.
+              </div>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">자체평가</span>
+              <span class="subject">제11회 아시아가족치료학회(AAFT) 연례 학술대회 참석 안내</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">내용이 들어갑니다.</div>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">시스템</span>
+              <span class="subject">[접수] 2026년 국제결혼중개업자 교육 2차 접수(4.22.) 사전안내</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">내용이 들어갑니다.</div>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">자체평가</span>
+              <span class="subject">[사전규격공개] 2026년 가족지원통합정보시스템 기능고도화</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">내용이 들어갑니다.</div>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">시스템</span>
+              <span class="subject">본인인증은 본인확인을 위한 절차로 성명 외 개인정보는 저장되지 않습니다.</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">내용이 들어갑니다.</div>
+            </div>
+          </li>
+          <li class="faq-item">
+            <button type="button" class="faq-header">
+              <span class="q-icon">Q</span>
+              <span class="category">자체평가</span>
+              <span class="subject">가족상담전화 (1577-4206), 다누리콜센터 (1577-1366) 온라인 상담 코너입니다.</span>
+              <span class="arrow-icon"></span>
+            </button>
+            <div class="faq-content">
+              <div class="a-icon">A</div>
+              <div class="answer-text">내용이 들어갑니다.</div>
+            </div>
+          </li>
+        </ul>
 
-          <ul class="faq-list">
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">시스템</span>
-                <span class="subject">
-                  로그인이 되지 않거나 접속이 원활하지 않습니다.
-                  <span class="badge-new">N</span>
-                </span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">
-                  본 시스템은 별도의 회원가입 기능이 없으며, 계정은 기관을 통해 발급됩니다.
-                  <br />
-                  아이디/비밀번호 분실 시 담당자 또는 관리자에게 문의해주시기 바랍니다.
-                </div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">자체평가</span>
-                <span class="subject">아이디 또는 비밀번호를 잊어버렸습니다. 어떻게 해야 하나요?</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">
-                  본 시스템은 별도의 회원가입 기능이 없으며, 계정은 기관을 통해 발급됩니다.
-                  <br />
-                  아이디/비밀번호 분실 시 담당자 또는 관리자에게 문의해주시기 바랍니다. 법인세법 시행령 제39조 및 상속세 및 증여세법 제50조의3에 의거, 국세청의 홈페이지에 게시한 2025년
-                  한국건강가정진흥원의 공익법인 결산서류 등(기부금 모집 및 지출내용 포함)을 공개합니다.
-                  <br />
-                  <br />
-                  한국건강가정진흥원은 5월 가정의 달을 계기로, &lt;함께해서 행복한 "우리가족 숏폼" 영상 올리기&gt; 이벤트를 진행합니다.
-                  <br />
-                  여러분이 소중한 가족과 함께하며 행복을 느끼는 이유는 무엇인가요? 숏폼영상을 구글폼으로 공유해주세요! 추첨을 통해 20가족을 선정하여 경품을 드립니다.
-                </div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">자체평가</span>
-                <span class="subject">제11회 아시아가족치료학회(AAFT) 연례 학술대회 참석 안내</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">내용이 들어갑니다.</div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">시스템</span>
-                <span class="subject">[접수] 2026년 국제결혼중개업자 교육 2차 접수(4.22.) 사전안내</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">내용이 들어갑니다.</div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">자체평가</span>
-                <span class="subject">[사전규격공개] 2026년 가족지원통합정보시스템 기능고도화</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">내용이 들어갑니다.</div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">시스템</span>
-                <span class="subject">본인인증은 본인확인을 위한 절차로 성명 외 개인정보는 저장되지 않습니다.</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">내용이 들어갑니다.</div>
-              </div>
-            </li>
-            <li class="faq-item">
-              <button type="button" class="faq-header">
-                <span class="q-icon">Q</span>
-                <span class="category">자체평가</span>
-                <span class="subject">가족상담전화 (1577-4206), 다누리콜센터 (1577-1366) 온라인 상담 코너입니다.</span>
-                <span class="arrow-icon"></span>
-              </button>
-              <div class="faq-content">
-                <div class="a-icon">A</div>
-                <div class="answer-text">내용이 들어갑니다.</div>
-              </div>
-            </li>
-          </ul>
-
-          {{ pagination(current=2, total=10) }}
+        {{ pagination(current=2, total=10) }}
 
         <script>
           document.addEventListener('DOMContentLoaded', function () {
@@ -155,8 +157,9 @@
           });
         </script>
       </div>
-    </main>
+  </main>
 
-    {% include "_inc/footer.html" %}
-  </body>
+  {% include "_inc/footer.html" %}
+</body>
+
 </html>

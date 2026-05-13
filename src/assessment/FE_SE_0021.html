@@ -18,7 +18,7 @@
               <strong>40</strong>
               건
             </div>
-                        {% call search_filter() %}
+            {% call search_filter() %}
               {{ filter_select("답변상태", ["전체", "대기", "답변완료"]) }}
               {{ filter_select_keyword("검색구분", ["전체", "평가명", "제목"], "검색어를 입력해 주세요.") }}
             {% endcall %}
