@@ -138,14 +138,13 @@ filter_select, filter_select_keyword %} {% set pageTitle = "자체평가 - 평�
             </tbody>
           </table>
         </div>
-
-        <div class="empty-msg">평가 기간이 아닙니다.</div>
       </div>
-
-      {{ pagination(current=1, total=10) }}
 
     </div>
 
+    <div class="view-btn-group">
+      <button type="button" class="f-btn primary large">목록</button>
+    </div>
   </main>
 
   {% include "_inc/footer.html" %}
