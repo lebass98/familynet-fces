@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-{% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination, search_filter, filter_daterange, filter_select, filter_select_keyword %}
+{% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination, search_filter, filter_daterange,
+filter_select, filter_select_keyword %}
 
 {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
 {% set currentSection = "self-eval" %}
 {% include "_inc/head.html" %}
 
 <body>
-  {% include "_inc/header.html" %}
+    {% include "_inc/header.html" %}
 
     <main id="sub-contents">
         <div class="inner">
-      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+            {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
 
             <h2 class="page-title">자체평가</h2>
 
@@ -30,9 +31,9 @@
             <div class="content-area">
                 <div class="content-title-wrap">
                     <h3 class="content-title">1. 평가선택</h3>
-                                        {% call search_filter() %}
-                      {{ filter_daterange("평가기간", "2026.04.20", "2026.04.24") }}
-                      {{ filter_select_keyword("진행상태", ["전체", "미평가", "진행중", "보완요청", "평가완료"], "평가명을 검색해주세요.") }}
+                    {% call search_filter() %}
+                    {{ filter_daterange("평가기간", "2026.04.20", "2026.04.24") }}
+                    {{ filter_select_keyword("진행상태", ["전체", "미평가", "진행중", "보완요청", "평가완료"], "평가명을 검색해주세요.") }}
                     {% endcall %}
                 </div>
 
@@ -103,7 +104,7 @@
     </main>
 
 
-  {% include "_inc/footer.html" %}
+    {% include "_inc/footer.html" %}
     <div class="modal-overlay active">
         <div class="modal-container">
             <div class="modal-header">
@@ -157,11 +158,33 @@
                 </div>
 
                 {{ pagination(current=1, total=10) }}
-            <div class="modal-footer">
-                <button type="button" class="btn-modal-close">닫기</button>
+
+                <div class="modal-table-wrap">
+                    <table class="modal-table horizontal-table">
+                        <colgroup>
+                            <col style="width: 180px;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <caption>보완 요청 목록</caption>
+                        <tbody>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <td scope="col">증빙자료 일부 누락되었습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>자료누락</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-close">닫기</button>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 
