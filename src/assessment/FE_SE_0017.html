@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-{% from "_inc/components.html" import breadcrumb %}
+{% from "_inc/components.html" import breadcrumb, stepper %}
 
 {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
 {% set currentSection = "self-eval" %}
@@ -15,50 +15,7 @@
 
             <h2 class="page-title">자체평가</h2>
 
-            <div class="stepper-wrap">
-                <ol class="stepper">
-                    <li>
-                        <dl class="complete">
-                            <dt>
-                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
-                            </dt>
-                            <dd>평가선택</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="complete">
-                            <dt>
-                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
-                            </dt>
-                            <dd>기관 운영 현황 작성</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="complete">
-                            <dt>
-                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
-                            </dt>
-                            <dd>평가지표 작성</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl class="active">
-                            <dt>
-                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
-                            </dt>
-                            <dd>총평 작성</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <dl>
-                            <dt>
-                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
-                            </dt>
-                            <dd>평가완료</dd>
-                        </dl>
-                    </li>
-                </ol>
-            </div>
+            {{ stepper(["평가선택", "기관 운영 현황 작성", "평가지표 작성", "총평 작성", "평가완료"], active=4) }}
             <div class="content-area">
                 <div class="content-title-wrap">
                     <h3 class="content-title"><img src="/assets/images/common/icon-subtit-dot.svg" />자체평가 결과보고서 의견</h3>
