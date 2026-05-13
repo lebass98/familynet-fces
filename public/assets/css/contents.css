@@ -154,6 +154,9 @@ main .inner {
   color: #fff;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.18);
 }
+.purple-card.v2 {
+  background: url('../images/main/card-self-bg2.jpg') no-repeat center center / cover;
+}
 
 .purple-card:hover {
   box-shadow: 4px 8px 24px 0 rgba(0, 0, 0, 0.28);
