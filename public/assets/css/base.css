@@ -387,3 +387,7 @@ textarea[readonly] {
     .tablet_border-bt-none {
         border-bottom: none !important;
     }
+    .tablet_text-left {
+        text-align: left !important;
+    }
+}

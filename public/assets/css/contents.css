@@ -706,8 +706,9 @@ main .inner {
   background: #e1e1e1;
   z-index: 0;
 }
+
 .stepper li:has(.complete)::after {
-    background: #5E4BC8;
+  background: #5E4BC8;
 }
 
 .stepper li:last-child::after {
@@ -4480,6 +4481,39 @@ a.file-link {
     height: 44px;
     font-size: 15px;
   }
+
+  .eval-result-top {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap:10px;
+  }
+
+  .eval-result-total {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .eval-result-search {
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .eval-result-search .search-item {
+    flex: 1;
+  }
+
+  .eval-result-search .date-group .input-date-wrap {
+    width: auto;
+  }
+
+  .eval-result-search .input-search-wrap {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -4563,6 +4597,7 @@ a.file-link {
 
   .write-table>tbody>tr>td {
     display: block;
+    font-size: 16px;
     width: 100% !important;
     border: none !important;
     padding: 4px 0 10px;
@@ -4584,11 +4619,16 @@ a.file-link {
     height: 48px;
     font-size: 17px;
   }
+
+  .eval-calc-label {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 640px) {
-  .f-textarea {
-  }
+  .f-textarea {}
 
   .file-upload-group .file-item {
     gap: 10px;
@@ -4667,18 +4707,19 @@ a.file-link {
 }
 
 @media screen and (max-width: 1024px) {
-  .section-title {
-  }
+  .section-title {}
 
   .section-title .title-sub-text br {
     display: none;
   }
+
   .title-sub-text {
     margin-left: 22px;
   }
+
   .write-table>thead>tr>th {
-    background-color:#fff;
-    border:none;
+    background-color: #fff;
+    border: none;
   }
 }
 
