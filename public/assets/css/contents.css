@@ -154,8 +154,17 @@ main .inner {
   color: #fff;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.18);
 }
+
 .purple-card.v2 {
   background: url('../images/main/card-self-bg2.jpg') no-repeat center center / cover;
+}
+
+.purple-card.v3-1 {
+  background: url('../images/main/card-self-bg3-1.jpg') no-repeat center center / cover;
+}
+
+.purple-card.v3-2 {
+  background: url('../images/main/card-self-bg3-2.jpg') no-repeat center center / cover;
 }
 
 .purple-card:hover {
@@ -1401,8 +1410,8 @@ a.file-link {
   border: 1px solid #e0e0e0;
   border-bottom: none;
   font-size: 17px;
-  position:relative;
-  text-align:left;
+  position: relative;
+  text-align: left;
   font-weight: 500;
   color: #111;
   vertical-align: middle;
@@ -1432,15 +1441,17 @@ a.file-link {
   vertical-align: middle;
   padding: 12px 20px;
 }
+
 .modal-horizontal-table tr:last-child th {
-    border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
+
 .modal-horizontal-table th.required::after {
-    content: '*';
-    color: #E63946;
-    margin-left: 4px;
-    font-size: 17px;
-    font-weight: 700;
+  content: '*';
+  color: #E63946;
+  margin-left: 4px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
 /* ================================================
