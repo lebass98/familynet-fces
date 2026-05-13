@@ -1268,6 +1268,11 @@ a.file-link {
    파일관리 모달 - thead 고정 + tbody 스크롤
    ======================================== */
 
+.modal-table {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
 .modal-table colgroup {
   display: none;
   /* colgroup은 display:block 모드에서 작동 안 함 → 각 셀에 width 직접 지정 */
@@ -1290,10 +1295,7 @@ a.file-link {
 .modal-table tbody {
   display: block;
   max-height: 260px;
-  overflow-y: auto;
   width: 100%;
-  /* 스크롤 유무와 관계없이 스크롤바 영역을 항상 확보하여 thead와 정렬 유지 */
-  scrollbar-gutter: stable;
 }
 
 .modal-table tbody tr {
@@ -1341,26 +1343,26 @@ a.file-link {
    Figma 기반 커스텀 스크롤바 (보라색)
    track: #EDE9F8 (연보라), thumb: #725AA4 (보라)
    ================================================ */
-.modal-table tbody::-webkit-scrollbar {
+.modal-table::-webkit-scrollbar {
   width: 6px;
 }
 
-.modal-table tbody::-webkit-scrollbar-track {
+.modal-table::-webkit-scrollbar-track {
   background: #EDE9F8;
   border-radius: 10px;
 }
 
-.modal-table tbody::-webkit-scrollbar-thumb {
+.modal-table::-webkit-scrollbar-thumb {
   background: #725AA4;
   border-radius: 10px;
 }
 
-.modal-table tbody::-webkit-scrollbar-thumb:hover {
+.modal-table::-webkit-scrollbar-thumb:hover {
   background: #5E4BC8;
 }
 
 /* Firefox 커스텀 스크롤바 */
-.modal-table tbody {
+.modal-table {
   scrollbar-width: thin;
   scrollbar-color: #725AA4 #EDE9F8;
 }
@@ -1616,8 +1618,7 @@ a.file-link {
 
 .budget-label {
   display: inline-block;
-  min-width: 70px;
-  font-size: 16px;
+  font-size: 17px;
   color: #111;
   font-weight: 500;
   margin-right: 10px;
@@ -1788,6 +1789,7 @@ a.file-link {
   color: #111;
   resize: none;
   box-sizing: border-box;
+  vertical-align: top;
 }
 
 .krds-textarea:focus {
@@ -1801,7 +1803,7 @@ a.file-link {
 
 .custom-tooltip-wrap {
   display: inline-flex;
-  align-items: center;
+  align-items: cen ter;
   justify-content: center;
   gap: 2px;
 }
@@ -1820,12 +1822,13 @@ a.file-link {
   transform: translateX(-50%);
   background-color: #fff;
   border: 1px solid #e1e1e1;
+  text-align: left;
   color: #111;
   padding: 8px 12px;
   font-size: 14px;
   border-radius: 4px;
   white-space: nowrap;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 40px 60px 0 rgba(0, 0, 0, 0.13);
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s;

@@ -282,6 +282,9 @@ textarea[readonly] {
 .font-w700 {
     font-weight: 700;
 }
+.min-w-auto {
+    min-width: auto !important;
+}
 
 @media screen and (max-width: 1024px) {
     .tablet_justify-start {

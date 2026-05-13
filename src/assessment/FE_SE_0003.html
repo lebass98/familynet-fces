@@ -1,17 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-{% from "_inc/components.html" import datepicker, breadcrumb %}
-
-{% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %}
-{% set currentSection = "self-eval" %}
-{% include "_inc/head.html" %}
+{% from "_inc/components.html" import datepicker, breadcrumb %} {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %} {%
+set currentSection = "self-eval" %} {% include
+"_inc/head.html" %}
 
 <body>
-  {% include "_inc/header.html" %}
+    {% include "_inc/header.html" %}
 
     <main id="sub-contents">
         <div class="inner">
-      {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
+            {{ breadcrumb([["홈"], ["자체평가"], ["평가하기"]]) }}
 
             <h2 class="page-title">자체평가</h2>
 
@@ -20,7 +18,7 @@
                     <li>
                         <dl class="complete">
                             <dt>
-                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택">
+                                <img src="/assets/images/sub/step-icon-01.svg" alt="평가선택" />
                             </dt>
                             <dd>평가선택</dd>
                         </dl>
@@ -28,7 +26,7 @@
                     <li>
                         <dl class="active">
                             <dt>
-                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성">
+                                <img src="/assets/images/sub/step-icon-02.svg" alt="기관 운영 현황 작성" />
                             </dt>
                             <dd>기관 운영 현황 작성</dd>
                         </dl>
@@ -36,7 +34,7 @@
                     <li>
                         <dl>
                             <dt>
-                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성">
+                                <img src="/assets/images/sub/step-icon-03.svg" alt="평가지표 작성" />
                             </dt>
                             <dd>평가지표 작성</dd>
                         </dl>
@@ -44,7 +42,7 @@
                     <li>
                         <dl>
                             <dt>
-                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성">
+                                <img src="/assets/images/sub/step-icon-04.svg" alt="총평 작성" />
                             </dt>
                             <dd>총평 작성</dd>
                         </dl>
@@ -52,7 +50,7 @@
                     <li>
                         <dl>
                             <dt>
-                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료">
+                                <img src="/assets/images/sub/step-icon-05.svg" alt="평가완료" />
                             </dt>
                             <dd>평가완료</dd>
                         </dl>
@@ -61,7 +59,10 @@
             </div>
             <div class="content-area">
                 <div class="content-title-wrap">
-                    <h3 class="content-title"><img src="/assets/images/common/icon-subtit-dot.svg" alt="" />기관 운영 현황 작성</h3>
+                    <h3 class="content-title">
+                        <img src="/assets/images/common/icon-subtit-dot.svg" alt="" />
+                        기관 운영 현황 작성
+                    </h3>
                 </div>
 
                 <!-- 센터 정보 입력 섹션 -->
@@ -73,9 +74,9 @@
                     <table class="write-table">
                         <caption>센터 정보 입력 양식</caption>
                         <colgroup>
-                            <col style="width: 150px;">
-                            <col style="width: 150px;">
-                            <col style="width: auto;">
+                            <col style="width: 150px" />
+                            <col style="width: 150px" />
+                            <col style="width: auto" />
                         </colgroup>
                         <tbody>
                             <tr>
@@ -85,34 +86,36 @@
                             <tr>
                                 <th class="required" colspan="2">통합전환연도</th>
                                 <td>
-                                    <select class="krds-form-select" style="width: 200px;">
+                                    <select class="krds-form-select" style="width: 200px">
                                         <option value="">선택하세요.</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="required" colspan="2">개소년월일</th>
-                                <td>
-                                    {{ datepicker(placeholder="YYYY-MM-DD", readonly=false, sronly="달력 선택") }}
-                                </td>
+                                <td>{{ datepicker(placeholder="YYYY-MM-DD", readonly=false, sronly="달력 선택") }}</td>
                             </tr>
                             <tr>
                                 <th class="required" colspan="2">운영형태</th>
                                 <td>
-                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px;">
+                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px">
                                         <label class="eval-radio">
-                                            <input type="radio" name="oper_type" checked>
+                                            <input type="radio" name="oper_type" checked />
                                             <span class="radio-mark">
-                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
-                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt=""
+                                                    class="r-off" />
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt=""
+                                                    class="r-on" />
                                             </span>
                                             <span class="radio-text">직영</span>
                                         </label>
                                         <label class="eval-radio">
-                                            <input type="radio" name="oper_type">
+                                            <input type="radio" name="oper_type" />
                                             <span class="radio-mark">
-                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
-                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt=""
+                                                    class="r-off" />
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt=""
+                                                    class="r-on" />
                                             </span>
                                             <span class="radio-text">위탁운영</span>
                                         </label>
@@ -124,10 +127,12 @@
                                 <td>
                                     <div class="input-group">
                                         <span class="tilde">국비</span>
-                                        <input type="text" class="krds-input text-right" style="width: 150px;" value="0">
+                                        <input type="text" class="krds-input text-right" style="width: 150px"
+                                            value="0" />
                                         <span class="unit">%</span>
-                                        <span class="tilde" style="margin-left: 20px;">지방비</span>
-                                        <input type="text" class="krds-input text-right" style="width: 150px;" value="0">
+                                        <span class="tilde" style="margin-left: 20px">지방비</span>
+                                        <input type="text" class="krds-input text-right" style="width: 150px"
+                                            value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -137,11 +142,14 @@
                                 <td>
                                     <div class="multi-row-wrap">
                                         <div class="input-group">
-                                            <input type="text" class="krds-input" style="width: 200px;" readonly placeholder="우편번호">
+                                            <input type="text" class="krds-input" style="width: 200px" readonly
+                                                placeholder="우편번호" />
                                             <button type="button" class="btn-search-addr">주소검색</button>
                                         </div>
-                                        <input type="text" class="krds-input" style="width: 100%;" readonly placeholder="도로명주소">
-                                        <input type="text" class="krds-input" style="width: 100%;" placeholder="상세주소를 입력해 주세요.">
+                                        <input type="text" class="krds-input" style="width: 100%" readonly
+                                            placeholder="도로명주소" />
+                                        <input type="text" class="krds-input" style="width: 100%"
+                                            placeholder="상세주소를 입력해 주세요." />
                                     </div>
                                 </td>
                             </tr>
@@ -150,13 +158,13 @@
                                 <th class="sub-th">전화</th>
                                 <td>
                                     <div class="input-group">
-                                        <select class="krds-form-select" style="width: 120px;">
+                                        <select class="krds-form-select" style="width: 120px">
                                             <option value="">선택</option>
                                         </select>
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                     </div>
                                 </td>
                             </tr>
@@ -164,39 +172,44 @@
                                 <th class="sub-th">팩스</th>
                                 <td>
                                     <div class="input-group">
-                                        <select class="krds-form-select" style="width: 120px;">
+                                        <select class="krds-form-select" style="width: 120px">
                                             <option value="">선택</option>
                                         </select>
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="required" colspan="2">센터장명</th>
                                 <td>
-                                    <input type="text" class="krds-input" style="width: 300px;" placeholder="센터장명을 입력해주세요.">
+                                    <input type="text" class="krds-input" style="width: 300px"
+                                        placeholder="센터장명을 입력해주세요." />
                                 </td>
                             </tr>
                             <tr>
                                 <th class="required" colspan="2">상근여부</th>
                                 <td>
-                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px;">
+                                    <div class="eval-radio-wrap" style="flex-direction: row; gap: 24px">
                                         <label class="eval-radio">
-                                            <input type="radio" name="work_type" checked>
+                                            <input type="radio" name="work_type" checked />
                                             <span class="radio-mark">
-                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
-                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt=""
+                                                    class="r-off" />
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt=""
+                                                    class="r-on" />
                                             </span>
                                             <span class="radio-text">상근</span>
                                         </label>
                                         <label class="eval-radio">
-                                            <input type="radio" name="work_type">
+                                            <input type="radio" name="work_type" />
                                             <span class="radio-mark">
-                                                <img src="/assets/images/common/icon-radio-off.svg" alt="" class="r-off">
-                                                <img src="/assets/images/common/icon-radio-on.svg" alt="" class="r-on">
+                                                <img src="/assets/images/common/icon-radio-off.svg" alt=""
+                                                    class="r-off" />
+                                                <img src="/assets/images/common/icon-radio-on.svg" alt=""
+                                                    class="r-on" />
                                             </span>
                                             <span class="radio-text">비상근</span>
                                         </label>
@@ -208,13 +221,13 @@
                                 <th class="sub-th">전화</th>
                                 <td>
                                     <div class="input-group">
-                                        <select class="krds-form-select" style="width: 120px;">
+                                        <select class="krds-form-select" style="width: 120px">
                                             <option value="">선택</option>
                                         </select>
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 120px;">
+                                        <input type="text" class="krds-input" style="width: 120px" />
                                     </div>
                                 </td>
                             </tr>
@@ -222,10 +235,10 @@
                                 <th class="sub-th">이메일</th>
                                 <td>
                                     <div class="input-group">
-                                        <input type="text" class="krds-input" style="width: 200px;">
+                                        <input type="text" class="krds-input" style="width: 200px" />
                                         <span class="tilde">@</span>
-                                        <input type="text" class="krds-input" style="width: 200px;">
-                                        <select class="krds-form-select" style="width: 200px;">
+                                        <input type="text" class="krds-input" style="width: 200px" />
+                                        <select class="krds-form-select" style="width: 200px">
                                             <option value="">직접입력</option>
                                         </select>
                                     </div>
@@ -244,31 +257,53 @@
                     <table class="write-table">
                         <caption>센터 현황 입력 양식</caption>
                         <colgroup>
-                            <col style="width: 150px;">
-                            <col style="width: 150px;">
-                            <col style="width: 458px;">
-                            <col style="width: 130px;">
-                            <col style="width: auto;">
+                            <col style="width: 150px" />
+                            <col style="width: 150px" />
+                            <col style="width: 458px" />
+                            <col style="width: 130px" />
+                            <col style="width: auto" />
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th class="required">인력현황</th>
-                                <th class="sub-th">상근직원수</th>
+                                <th class="sub-th">
+                                    <div class="custom-tooltip-wrap">
+                                        <span>상근직원수</span>
+                                        <div class="tooltip-trigger">
+                                            <img src="/assets/images/common/icon-info.svg" alt="도움말"
+                                                style="vertical-align: middle" />
+                                            <div class="tooltip-content">
+                                                상근센터장 포함,<br>별도사업 인력 제외
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
                                 <td colspan="3">
                                     <div class="input-group">
-                                        <input type="text" class="krds-input text-right" style="width: 200px;" value="0">
+                                        <input type="text" class="krds-input text-right" style="width: 200px"
+                                            value="0" />
                                         <span class="unit">명</span>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th class="required" rowspan="2">위탁현황 (직영/위탁)</th>
+                                <th class="required" rowspan="4">위탁현황 (직영/위탁)</th>
                                 <th class="sub-th">법인명</th>
-                                <td>
-                                    <input type="text" class="krds-input" style="width: 100%;" placeholder="법인명을 입력해주세요.">
+                                <td colspan="3">
+                                    <input type="text" class="krds-input" style="width:434px"
+                                        placeholder="법인명을 입력해주세요." />
                                 </td>
-                                <th class="sub-th" style="border-left:1px solid #e0e0e0">위탁기간</th>
-                                <td>
+                            </tr>
+                            <tr>
+                                <th class="sub-th">대표자명</th>
+                                <td colspan="3">
+                                    <input type="text" class="krds-input" style="width:434px"
+                                        placeholder="대표자명을 입력해주세요." />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="sub-th" style="border-left: 1px solid #e0e0e0">위탁기간</th>
+                                <td colspan="3">
                                     <div class="input-group">
                                         {{ datepicker(placeholder="YYYY-MM-DD", readonly=false) }}
                                         <span class="tilde">~</span>
@@ -277,20 +312,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th class="sub-th">대표자명</th>
-                                <td>
-                                    <input type="text" class="krds-input" style="width: 100%;" placeholder="대표자명을 입력해주세요.">
-                                </td>
-                                <th class="sub-th" style="border-left:1px solid #e0e0e0">연락처</th>
-                                <td>
+                                <th class="sub-th" style="border-left: 1px solid #e0e0e0">연락처</th>
+                                <td colspan="3">
                                     <div class="input-group">
-                                        <select class="krds-form-select" style="width: 120px;">
+                                        <select class="krds-form-select" style="width: 120px">
                                             <option value="">선택</option>
                                         </select>
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 100px;">
+                                        <input type="text" class="krds-input" style="width: 100px" />
                                         <span class="tilde">-</span>
-                                        <input type="text" class="krds-input" style="width: 100px;">
+                                        <input type="text" class="krds-input" style="width: 100px" />
                                     </div>
                                 </td>
                             </tr>
@@ -302,16 +333,16 @@
                                 <td class="budget-total tablet_pb-0" rowspan="2">
                                     <div class="input-group">
                                         <span class="budget-label">총액</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
                                     </div>
                                 </td>
                                 <td class="budget-sub tablet_pb-0" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -320,9 +351,9 @@
                                 <td class="budget-sub" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금 외</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -334,16 +365,16 @@
                                 <td class="budget-total" rowspan="2">
                                     <div class="input-group">
                                         <span class="budget-label">총액</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
                                     </div>
                                 </td>
                                 <td class="budget-sub tablet_pb-0 tablet_pt-0" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -352,9 +383,9 @@
                                 <td class="budget-sub" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금 외</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -366,15 +397,17 @@
                                 <td class="budget-total" rowspan="2">
                                     <div class="input-group">
                                         <span class="budget-label">총액</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
                                     </div>
+                                </td>
+
                                 <td class="budget-sub tablet_pb-0 tablet_pt-0" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -383,9 +416,9 @@
                                 <td class="budget-sub" colspan="2">
                                     <div class="input-group tablet_justify-start">
                                         <span class="budget-label">보조금 외</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">천원</span>
-                                        <input type="text" class="krds-input text-right" value="0">
+                                        <input type="text" class="krds-input text-right" value="0" />
                                         <span class="unit">%</span>
                                     </div>
                                 </td>
@@ -401,7 +434,6 @@
                     </table>
                 </div>
 
-
                 <!-- 하단 버튼 그룹 -->
 
                 <div class="view-btn-group">
@@ -414,8 +446,7 @@
         </div>
     </main>
 
-
-  {% include "_inc/footer.html" %}
+    {% include "_inc/footer.html" %}
 </body>
 
 </html>
