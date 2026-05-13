@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ko">
-  {% from "_inc/components.html" import datepicker, breadcrumb, stepper %} {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "self-eval" %} {% include
+  {% from "_inc/components.html" import datepicker, breadcrumb, stepper, pagination %} {% set pageTitle = "자체평가 - 평가하기 | 한국건강가정진흥원 평가시스템" %} {% set currentSection = "self-eval" %} {% include
   "_inc/head.html" %}
 
   <body>
@@ -126,6 +126,9 @@
 
           <div class="empty-msg">평가 기간이 아닙니다.</div>
         </div>
+        
+          {{ pagination(current=1, total=10) }}
+
       </div>
     </main>
 
