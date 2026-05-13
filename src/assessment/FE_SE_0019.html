@@ -20,7 +20,7 @@
                     <div class="eval-result-total">총 <strong>40</strong>건</div>
                                         {% call search_filter() %}
                       {{ filter_daterange("평가기간", "2026.04.20", "2026.04.24") }}
-                      {{ filter_select_keyword("진행상태", ["전체", "평가중", "평가완료"], "평가명을 검색해주세요.") }}
+                      {{ filter_select_keyword("진행상태", ["전체", "미평가", "진행중", "보완요청", "평가완료"], "평가명을 검색해주세요.") }}
                     {% endcall %}
                 </div>
 
