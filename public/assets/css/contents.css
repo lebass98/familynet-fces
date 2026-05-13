@@ -159,6 +159,21 @@ main .inner {
   background: url('../images/main/card-self-bg2.jpg') no-repeat center center / cover;
 }
 
+/* 분할 퍼플카드 페어 래퍼 (기존 단일 퍼플카드와 동일한 외형 크기 유지) */
+.purple-card-pair {
+  width: 662px; /* 전체 폭 = 두 카드(319 + 319) + gap(24) */
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.purple-card-pair .purple-card {
+  flex: 1;
+  width: auto;
+  height: 100%;
+}
+
 .purple-card.v3-1 {
   background: url('../images/main/card-self-bg3-1.jpg') no-repeat center center / cover;
 }
@@ -172,7 +187,7 @@ main .inner {
 }
 
 .purple-card .card-title {
-  font-size: 44px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -180,6 +195,34 @@ main .inner {
 .purple-card .card-desc {
   font-size: 17px;
   line-height: 1.4;
+  font-weight:600;
+}
+
+/* 분할 퍼플카드(v3-1/v3-2) 의 "바로가기" 링크 */
+.purple-card .card-link-wrap {
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.purple-card .card-link-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+/* 퍼플카드 안에서 btn-go 위치를 absolute → static 으로 재배치 (card-link-wrap 안에 가로 배치) */
+.purple-card .card-link-wrap .btn-go {
+  position: static;
+  top: auto;
+  right: auto;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Sub Card Layout */
@@ -3699,10 +3742,15 @@ a.file-link {
 .faq-card:hover .btn-go,
 .faq-card:focus-within .btn-go,
 .qna-card:hover .btn-go,
-.qna-card:focus-within .btn-go {
+.qna-card:focus-within .btn-go,
+.purple-card:hover .card-link-wrap .btn-go,
+.purple-card:focus-within .card-link-wrap .btn-go {
   background-image: url('../images/main/icon-main-card-ar.svg');
   background-color: transparent;
   background-size: 100% 100%;
+}
+.card-content {
+  height:160px;
 }
 
 /* ============================================
@@ -3764,6 +3812,15 @@ a.file-link {
 
   .section-title {
     font-size: 20px;
+  }
+  .card-content {
+    height:auto;
+  }
+  .purple-card .card-title {
+    margin-bottom:0;
+  }
+  .card-link-wrap {
+    margin-top:10px;
   }
 }
 
@@ -4315,6 +4372,26 @@ a.file-link {
   .qna-card {
     grid-column: span 2;
     width: 100%;
+  }
+
+  /* v3 분할 퍼플카드: 태블릿에서 페어 래퍼를 풀어 grid 에 직접 참여시킴.
+     1행: v3-1 / v3-2 / 공지사항 (각각 span 2)
+     2행: 자료실 / FAQ / Q&A (각각 span 2) */
+  .purple-card-pair {
+    display: contents;
+  }
+
+  .purple-card-pair .purple-card.v3-1,
+  .purple-card-pair .purple-card.v3-2 {
+    grid-column: span 2;
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  /* 페어가 있는 카드그룹 내의 공지사항만 span 2 로 (기존 span 3 덮어쓰기) */
+  .card-group:has(.purple-card-pair) .notice-card {
+    grid-column: span 2;
   }
 }
 
