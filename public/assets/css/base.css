@@ -203,6 +203,10 @@ textarea[readonly] {
     margin-bottom: 80px !important;
 }
 
+.ml-8 {
+    margin-left: 8px !important;
+}
+
 .ml-10 {
     margin-left: 10px !important;
 }
@@ -306,6 +310,9 @@ textarea[readonly] {
 
 .gap-10 {
     gap: 10px;
+}
+.gap-16 {
+    gap: 16px;
 }
 
 .mt-10 {
