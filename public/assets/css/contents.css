@@ -706,6 +706,9 @@ main .inner {
   background: #e1e1e1;
   z-index: 0;
 }
+.stepper li:has(.complete)::after {
+    background: #5E4BC8;
+}
 
 .stepper li:last-child::after {
   display: none;
