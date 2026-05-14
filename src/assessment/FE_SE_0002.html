@@ -113,11 +113,9 @@ filter_select, filter_select_keyword %}
             </div>
             <div class="modal-content">
                 <div class="modal-board-top">
-                    <!-- 검색 영역: 아이콘 클릭 가능하도록 버튼 추가 -->
-                    <div class="search-input-wrap">
-                        <input type="text" class="search-input" placeholder="제목을 검색해주세요.">
-                        <button type="button" class="btn-search-modal"><span class="sr-only">검색</span></button>
-                    </div>
+                    {% call search_filter() %}
+                    {{ filter_select_keyword("유형", ["선택","자료누락", "내용보완", "수치오류","작성미흡","증빙불일치","기준미충족","기타"], "검색어를 입력해 주세요.") }}
+                    {% endcall %}
                 </div>
                 <div class="modal-table-wrap">
                     <table class="modal-table">

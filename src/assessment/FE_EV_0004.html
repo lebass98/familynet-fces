@@ -117,7 +117,7 @@ filter_select, filter_select_keyword %}
 
                     {% call search_filter() %}
                     {{ filter_select("상태", ["전체", "대기", "답변완료"]) }}
-                    {{ filter_select_keyword("유형", ["전체", "평가명", "제목"], "검색어를 입력해 주세요.") }}
+                    {{ filter_select_keyword("유형", ["선택","자료누락", "내용보완", "수치오류","작성미흡","증빙불일치","기준미충족","기타"], "검색어를 입력해 주세요.") }}
                     {% endcall %}
                 </div>
                 <div class="modal-table-wrap">
@@ -128,6 +128,7 @@ filter_select, filter_select_keyword %}
                             <col style="width: 180px;">
                             <col style="width: 180px;">
                             <col style="width: auto;">
+                            <col style="width: 150px;">
                             <col style="width: 240px;">
                         </colgroup>
                         <thead>
@@ -136,6 +137,7 @@ filter_select, filter_select_keyword %}
                                 <th scope="col">유형</th>
                                 <th scope="col">평가자</th>
                                 <th scope="col">제목</th>
+                                <th scope="col">상태</th>
                                 <th scope="col">보완요청일</th>
                             </tr>
                         </thead>
@@ -145,6 +147,7 @@ filter_select, filter_select_keyword %}
                                 <td>자료누락</td>
                                 <td>홍**</td>
                                 <td><a href="#" class="link">증빙자료 일부 누락되었습니다.</a></td>
+                                <td>검토완료</td>
                                 <td>2026.04.02</td>
                             </tr>
                             <tr>
@@ -152,10 +155,11 @@ filter_select, filter_select_keyword %}
                                 <td>평가수정</td>
                                 <td>유**</td>
                                 <td><a href="#" class="link">수정요청건</a></td>
+                                <td>검토완료</td>
                                 <td>2026.03.02</td>
                             </tr>
                             <tr>
-                                <td colspan="5" style="width:100%" class="empty-msg">등록된 보완요청이 없습니다.</td>
+                                <td colspan="6" style="width:100%" class="empty-msg">등록된 보완요청이 없습니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -183,7 +187,7 @@ filter_select, filter_select_keyword %}
                             </tr>
                             <tr>
                                 <th scope="row" class="required">평가자</th>
-                                <td><b>홍**평가자</b></td>
+                                <td><b>홍**</b></td>
                             </tr>
                             <tr>
                                 <th scope="row" class="required">유형</th>
