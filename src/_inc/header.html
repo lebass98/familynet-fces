@@ -14,7 +14,7 @@ userName — 상단 인사말에 표시되는 이름 (기본 "동대문구가족
         <div class="header-utility"></div>
         <div class="header-branding">
           <h1 class="logo">
-            <a href="/index.html">
+            <a href="{{ base }}index.html">
               <img src="/assets/images/common/fces_logo.svg" alt="가족센터">
               <span class="logo-text">평가시스템</span>
             </a>
@@ -26,7 +26,7 @@ userName — 상단 인사말에 표시되는 이름 (기본 "동대문구가족
                 <span class="icon-size"><img src="/assets/images/common/icon-head-user.svg" alt=""></span>
                 <span class="text">{{ userName }}님 반갑습니다.</span>
               </div>
-              <a href="/index.html" class="utility-item">
+              <a href="{{ base }}index.html" class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-head-home.svg" alt=""></span>
                 <span class="text semibold">처음으로</span>
               </a>
@@ -37,7 +37,7 @@ userName — 상단 인사말에 표시되는 이름 (기본 "동대문구가족
             </div>
             {% else %}
             <div class="header-utility-group">
-              <a href="/login.html" class="utility-item">
+              <a href="{{ base }}login.html" class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-login.svg" alt=""></span>
                 <span class="text semibold">로그인</span>
               </a>
