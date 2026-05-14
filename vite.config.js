@@ -21,15 +21,16 @@ const input = Object.fromEntries(
   })
 );
 
-const BASE = '/familynet-fces/';
-
 function nunjucksPlugin() {
   return {
     name: 'vite-plugin-nunjucks',
     transformIndexHtml: {
       order: 'pre',
-      handler(html) {
-        return nunjucks.renderString(html, { base: BASE });
+      handler(html, ctx) {
+        const path = ctx.path || '/';
+        const depth = path.split('/').filter(Boolean).length - 1;
+        const base = depth <= 0 ? './' : '../'.repeat(depth);
+        return nunjucks.renderString(html, { base });
       },
     },
     handleHotUpdate({ file, server }) {
@@ -44,7 +45,7 @@ function nunjucksPlugin() {
 export default defineConfig({
   root: srcDir,
   publicDir: resolve(__dirname, 'public'),
-  base: BASE,
+  base: './',
   plugins: [nunjucksPlugin()],
   build: {
     outDir: resolve(__dirname, 'dist'),
