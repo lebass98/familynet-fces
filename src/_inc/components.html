@@ -63,7 +63,7 @@ total : 총 페이지 수
       {% for label in steps %}
       {% set idx = loop.index %}
       {% set num = "0" + idx|string if idx < 10 else idx|string %} <li>
-        <dl{% if idx < active %} class="complete"{% elif idx == active %} class="active"{% endif %}>
+        <dl{% if idx < active %} class="complete" {% elif idx==active %} class="active" {% endif %}>
           <dt><img src="/assets/images/sub/step-icon-{{ num }}.svg" alt="{{ label }}"></dt>
           <dd>{{ label }}</dd>
           </dl>

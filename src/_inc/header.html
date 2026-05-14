@@ -1,7 +1,7 @@
 {# header.html
-   페이지 단위 변수:
-     currentSection  — "self-eval" | "eval-mgmt" | "notice" | "mypage" (없으면 표시 안 함)
-     isLoggedIn      — false 면 로그인/회원가입 노출 (기본 true)
+페이지 단위 변수:
+currentSection — "self-eval" | "eval-mgmt" | "notice" | "mypage" (없으면 표시 안 함)
+isLoggedIn — false 면 로그인/회원가입 노출 (기본 true)
 #}
 {% set isLoggedIn = isLoggedIn if isLoggedIn is defined else true %}
 
@@ -22,7 +22,7 @@
             <div class="header-utility-group">
               <div class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-head-user.svg" alt=""></span>
-                <span class="text">동대문구가족센터님 반갑습니다.</span>
+                <span class="text">사이트 관리자님 반갑습니다.</span>
               </div>
               <a href="/index.html" class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-head-home.svg" alt=""></span>
@@ -53,7 +53,7 @@
     <nav class="krds-main-menu">
       <div class="inner">
         <ul class="gnb-menu">
-          <li{% if currentSection == "self-eval" %} class="active"{% endif %}>
+          <li{% if currentSection=="self-eval" %} class="active" {% endif %}>
             <button type="button" class="gnb-main-trigger" data-trigger="gnb">자체평가</button>
             <div class="gnb-toggle-wrap">
               <div class="gnb-main-list">
@@ -69,76 +69,76 @@
                 </div>
               </div>
             </div>
-          </li>
-          <li{% if currentSection == "eval-mgmt" %} class="active"{% endif %}>
-            <button type="button" class="gnb-main-trigger" data-trigger="gnb">평가관리</button>
-            <div class="gnb-toggle-wrap">
-              <div class="gnb-main-list">
-                <div class="gnb-sub-list single-list between">
-                  <div class="gnb-sub-content">
-                    <h2 class="sub-title"><span>평가관리</span> <a href="#" class="btn-link">바로가기</a></h2>
-                    <ul>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                    </ul>
+            </li>
+            <li{% if currentSection=="eval-mgmt" %} class="active" {% endif %}>
+              <button type="button" class="gnb-main-trigger" data-trigger="gnb">평가관리</button>
+              <div class="gnb-toggle-wrap">
+                <div class="gnb-main-list">
+                  <div class="gnb-sub-list single-list between">
+                    <div class="gnb-sub-content">
+                      <h2 class="sub-title"><span>평가관리</span> <a href="#" class="btn-link">바로가기</a></h2>
+                      <ul>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                        <li><a href="#">Last depth</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li{% if currentSection == "notice" %} class="active"{% endif %}>
-            <button type="button" class="gnb-main-trigger" data-trigger="gnb">알림마당</button>
-            <div class="gnb-toggle-wrap">
-              <div class="gnb-main-list">
-                <div class="gnb-sub-list single-list between">
-                  <div class="gnb-sub-content">
-                    <h2 class="sub-title"><span>알림마당</span> <a href="#" class="btn-link">바로가기</a></h2>
-                    <ul>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                    </ul>
+              </li>
+              <li{% if currentSection=="notice" %} class="active" {% endif %}>
+                <button type="button" class="gnb-main-trigger" data-trigger="gnb">알림마당</button>
+                <div class="gnb-toggle-wrap">
+                  <div class="gnb-main-list">
+                    <div class="gnb-sub-list single-list between">
+                      <div class="gnb-sub-content">
+                        <h2 class="sub-title"><span>알림마당</span> <a href="#" class="btn-link">바로가기</a></h2>
+                        <ul>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                          <li><a href="#">Last depth</a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </li>
-          <li{% if currentSection == "mypage" %} class="active"{% endif %}>
-            <button type="button" class="gnb-main-trigger" data-trigger="gnb">마이페이지</button>
-            <div class="gnb-toggle-wrap">
-              <div class="gnb-main-list">
-                <div class="gnb-sub-list single-list between">
-                  <div class="gnb-sub-content">
-                    <h2 class="sub-title"><span>마이페이지</span> <a href="#" class="btn-link">바로가기</a></h2>
-                    <ul>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                      <li><a href="#">Last depth</a></li>
-                    </ul>
+                </li>
+                <li{% if currentSection=="mypage" %} class="active" {% endif %}>
+                  <button type="button" class="gnb-main-trigger" data-trigger="gnb">마이페이지</button>
+                  <div class="gnb-toggle-wrap">
+                    <div class="gnb-main-list">
+                      <div class="gnb-sub-list single-list between">
+                        <div class="gnb-sub-content">
+                          <h2 class="sub-title"><span>마이페이지</span> <a href="#" class="btn-link">바로가기</a></h2>
+                          <ul>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                            <li><a href="#">Last depth</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </li>
+                  </li>
         </ul>
       </div>
     </nav>
