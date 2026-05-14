@@ -2,8 +2,10 @@
 페이지 단위 변수:
 currentSection — "self-eval" | "eval-mgmt" | "notice" | "mypage" (없으면 표시 안 함)
 isLoggedIn — false 면 로그인/회원가입 노출 (기본 true)
+userName — 상단 인사말에 표시되는 이름 (기본 "동대문구가족센터님")
 #}
 {% set isLoggedIn = isLoggedIn if isLoggedIn is defined else true %}
+{% set userName = userName if userName is defined else "동대문구가족센터" %}
 
 <header id="krds-header">
   <div class="header-in">
@@ -22,7 +24,7 @@ isLoggedIn — false 면 로그인/회원가입 노출 (기본 true)
             <div class="header-utility-group">
               <div class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-head-user.svg" alt=""></span>
-                <span class="text">사이트 관리자님 반갑습니다.</span>
+                <span class="text">{{ userName }}님 반갑습니다.</span>
               </div>
               <a href="/index.html" class="utility-item">
                 <span class="icon-size"><img src="/assets/images/common/icon-head-home.svg" alt=""></span>
