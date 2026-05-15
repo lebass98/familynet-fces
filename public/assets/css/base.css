@@ -242,6 +242,11 @@ textarea[readonly] {
     text-align: left !important;
 }
 
+.text-left-table td,
+.text-left-table th {
+    text-align: left !important;
+}
+
 .text-center {
     text-align: center !important;
 }

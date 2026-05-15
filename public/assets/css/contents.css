@@ -254,7 +254,7 @@ main .inner {
 .white-card .card-title {
   font-size: 23px;
   font-weight: 700;
-  color: #1d1d1d;
+  color: #111;
 }
 
 /* Notice Card */
@@ -316,7 +316,6 @@ main .inner {
 .notice-item .date {
   color: #545454;
   font-size: 14px;
-  margin-left: 10px;
 }
 
 /* Small Cards (Archive, FAQ, Q&A) */
@@ -4228,6 +4227,17 @@ a.file-link {
 }
 
 @media screen and (max-width: 1430px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  main .inner {
+    padding: 0 24px;
+  }
+  .slogan-wrap {
+    margin-bottom:40px;
+  }
+
   #sub-contents .inner {
     max-width: 100%;
     padding: 0 20px;
@@ -4245,6 +4255,7 @@ a.file-link {
 
   .slogan-wrap .main-slogan {
     font-size: 48px;
+    margin-bottom: 14px;
   }
 
   .slogan-wrap .desc {
@@ -4302,7 +4313,9 @@ a.file-link {
     grid-column: span 2;
     width: 100%;
   }
-
+  .notice-item {
+    font-size:16px;
+  }
   /* v3 분할 퍼플카드 (.card-group.v3): 태블릿에서 페어 래퍼를 풀어 grid 에 직접 참여시킴.
      Figma 비율(226:226:476 / 309:309:309)에 맞춰 12-col 그리드 사용.
      1행: v3-1 / v3-2 / 공지사항 (3 / 3 / 6)
@@ -4322,18 +4335,20 @@ a.file-link {
     height: auto;
     min-height: 200px;
     justify-content: space-between;
-    padding:32px;
+    padding: 32px;
   }
 
   /* v3 카드그룹 내의 공지사항: 12-col 기준 span 6 (기본 span 3 덮어쓰기) */
   .card-group.v3 .notice-card {
     grid-column: span 6;
   }
+
   .card-group.v3 .purple-card .card-desc {
     display: none;
   }
+
   .card-group.v3 .purple-card .card-title {
-    font-size:28px;
+    font-size: 28px;
   }
 
   /* v3 카드그룹 내의 하단 3카드: 12-col 기준 span 4 (기본 span 2 덮어쓰기) */
