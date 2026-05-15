@@ -706,8 +706,8 @@ main .inner {
 
 .stepper li dl dt img {
   opacity: 0.3;
-  max-width: 60%;
-  max-height: 60%;
+  width:64px;
+  height:64px;
   object-fit: contain;
 }
 
@@ -717,13 +717,10 @@ main .inner {
   margin-top: 0;
   margin-bottom: 10px;
   border: 2px solid #5E4BC8;
-  box-shadow: 0 4px 20px rgba(99, 79, 209, 0.15);
 }
 
 .stepper li dl.active dt img {
   opacity: 1;
-  max-width: 70%;
-  max-height: 70%;
 }
 
 .stepper li dl.complete dt {
