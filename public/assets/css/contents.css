@@ -1423,14 +1423,14 @@ a.file-link {
 
 /* ================================================
    Figma 기반 커스텀 스크롤바 (보라색)
-   track: #EDE9F8 (연보라), thumb: #725AA4 (보라)
+   track: ##EAEAEA , thumb: #725AA4 (보라)
    ================================================ */
 .modal-table::-webkit-scrollbar {
   width: 6px;
 }
 
 .modal-table::-webkit-scrollbar-track {
-  background: #EDE9F8;
+  background: #EAEAEA;
   border-radius: 10px;
 }
 
@@ -1440,13 +1440,13 @@ a.file-link {
 }
 
 .modal-table::-webkit-scrollbar-thumb:hover {
-  background: #5E4BC8;
+  background: #725AA4;
 }
 
 /* Firefox 커스텀 스크롤바 */
 .modal-table {
   scrollbar-width: thin;
-  scrollbar-color: #725AA4 #EDE9F8;
+  scrollbar-color: #725AA4 #EAEAEA;
 }
 
 /* 모달 테이블 행 호버 효과 */
