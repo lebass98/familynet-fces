@@ -3,3 +3,18 @@
     <p>© KOREA INSTITUTE FOR HEALTHY FAMILY. All Rights Reserved.</p>
   </div>
 </footer>
+
+<script>
+  // 메인 카드 그룹: 각 카드에 등장 순서(--card-index)와 진입 방향(data-card-dir) 부여.
+  // - 카드 인덱스: stagger delay 계산용 (CSS variable)
+  // - 진입 방향: 좌 / 우 / 아래 / 위 순환
+  (function () {
+    var DIRS = ['left', 'right', 'down', 'up'];
+    document.querySelectorAll('.card-group').forEach(function (group) {
+      group.querySelectorAll('.card-item').forEach(function (card, i) {
+        card.style.setProperty('--card-index', i);
+        card.setAttribute('data-card-dir', DIRS[i % DIRS.length]);
+      });
+    });
+  })();
+</script>
