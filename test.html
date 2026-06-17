@@ -1,0 +1,1402 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta name="_csrf_parameter" content="_csrf" />
+  <meta name="_csrf_header" content="X-CSRF-TOKEN" />
+  <meta name="_csrf" content="4a23cca2-4a4c-4e5e-8ebd-866c2f29ffd1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="SiteID" content="1" />
+  <link rel="shortcut icon" type="image/x-icon"
+    href="https://tst.familynet.or.krhttps://tst.familynet.or.kr/images/common/favicon.ico">
+  <title>가족센터>돌봄지원 (부모교육)>법적근거 / 사업 주체별 역할
+
+  </title>
+  <link rel="stylesheet" href="https://tst.familynet.or.kr/lib/css/import.css" type="text/css">
+  <link rel="stylesheet" href="https://tst.familynet.or.kr/lib/css/sub.css" type="text/css">
+  <link href="https://tst.familynet.or.kr/lib/css/base/jquery-ui-1.14.1.css" rel="stylesheet" type="text/css" />
+  <link href="https://tst.familynet.or.kr/lib/css/base/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery-migrate-1.4.1.min.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery-ui-1.14.1.min.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery.cookie.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery.lck.util.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery.form.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/lnb.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/sub.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/common.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/mc.js" defer></script>
+  <script type="text/javascript" src="https://tst.familynet.or.kr/lib/js/jquery.blockUI.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173347735-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173347735-1');
+  </script>
+
+  <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+  <script type="text/javascript">
+    if (!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "77ea6930add954";
+    if (window.wcs) {
+      wcs_do();
+    }
+  </script>
+
+
+
+
+  <!-- 관리자 메뉴설정에서 설정 -->
+
+
+
+</head>
+
+<body>
+  <div class="wrap">
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <div id="backPage"
+      style="width:100%; height:100%; background-color : rgba(0,0,0, .5); position:fixed; z-index:999; display:none">
+      <div id="frontPage"
+        style="position:relative; top:200px; margin:auto; width:27%; background:white; height:25%; z-index:1000;">
+        <div class="login_insert clearfix">
+          <p
+            style="text-align: center; padding-top: 20px; color: #555; font-size: 24px; font-family: 'NS'; letter-spacing: -0.045em;">
+            비밀번호를 입력해주세요.</p>
+          <div style="margin-top: 30px; margin-left: 40px;">
+            <div class="input">
+              <input type="password" id="myPage_pw" placeholder="비밀번호" title="비밀번호" onkeypress="capLock(event)"
+                autocomplete="off"
+                style="padding: 13px; width: 88%; border: 1px solid #d5d5d5; color: #666; font-size: 13px; font-family: 'NBG'; box-sizing: border-box; line-height: 16px;">
+
+              <!-- <p id="capslock" style="display:none;">Caps Lock이 켜져 있습니다.</p> -->
+            </div>
+            <div style="margin-top: 40px; margin-left: 100px;">
+              <a href="#" id="check_btn" value="확인" onClick="myPageIntercept();" style="background: #666; float: left; text-align: center; padding: 13px 0; 
+	                        margin-left: 8px; width: calc(30% - 4px); 
+                            color: white;">확인</a>
+              &nbsp;
+              <a href="#" id="backPage_close" value="닫기" style="background: #666; float: left; text-align: center; padding: 13px 0; margin-left: 8px; 
+	                        width: calc(30% - 4px); 
+                            color: white;">닫기</a>
+            </div>
+            <!-- 						<div style="display: block; float: left; text-align: center; padding: 13px 0; margin-left: 8px; width: calc(50% - 4px); background: #666; color: #fff;
+						    font-size: 15px; font-family: 'NBGB'; box-sizing: border-box;">
+						    
+						</div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="header">
+      <div class="h_wrap clearfix">
+        <h1><a href="/"><img src="https://tst.familynet.or.kr/images/header/logo.png" alt="건강가정지원센터"></a></h1>
+        <div class="h_navi">
+          <div class="utill clearfix">
+
+            <div class="utill_menu">
+              <ul>
+                <li class="home"><a href="/web">처음으로</a></li>
+
+
+                <li class="login"><a href="/web/lay4/program/S1T2C4/member/login.do">로그인</a></li>
+                <li class="join"><a href="/web/lay4/program/S1T2C4/member/join_step1.do">회원가입(sign up)</a></li>
+
+
+
+              </ul>
+
+              <div class="side_menu btnCtg"><a href="#"><img
+                    src="https://tst.familynet.or.kr/images/header/m_menu_btn.gif" alt="전체메뉴 열기"></a>
+              </div>
+              <div class="m_search_box">
+                <form action="/web/lay3/program/S1T2C58/total/search.do" method="get" name="searchFrm">
+                  <input type="hidden" name="_csrf" value="4a23cca2-4a4c-4e5e-8ebd-866c2f29ffd1" />
+                  <fieldset>
+                    <legend>통합검색</legend>
+                    <input type="text" name="total_keyword" value="" placeholder="검색어를 입력해주세요" title="검색어 입력란">
+                    <input type="submit" value="검색">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- h_wrap -->
+
+      <div class="gnb">
+        <div class="gnb_wrap clearfix">
+          <a href="http://www.kihf.or.kr" class="kihf_link" target="_blank" title="한국건강가정진흥원 홈페이지 새창열림"><img
+              src="https://tst.familynet.or.kr/images/header/kihf_logo.png" alt="한국건강가정진흥원" /></a>
+          <div class="lnb" id="gnavi">
+            <div class="lnb_bg" style="display:none"></div>
+            <ul>
+              <li class="l_title1" menu-seq="296"> <a href="/web/lay1/S1T1C296/sublink.do">주요사업 </a>
+                <div class="lnb_sub">
+                  <p>주요사업</p>
+                  <ul>
+                    <li class="" menu-seq="297"> <a href="/web/lay1/S1T296C297/contents.do">사업소개 </a> </li>
+                    <li class="" menu-seq="337"> <a href="/web/lay1/S1T296C337/contents.do">가족센터는 </a> </li>
+                    <li class="" menu-seq="339"> <a href="/web/lay1/S1T309C339/contents.do">사업운영 및 사업영역 </a> </li>
+                    <li class="" menu-seq="338"> <a href="/web/lay1/S1T309C338/contents.do">설립목적 및 방향 </a> </li>
+                    <li class="" menu-seq="340"> <a href="/web/lay1/S1T309C340/contents.do">전달체계도 </a> </li>
+                    <li class="" menu-seq="424"> <a href="/web/lay1/S1T296C424/sublink.do">건강가정사 </a> </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="l_title2" menu-seq="299"> <a href="/web/lay1/S1T1C299/sublink.do">알림마당 </a>
+                <div class="lnb_sub">
+                  <p>알림마당</p>
+                  <ul>
+                    <li class="" menu-seq="300"> <a href="/web/lay1/bbs/S1T299C300/A/3/list.do">진흥원소식 </a> </li>
+                    <li class="" menu-seq="301"> <a href="/web/lay1/bbs/S1T299C301/A/4/list.do">뉴스링크 </a> </li>
+                    <li class="" menu-seq="302"> <a href="/web/lay1/bbs/S1T299C302/A/1/list.do">센터홍보실 </a> </li>
+                    <li class="" menu-seq="303"> <a href="/web/lay1/bbs/S1T299C303/E/2/list.do">자주 묻는 질문 </a> </li>
+                    <li class="" menu-seq="416"> <a href="/web/lay1/bbs/S1T299C416/A/15/list.do">채용공고 </a> </li>
+                    <li class="" menu-seq="442"> <a href="/web/lay1/bbs/S1T299C442/A/20/list.do">자료실 </a> </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="l_title3" menu-seq="304"> <a href="/web/lay1/S1T1C304/sublink.do">참여마당 </a>
+                <div class="lnb_sub">
+                  <p>참여마당</p>
+                  <ul>
+                    <li class="" menu-seq="450"> <a href="/web/lay1/program/S1T304C450/recruitReceipt/list.do">프로그램신청
+                      </a> </li>
+                    <li class="" menu-seq="379"> <a href="/web/lay1/bbs/S1T304C379/G/10/list.do">온라인상담실 </a> </li>
+                    <li class="" menu-seq="306"> <a href="/web/lay1/program/S1T304C306/poll/list.do">만족도조사 </a> </li>
+                    <li class="" menu-seq="423"> <a href="/web/lay1/program/S1T304C423/receipt/list.do">센터홍보 </a> </li>
+                    <li class="" menu-seq="305"> <a
+                        href="/web/lay1/program/S1T304C305/web/lay1/bbs/S1T304C305/A/5/intro.do">고객제안 </a> </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="l_title4" menu-seq="307"> <a href="/web/lay1/program/S1T1C307/info/view.do">지역센터안내 </a>
+                <div class="lnb_sub">
+                  <p>지역센터안내</p>
+                  <ul>
+                  </ul>
+                </div>
+              </li>
+              <li class="on l_title5" menu-seq="431"> <a href="/web/lay1/S1T1C431/sublink.do">돌봄지원 (부모교육) </a>
+                <div class="lnb_sub">
+                  <p>돌봄지원 (부모교육)</p>
+                  <ul>
+                    <li class="on" menu-seq="456"> <a href="/web/lay1/S1T431C456/contents.do">법적근거 / 사업 주체별 역할 </a>
+                    </li>
+                    <li class="" menu-seq="432"> <a href="/web/lay1/S1T431C432/contents.do">돌봄공동체 </a> </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a href="javascript:void(0);" id="allMenu_link" class="all_menu"><span>전체메뉴</span></a>
+          <div class="allMenu" style="display: none;">
+            <div class="dim_layer"></div>
+            <div class="menu_list">
+              <div class="wrap">
+                <p class="allmenu_tit">전체메뉴</p>
+                <div class="contents_wrap">
+                  <!-- contents -->
+                  <div class="sitemap_wrap">
+                    <div class="all_sitemap">
+                      <ol>
+                        <li menu-seq="296" class="title"> <a href="/web/lay1/S1T1C296/sublink.do">주요사업 </a>
+                          <ol class="list">
+                            <li menu-seq="297"> <a href="/web/lay1/S1T296C297/contents.do">사업소개 </a> </li>
+                            <li menu-seq="337"> <a href="/web/lay1/S1T296C337/contents.do">가족센터는 </a> </li>
+                            <li menu-seq="339"> <a href="/web/lay1/S1T309C339/contents.do">사업운영 및 사업영역 </a> </li>
+                            <li menu-seq="338"> <a href="/web/lay1/S1T309C338/contents.do">설립목적 및 방향 </a> </li>
+                            <li menu-seq="340"> <a href="/web/lay1/S1T309C340/contents.do">전달체계도 </a> </li>
+                            <li menu-seq="424"> <a href="/web/lay1/S1T296C424/sublink.do">건강가정사 </a> </li>
+                          </ol>
+                        </li>
+                        <li menu-seq="299" class="title"> <a href="/web/lay1/S1T1C299/sublink.do">알림마당 </a>
+                          <ol class="list">
+                            <li menu-seq="300"> <a href="/web/lay1/bbs/S1T299C300/A/3/list.do">진흥원소식 </a> </li>
+                            <li menu-seq="301"> <a href="/web/lay1/bbs/S1T299C301/A/4/list.do">뉴스링크 </a> </li>
+                            <li menu-seq="302"> <a href="/web/lay1/bbs/S1T299C302/A/1/list.do">센터홍보실 </a> </li>
+                            <li menu-seq="303"> <a href="/web/lay1/bbs/S1T299C303/E/2/list.do">자주 묻는 질문 </a> </li>
+                            <li menu-seq="416"> <a href="/web/lay1/bbs/S1T299C416/A/15/list.do">채용공고 </a> </li>
+                            <li menu-seq="442"> <a href="/web/lay1/bbs/S1T299C442/A/20/list.do">자료실 </a> </li>
+                          </ol>
+                        </li>
+                        <li menu-seq="304" class="title"> <a href="/web/lay1/S1T1C304/sublink.do">참여마당 </a>
+                          <ol class="list">
+                            <li menu-seq="450"> <a href="/web/lay1/program/S1T304C450/recruitReceipt/list.do">프로그램신청
+                              </a> </li>
+                            <li menu-seq="379"> <a href="/web/lay1/bbs/S1T304C379/G/10/list.do">온라인상담실 </a> </li>
+                            <li menu-seq="306"> <a href="/web/lay1/program/S1T304C306/poll/list.do">만족도조사 </a> </li>
+                            <li menu-seq="423"> <a href="/web/lay1/program/S1T304C423/receipt/list.do">센터홍보 </a> </li>
+                            <li menu-seq="305"> <a
+                                href="/web/lay1/program/S1T304C305/web/lay1/bbs/S1T304C305/A/5/intro.do">고객제안 </a> </li>
+                          </ol>
+                        </li>
+                        <li menu-seq="307" class="title"> <a href="/web/lay1/program/S1T1C307/info/view.do">지역센터안내 </a>
+                          <ol class="list">
+                          </ol>
+                        </li>
+                        <li menu-seq="431" class="title"> <a href="/web/lay1/S1T1C431/sublink.do">돌봄지원 (부모교육) </a>
+                          <ol class="list">
+                            <li menu-seq="456"> <a href="/web/lay1/S1T431C456/contents.do">법적근거 / 사업 주체별 역할 </a> </li>
+                            <li menu-seq="432"> <a href="/web/lay1/S1T431C432/contents.do">돌봄공동체 </a> </li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                  <!-- //contents -->
+                </div>
+              </div>
+            </div>
+            <a class="allmenu_close" href="javascript:void(0)" title="전체메뉴 닫기"><img
+                src="https://tst.familynet.or.kr/images/header/allMenu_close.gif" alt="닫기" /></a>
+          </div> <!-- allMenu -->
+
+          <script type="text/javascript">
+            $(document).ready(function () {
+
+              if ($("#pw_change_yn").val() == 'Y') {
+                alert("비밀번호를 변경해주세요.");
+                $("#pw_change_yn").val('N');
+                //location.href = "/web/lay1/program/S1T2C5/member/modify_step2.do";
+                location.href = "/web/lay1/program/S1T2C5/member/modifyPwForm.do";
+              }
+
+              $(".all_menu").on("click", function () { /* focusin */
+                if ($(".allMenu").css("display") == "none") {
+                  $(".allMenu").fadeIn(300);
+                  //jQuery(".menu_list").load("/popup/allmenu/index.do", function(){});
+                } else {
+                  $(".allMenu").fadeOut();
+                }
+              });
+
+              $(".allmenu_close").on("click", function () {
+                if ($(".allMenu").css("display") == "block") {
+                  $(".allMenu").fadeOut();
+                }
+              });
+
+              $(".dim_layer").on("click", function () {
+                if ($(".allMenu").css("display") == "block") {
+                  $(".allMenu").fadeOut();
+                }
+              });
+
+              $("a.allmenu_close").on("mouseenter click", function () {
+                $(".allMenu_btn a").focus();
+              });
+              // 05-02추가				
+              $("#allMenu_link, .kihf_link").focus(function () {
+                $(".lnb_sub, .lnb_bg").hide();
+              });
+            });
+
+            function logout() {
+              if (confirm("로그아웃 하시겠습니까?")) {
+                location.href = "/login/logout.do";
+              }
+            }
+
+            // 10분마다 세션 업데이트
+            setInterval(function () {
+              $.ajax({
+                method: "POST",
+                url: "/updateSession.do",
+                data: {},
+                dataType: "JSON",
+                success: function (data) { }
+              });
+            }, 600000);
+
+            function searchFormCheck() {
+              alert("준비중 입니다.");
+              return false;
+            }
+
+            $("#myPage").on("click", function () {
+              /* var path = window.location.pathname;
+            	
+              if(path.indexOf('mypage') > -1 || path.indexOf('member/leave') > -1 || path.indexOf('member/modify')  > -1){
+                location.href="/web/lay1/S1T1C2/sublink.do" ;
+              }else{
+                $("#backPage").show();
+                $("#myPage_pw").focus();
+              } */
+
+              location.href = "/web/lay1/S1T1C2/sublink.do";
+            });
+
+            $("#backPage_close").on("click", function () {
+              $("#backPage").hide();
+            });
+
+            function myPageIntercept() {
+              /* var member_id = "";
+              var member_pw = $("#myPage_pw").val();
+            	
+                  if(member_pw == ""){
+                      alert("비밀번호를 입력하여 주시기 바립니다.");
+                      $("#member_pw").focus();
+                      return false;
+                  } else {		
+            	
+                $.ajax({
+                      method: "POST",
+                      url: "/login/myPage_pw_check.do",
+                      data: {"member_id":member_id, "member_pw":member_pw},
+                      dataType: "JSON",
+                      success: function(data) {
+                        var result = data.rst;
+                        if(result == "Y"){
+                          location.href="/web/lay1/S1T1C2/sublink.do" ;
+                        }else {
+                          alert("비밀번호가 일치하지 않습니다.");
+                          $("#myPage_pw").focus();
+                        }
+                      }
+                });
+                  } */
+              location.href = "/web/lay1/S1T1C2/sublink.do";
+            }
+
+            $("#myPage_pw").keyup(function (e) {
+              if (e.keyCode == 13) $("#check_btn").click();;
+            });
+          </script>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contents_wrap">
+
+
+      <div class="contents">
+
+
+
+        <div id="left_menu">
+          <h2>돌봄지원 (부모교육)</h2>
+          <ul>
+            <li class="" menu-seq="456"> <a href="/web/lay1/S1T431C456/contents.do" class="on"> <span>법적근거 / 사업 주체별
+                  역할</span> </a> </li>
+            <li class="last" menu-seq="432"> <a href="/web/lay1/S1T431C432/contents.do"> <span>돌봄공동체</span> </a> </li>
+          </ul>
+          <div class="left_counseling">
+            <div class="call">
+              <h6>전화상담</h6>
+              <p>1577-9337</p>
+              <span>언제나 고객님들께 친절히<br />상담해드리겠습니다.</span>
+            </div>
+            <div class="online">
+              <a href="/web/lay1/bbs/S1T304C379/G/10/list.do">
+                <h6>온라인상담</h6>
+                <!-- 한가원 고도화 (2022-02-15) -->
+                <span>가족센터에서는<br />고객의 목소리에<br />귀 기울이겠습니다.</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="sub">
+          <div class="strapline">
+            <div class="navi">
+
+
+
+
+              <script type="text/javascript" src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+              <script type="text/javascript">
+                //사용할 앱의 JavaScript 키를 설정해 주세요.
+                Kakao.init("07b9e3a431515bf7ae7e206a72edacf5");
+              </script>
+              <div class="n_wrap">
+                <!-- 	20251208 수정, 이창환 -->
+                <!-- 	page_navi 빈값일 경우 비밀번호 찾기 페이지로 지정 -->
+                <ul class="state clearfix">
+
+
+
+                  <li><a href="#"><img src="https://tst.familynet.or.kr/images/sub/state_home.png" alt="홈" /></a></li>
+
+
+
+
+                  <li>돌봄지원 (부모교육)</li>
+
+
+
+
+
+                  <li><strong>법적근거 / 사업 주체별 역할</strong></li>
+
+
+
+
+                </ul>
+                <div class="etc">
+                  <a href="javascript:window.print();" class="etc_print" title="페이지 인쇄"><img
+                      src="https://tst.familynet.or.kr/images/sub/etc_print.png" alt="프린트" /></a>
+                  <a href="javascript:void(0);" class="etc_share" title="페이지 공유 사이트 목록 열기">페이지 공유 사이트 목록</a>
+                  <ul class="etc_list">
+                    <li><a href="javascript:fbLink();" class="etc_facebook" title="페이스북 공유 새창열림">페이스북 공유</a></li>
+                    <li><a href="javascript:twtLink();" class="etc_twitter" title="트위터 공유 새창열림">트위터 공유</a></li>
+                    <li><a href="javascript:ksLink();" class="etc_kakao" title="카카오스토리 공유 새창열림">카카오스토리 공유</a></li>
+                    <li><a href="javascript:blogLink();" class="etc_naver" title="네이버블로그 공유 새창열림">네이버블로그 공유</a></li>
+                    <li><a href="javascript:copyLink();" class="etc_link" title="링크 주소 복사">링크 주소 복사</a></li>
+                  </ul>
+                </div>
+
+                <script>
+                  $(function () {
+                    $('.etc_share').click(function () {
+                      $(this).toggleClass('open');
+                      $('.etc_list').toggleClass('open').slideToggle(300);
+                      if ($(".etc_share").hasClass("open") === true) {
+                        $(this).attr("title", "페이지 공유 사이트 목록 닫기");
+                      } else {
+                        $(this).attr("title", "페이지 공유 사이트 목록 열기");
+                      }
+                    });
+                  });
+                </script>
+
+              </div>
+
+            </div>
+
+
+
+            <h3>법적근거 / 사업 주체별 역할</h3>
+
+
+          </div>
+          <div class="sub_contents">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="sub_contents">
+
+              <h4>가족센터 ‘가족교육’이란</h4>
+
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px"
+                      class="">
+                      <p style="line-height: 0.8;"><span style="font-size: 10pt;"> </span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> - 가족교육은 예비부부, 부모, 자녀 등 가족구성원이 서로를
+                          이해하고 건강하게
+                          소통할 수 있도록 지원하는 가족관계향상 교육입니다.</span></p>
+                      <p style="line-height: 1.5;"><span style="font-size: 12pt;"> - 부부갈등, 부모-자녀 갈등, 양육 스트레스, 자녀발달이해,
+                          진로탐색 등 가족
+                          내 다양한
+                          어려움을 예방하고, 건강한 가족관계 형성과 부모 역할 수행을 지원하기 위해 운영됩니다.</span></p>
+                      <p style="line-height: 0.8;"><br></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+
+              </p>
+              <h4>가족교육은 왜 필요한가요</h4>
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px;"
+                      class="">
+                      <p style="line-height: 0.8;"><span style="font-size: 10pt;"> </span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> 최근 가족구조와 생활환경 변화로 인해 가족 간 대화 부족, 양육
+                          부담, 관계
+                          갈등 등이 증
+                          가하고 있습니다. 특히 국민들은 가족관계와 소통에 대한 교육 필요성을 높게 인식하고 있
+                          는 것으로 나타났습니다.</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> “가족을 구성하고 관계를 행복하게 유지하는 것은 중요하다” 평균
+                          8.69점(10점 만점)<br>
+                          “가족교육은 모든 가정에 필요하다” 평균 8.19점(10점 만점)<br>
+                          “향후 참여하고 싶은 교육으로 가족관계 및 소통교육이 가장 높게 나타남” 43.4%<br>
+                          “가장 필요한 부모교육 분야는 자녀와의 대화법 및 소통기술” 51.7%</span></p>
+                      <p style="line-height: 0.8; text-align:right;"><span style="text-align:right">- 한국건강가정진흥원 가족교육
+                          인식조사 결과 -</span></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <h4>어떤 도움을 받을 수 있나요</h4>
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px"
+                      class="">
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">가족교육은 생애주기와 가족 특성에 따라 다양한 교육을
+                          제공합니다.</span>
+                      </p>
+                      <table border="1" cellpadding="0" cellspacing="0"
+                        style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px;"
+                        class="__se_tbl">
+                        <thead>
+                          <tr>
+                            <th
+                              style="border: 1px solid #000000; padding: 10px; font-size: 12pt; font-weight: bold; text-align: center; width: 22%; height: 40px; color: #000000; font-family: 'Pretendard', sans-serif;">
+                              교육 영역
+                            </th>
+                            <th
+                              style="border: 1px solid #000000; padding: 10px; font-size: 12pt; font-weight: bold; text-align: center; width: 56%; height: 40px; color: #000000; font-family: 'Pretendard', sans-serif;">
+                              주요 내용
+                            </th>
+                            <th
+                              style="border: 1px solid #000000; padding: 10px; font-size: 12pt; font-weight: bold; text-align: center; width: 22%; height: 40px; color: #000000; font-family: 'Pretendard', sans-serif;">
+                              추천 대상
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              청년·예비부부 교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 건강한 관계 형성· 연인·부부 간 의사소통· 결혼 준비와 역할 이해· 갈등 예방 및 관계 이해
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 청년· 예비부부· 신혼부부
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              임신·출산기 부모교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 부모 역할 준비· 출산 이후 관계 변화 이해· 양육 스트레스 예방· 공동양육과 부부 소통
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 임신·출산기 부부· 영아기 부모
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              영유아기 부모교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 자녀 발달 이해· 부모-자녀 애착 형성· 긍정 양육· 자녀와의 대화법
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 영유아 자녀 부모
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              학령기 부모교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 자녀와의 의사소통· 디지털 기기 사용 지도· 학습·진로 이해· 정서지원과 갈등관리
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 초·중·고 자녀 부모
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              부부·가족관계 교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 부부갈등 예방· 가족 내 역할 조정· 세대 간 이해와 소통· 가족관계 회복
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 부부· 가족 구성원
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; font-weight: bold; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6;">
+                              다양한 가족 맞춤형 교육
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 한부모·다문화 가족 이해· 가족 특성별 관계 지원· 돌봄 및 생활지원 정보
+                            </td>
+                            <td
+                              style="border: 1px solid #000000; padding: 10px 15px; font-size: 12pt; text-align: left; vertical-align: middle; color: #000000; font-family: 'Pretendard', sans-serif; line-height: 1.6; word-break: keep-all;">
+                              · 다양한 가족 형태 및 특성 가정
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <h4>가족교육은 왜 필요한가요</h4>
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px;"
+                      class="">
+                      <p style="line-height: 0.8;"><span style="font-size: 10pt;"> </span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> 가족교육은</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 전국 가족센터에서 운영하는 대면교육 (→ 2026년 가족센터
+                          가족교육 연결)</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 온라인 교육 콘텐츠 (→ 하단 온라인 교육)</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 찾아가는 가족교육</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 가족체험 및 캠프 프로그램</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">등 다양한 방식으로 참여할 수 있습니다.</span></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <h4>가족센터 가족교육 추진 방향</h4>
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px;"
+                      class="">
+                      <p style="line-height: 0.8;"><span style="font-size: 10pt;"> </span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> 가족센터 가족교육은 단순한 부모교육을 넘어</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 관계·소통 중심 예방적 가족정책 강화</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 생애주기별 가족관계 지원 확대</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 전국 단위 통합 가족교육 체계 구축</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">- 지역사회 및 가족센터 연계 강화</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;">를 목표로 추진되고 있습니다.</span></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <h4>2026년 가족센터 가족교육</h4>
+              <table border="1" cellpadding="0" cellspacing="0"
+                style="border:1px dashed #c7c7c7; border-left:0; border-bottom:0;" attr_no_border_tbl="1"
+                class="__se_tbl">
+                <tbody>
+                  <tr>
+                    <td
+                      style="border-width: 0px 0px 1px 1px; padding-left:20px; padding-right:30px; border-bottom-style: dashed; border-left-style: dashed; border-bottom-color: rgb(199, 199, 199); border-left-color: rgb(199, 199, 199); border-image: initial; border-top-style: initial; border-top-color: initial; border-right-style: initial; border-right-color: initial; width: 972px; height: 84px; background-color: rgb(245, 245, 245); padding:20px;"
+                      class="">
+                      <p style="line-height: 0.8;"><span style="font-size: 10pt;"> </span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> 전국 가족센터에서 운영하는 다양한 가족교육을
+                          안내합니다.</span></p>
+                      <p style="line-height: 1.8;"><span style="font-size: 12pt;"> 부모교육, 부부교육, 가족관계 회복 프로그램, 가족체험활동 등
+                          지역별 교육 정보를 한눈
+                          에 확인하고 신청할 수 있습니다.</span></p>
+                      <p style="line-height: 1.8; margin-top: 15px;">
+                        <a href="#"
+                          style="display: inline-block; padding: 10px 20px; font-size: 11pt; font-weight: bold; color: #ffffff; background-color: #025f8d; border-radius: 4px; text-decoration: none; font-family: 'Pretendard', sans-serif; line-height: 1.4;"
+                          title="2026년 가족센터 가족교육 다운로드">
+                          2026년 가족센터 가족교육 (다운받기)
+                        </a>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+              <h4>온라인 가족교육 안내</h4>
+              <style>
+                .online-edu-box {
+                  border: 1px dashed #c7c7c7;
+                  border-left: 0;
+                  border-bottom: 0;
+                  margin-top: 10px;
+                  background-color: rgb(245, 245, 245);
+                  padding: 20px;
+                }
+                .online-edu-box .intro-text {
+                  line-height: 1.8;
+                  font-size: 12pt;
+                  color: #333;
+                }
+                .online-edu-box .intro-text + .intro-text {
+                  margin-top: 5px;
+                }
+                .online-edu-grid {
+                  display: grid;
+                  grid-template-columns: repeat(3, 282px);
+                  gap: 40px 16px;
+                  justify-content: center;
+                  margin-top: 24px;
+                  font-family: 'Pretendard', sans-serif;
+                }
+                .edu-card {
+                  display: flex;
+                  flex-direction: column;
+                  width: 282px;
+                  height: 169px;
+                  text-decoration: none !important;
+                  box-sizing: border-box;
+                  overflow: hidden;
+                  transition: transform 0.2s ease, box-shadow 0.2s ease;
+                  border-radius: 0px;
+                  border: 1px solid #ddd;
+                  background-color: #ffffff;
+                }
+                .edu-card:not(.no-link):hover {
+                  transform: translateY(-4px);
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                }
+                .card-logo {
+                  height: 100px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: #ffffff;
+                  padding: 15px 20px;
+                  box-sizing: border-box;
+                  border-bottom: 1px solid #ddd;
+                }
+                .card-logo img {
+                  max-width: 100%;
+                  max-height: 100%;
+                  object-fit: contain;
+                }
+                .card-text {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: #f5f5f5;
+                  padding: 8px 16px;
+                  box-sizing: border-box;
+                  text-align: center;
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: #151717;
+                  line-height: 1.4;
+                  word-break: keep-all;
+                }
+                .card-text.multi-link {
+                  padding: 6px 12px;
+                }
+                .card-text.multi-link p {
+                  font-size: 14px;
+                  margin-bottom: 6px;
+                  font-weight: 500;
+                  color: #151717;
+                }
+                .card-text.multi-link .links {
+                  display: flex;
+                  gap: 6px;
+                }
+                .card-text.multi-link .links a {
+                  font-size: 15px;
+                  color: #ffffff;
+                  background-color: #025f8d;
+                  padding: 6px 12px;
+                  border-radius: 4px;
+                  text-decoration: none !important;
+                  font-weight: 500;
+                  transition: background-color 0.2s, color 0.2s;
+                }
+                .card-text.multi-link .links a:hover {
+                  background-color: #004b70;
+                  color: #ffffff;
+                }
+                
+                /* Responsive breakdown */
+                @media (max-width: 991px) {
+                  .online-edu-grid {
+                    grid-template-columns: repeat(2, 282px);
+                    gap: 30px 16px;
+                  }
+                }
+                @media (max-width: 640px) {
+                  .online-edu-grid {
+                    grid-template-columns: repeat(1, 282px);
+                    gap: 20px 16px;
+                  }
+                }
+              </style>
+              <div class="online-edu-box">
+                <p class="intro-text">정부부처, 공공기관, 가족센터 등에서 제공하는 다양한 가족교육·부모교육 콘텐츠를 한곳에서 안내하는 통합 정보 서비스입니다.</p>
+                <p class="intro-text">가족관계, 부모교육, 임신·출산, 양육, 청소년 이해 등 필요한 교육자료를 쉽게 검색하고 해당 기관의 교육 페이지로 바로 이동하여 이용할 수 있습니다.</p>
+                
+                <div class="online-edu-grid">
+                  <!-- 1. 여성가족부 -->
+                  <a href="https://www.mogef.go.kr/kps/main.do" target="_blank" title="가족교육 관련 사이트 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-10.png" alt="여성가족부">
+                    </div>
+                    <div class="card-text">
+                      가족교육 관련 사이트
+                    </div>
+                  </a>
+                  
+                  <!-- 2. 한국건강가정진흥원 -->
+                  <a href="https://edu.kihf.or.kr/portal/education/microListAction.do" target="_blank" title="다문화 가족 지원 가족교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-11.png" alt="한국건강가정진흥원">
+                    </div>
+                    <div class="card-text">
+                      다문화 가족 지원 가족교육
+                    </div>
+                  </a>
+                  
+                  <!-- 3. 중앙육아종합지원센터 -->
+                  <a href="https://lms.educare.or.kr/lms/receipt/lecture/listReceiptLecture.edu?paramCodeType=ON&amp;paramSelectDivision=&amp;userType=2" target="_blank" title="영유아자녀 양육 가족교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-12.png" alt="중앙육아종합지원센터">
+                    </div>
+                    <div class="card-text">
+                      영유아자녀 양육 가족교육
+                    </div>
+                  </a>
+                  
+                  <!-- 4. 학부모 On누리 -->
+                  <a href="https://www.parents.go.kr/usr/wap/list.do?app=10930&amp;listAll=Y&amp;lang=ko" target="_blank" title="학령기 자녀 정서코칭 및 학습, 진학 가족교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-13.png" alt="학부모 On누리">
+                    </div>
+                    <div class="card-text">
+                      학령기 자녀 정서코칭 및<br>학습, 진학 가족교육
+                    </div>
+                  </a>
+                  
+                  <!-- 5. I-누리 -->
+                  <a href="https://i-nuri.go.kr/parents/module/lms/index.do?menu_idx=7" target="_blank" title="영유아 양육지원 가족교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-14.png" alt="I-누리">
+                    </div>
+                    <div class="card-text">
+                      영유아 양육지원 가족교육
+                    </div>
+                  </a>
+                  
+                  <!-- 6. 한국청소년상담복지개발원 -->
+                  <a href="https://www.1388.go.kr/cco/YTOSP_SC_CEM_01" target="_blank" title="청소년기 자녀 이해 가족교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-15.png" alt="한국청소년상담복지개발원">
+                    </div>
+                    <div class="card-text">
+                      청소년기 자녀 이해<br>가족교육
+                    </div>
+                  </a>
+                  
+                  <!-- 7. 국가아동권리보장원 -->
+                  <a href="https://edu.ncrc.or.kr/common/greeting.do" target="_blank" title="입양 및 가정 위탁 부모교육 아동학대 관련 교육 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-16.png" alt="국가아동권리보장원">
+                    </div>
+                    <div class="card-text">
+                      입양 및 가정 위탁 부모교육<br>아동학대 관련 교육
+                    </div>
+                  </a>
+                  
+                  <!-- 8. 아이사랑 -->
+                  <a href="https://www.childcare.go.kr/?menuno=336" target="_blank" title="자녀 인권 및 성행동, 스마트폰 예방 등 새창열림" class="edu-card">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-17.png" alt="아이사랑">
+                    </div>
+                    <div class="card-text">
+                      자녀 인권 및 성행동,<br>스마트폰 예방 등
+                    </div>
+                  </a>
+                  
+                  <!-- 9. 놀이온 -->
+                  <div class="edu-card no-link">
+                    <div class="card-logo">
+                      <img src="/images/sub/logo-01-18.png" alt="놀이온">
+                    </div>
+                    <div class="card-text multi-link">
+                      <div class="links">
+                        <a href="https://more.goe.go.kr/kids-love/subList/20000000219" target="_blank" title="부모놀이 새창열림">부모놀이</a>
+                        <a href="https://more.goe.go.kr/kids-love/subList/30300001819" target="_blank" title="유아놀이 새창열림">유아놀이</a>
+                        <a href="https://more.goe.go.kr/kids-love/subList/20000000228" target="_blank" title="교사연구 새창열림">교사연구</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div><br></div>
+              <div><br></div>
+              <div><br>
+              </div>
+
+
+
+
+
+
+
+              <script>
+                var cms_menu_seq = "";
+                if (cms_menu_seq == "438") { // 지역센터 접속시 하위메뉴 링크 삭제
+                  $("#sub > .sub_contents > .care_community > .agency").remove();
+                  $("#sub > .sub_contents > .care_community > h4").eq(1).remove();
+                } 
+              </script>
+
+
+
+
+
+              <script type="text/javascript">
+                //<![CDATA[
+                $(function () {
+                  $("#satisfactionFrm").submit(function () {
+                    if (!$("[name=&apos;score&apos;]").is(":checked")) {
+                      alert("만족도를 선택하여 주시기 바랍니다.");
+                      $("[name=&apos;score&apos;]").eq(0).focus();
+                      return false;
+                    }
+                    $.post($(this).prop("action"), $(this).serializeObject(), function (data) {
+                      if (data.rst == "-1") {
+                        alert(data.msg);
+                      } else {
+                        alert("정상적으로 등록되었습니다. 참여해주셔서 감사합니다.");
+                        $(".s_avg").text(data.data.average);
+                        $(".s_cnt").text(data.data.cnt);
+                        $("textarea[name=&apos;etc&apos;]").val(& apos;& apos;);
+                  }
+        });
+                return false;
+      });
+
+                $("#QR_code").toggle(function () {
+                  $(".QR_box").slideDown();
+                  $("#qr_img").attr("src", "/mc/common/qrcode.do?width=100&height=97&url=" + location.href);
+                }, function () {
+                  $(".QR_box").slideUp();
+                });
+    });
+                function estimate() {
+                  $("#satisfactionFrm").submit();
+                }
+                //]]>
+              </script>
+
+              <script type="text/javascript">
+                $(document).ready(function () {
+                  $("input:radio[name=score]").click(function () {
+                    if ($("#etc_chk").prop("checked")) {
+                      $("#eval_insert").css("display", "block");
+                    } else {
+                      $("#eval_insert").css("display", "none");
+                      $("#eval_etc_text").val("");
+                    }
+                  });
+
+                  $(".gtb ul li input").on("click", function () {
+                    if ($(".gtb ul li input:radio[value=0]").prop("checked")) {
+                      $(".gtb a").css("display", "none");
+                    } else {
+                      $(".gtb a").css("display", "block");
+                    }
+                  });
+                  setTimeout(function () {
+                    $(".gtb ul li input").on(& apos; focus & apos;, function () {
+                      $(this).next("label").addClass("outline");
+                    });
+                  $(".gtb ul li input").blur(function () {
+                    $(this).next("label").removeClass("outline");
+                  });
+                }, 500);
+
+    });
+              </script>
+              <!-- 만족도조사 / 페이지담당자 -->
+
+              <div class="eval_sec">
+                <form id="satisfactionFrm" name="satisfactionFrm" action="/satifaction/estimate.do" method="post">
+                  <input type="hidden" name="_csrf" value="a9abab56-f082-4499-9bac-d2118ef1d44f">
+                  <div class="eval_txt">
+                    <p><strong>만족도</strong> 현재 페이지에 대하여 얼마나 만족하십니까?</p>
+                  </div>
+                  <div class="gtb">
+                    <input type="hidden" name="cms_menu_seq" value="297">
+                    <ul>
+                      <li><input type="radio" id="well" name="score" value="5"><label for="well">매우만족</label> </li>
+                      <li><input type="radio" id="satisfactorily" name="score" value="4"><label
+                          for="satisfactorily">만족</label></li>
+                      <li><input type="radio" id="normal" name="score" value="3"><label for="normal">보통</label></li>
+                      <li><input type="radio" id="dissatisfaction" name="score" value="2"><label
+                          for="dissatisfaction">불만족</label>
+                      </li>
+                      <li><input type="radio" id="veryunsatisfactory" name="score" value="1"><label
+                          for="veryunsatisfactory">매우불만족</label></li>
+                      <li><input type="radio" id="etc_chk" name="score" value="0"><label for="etc_chk">기타의견</label></li>
+                    </ul>
+                    <a href="javascript:estimate()"><span>평가하기</span></a>
+                  </div>
+                  <div class="eval_insert" id="eval_insert">
+                    <textarea id="eval_etc_text" name="etc" placeholder="기타의견을 작성해주세요" title="기타의견 작성"></textarea>
+                    <span><input type="submit" value="의견제출"></span>
+                  </div>
+                </form>
+              </div>
+
+
+            </div>
+
+
+
+
+
+            <script>
+              var cms_menu_seq = "";
+              if (cms_menu_seq == "438") { // 지역센터 접속시 하위메뉴 링크 삭제
+                $("#sub > .sub_contents > .care_community > .agency").remove();
+                $("#sub > .sub_contents > .care_community > h4").eq(1).remove();
+              } 
+            </script>
+
+
+
+
+
+            <script type="text/javascript">
+              //<![CDATA[
+              $(function () {
+                $("#satisfactionFrm").submit(function () {
+                  if (!$("[name='score']").is(":checked")) {
+                    alert("만족도를 선택하여 주시기 바랍니다.");
+                    $("[name='score']").eq(0).focus();
+                    return false;
+                  }
+                  $.post($(this).prop("action"), $(this).serializeObject(), function (data) {
+                    if (data.rst == "-1") {
+                      alert(data.msg);
+                    } else {
+                      alert("정상적으로 등록되었습니다. 참여해주셔서 감사합니다.");
+                      $(".s_avg").text(data.data.average);
+                      $(".s_cnt").text(data.data.cnt);
+                      $("textarea[name='etc']").val('');
+                    }
+                  });
+                  return false;
+                });
+
+                $("#QR_code").toggle(function () {
+                  $(".QR_box").slideDown();
+                  $("#qr_img").attr("src", "/mc/common/qrcode.do?width=100&height=97&url=" + location.href);
+                }, function () {
+                  $(".QR_box").slideUp();
+                });
+              });
+              function estimate() {
+                $("#satisfactionFrm").submit();
+              }
+              //]]>
+            </script>
+
+            <script type="text/javascript">
+              $(document).ready(function () {
+                $("input:radio[name=score]").click(function () {
+                  if ($("#etc_chk").prop("checked")) {
+                    $("#eval_insert").css("display", "block");
+                  } else {
+                    $("#eval_insert").css("display", "none");
+                    $("#eval_etc_text").val("");
+                  }
+                });
+
+                $(".gtb ul li input").on("click", function () {
+                  if ($(".gtb ul li input:radio[value=0]").prop("checked")) {
+                    $(".gtb a").css("display", "none");
+                  } else {
+                    $(".gtb a").css("display", "block");
+                  }
+                });
+                setTimeout(function () {
+                  $(".gtb ul li input").on('focus', function () {
+                    $(this).next("label").addClass("outline");
+                  });
+                  $(".gtb ul li input").blur(function () {
+                    $(this).next("label").removeClass("outline");
+                  });
+                }, 500);
+
+              });
+            </script>
+            <!-- 만족도조사 / 페이지담당자 -->
+
+            <div class="eval_sec">
+              <form id="satisfactionFrm" name="satisfactionFrm" action="/satifaction/estimate.do" method="post">
+                <input type="hidden" name="_csrf" value="4a23cca2-4a4c-4e5e-8ebd-866c2f29ffd1" />
+                <div class="eval_txt">
+                  <p><strong>만족도</strong> 현재 페이지에 대하여 얼마나 만족하십니까?</p>
+                </div>
+                <div class="gtb">
+                  <input type="hidden" name="cms_menu_seq" value="456" />
+                  <ul>
+                    <li><input type="radio" id="well" name="score" value="5" /><label for="well">매우만족</label> </li>
+                    <li><input type="radio" id="satisfactorily" name="score" value="4" /><label
+                        for="satisfactorily">만족</label></li>
+                    <li><input type="radio" id="normal" name="score" value="3" /><label for="normal">보통</label></li>
+                    <li><input type="radio" id="dissatisfaction" name="score" value="2" /><label
+                        for="dissatisfaction">불만족</label></li>
+                    <li><input type="radio" id="veryunsatisfactory" name="score" value="1" /><label
+                        for="veryunsatisfactory">매우불만족</label></li>
+                    <li><input type="radio" id="etc_chk" name="score" value="0" /><label for="etc_chk">기타의견</label></li>
+                  </ul>
+                  <a href="javascript:estimate()"><span>평가하기</span></a>
+                </div>
+                <div class="eval_insert" id="eval_insert">
+                  <textarea id="eval_etc_text" name="etc" placeholder="기타의견을 작성해주세요" title="기타의견 작성"></textarea>
+                  <span><input type="submit" value="의견제출" /></span>
+                </div>
+              </form>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="footer"><!-- 설정된게 없는경우 기본 화면 -->
+      <div class="f_wrap clearfix">
+        <div class="f_logo"><img src="https://tst.familynet.or.kr/images/footer/f_logo.png" alt="한국건강가정진흥원" /></div>
+        <div class="f_menu">
+          <ul>
+            <li><a href="/web/lay1/S1T6C393/sublink.do"><b>개인정보처리방침</b></a></li>
+            <li><a href="/web/lay1/S1T6C394/contents.do">이메일무단수집거부</a></li>
+            <li><a href="/web/lay1/S1T6C440/contents.do">공공저작물 저작권 관리 및 이용 지침</a></li>
+            <!-- //한가원 고도화 (2021-11-03) -->
+            <li><a href="/web/lay1/program/S1T6C7/sitemap/intro.do">사이트맵</a></li>
+          </ul>
+          <div class="f_txt">
+            <!-- /******************************************************************************
+				**** 서남아이에스   2023년 10월 협의 후 반영 조치내역       2023-10-19    ****
+				**** 대표 및 사업자등록번호 미표출 ****
+				*******************************************************************************/-->
+            <!-- <p>대표 : 김금옥   |    사업자등록번호 : 348-82-00136<br></p> -->
+            <p>(04554) 서울특별시 중구 퇴계로 173(충무로3가, 남산스퀘어) 21층 (고객상담 : 1577-9337)<br />Copyright &copy; KOREA INSTITUTE FOR
+              HEALTHY FAMILY. All Rights Reserved.</p>
+          </div>
+          <a title="새창에서 열립니다." href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110"
+            title="국가 공인 인증기관 : 웹와치" class="wa_mark" target="_blank">
+            <img src="https://tst.familynet.or.kr/images/footer/wamark.png" border="0"
+              alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" />
+          </a>
+        </div>
+        <div class="f_utill">
+          <div class="familySite">
+            <a class="btn_family" href="javascript:void(0);" title="패밀리 사이트 목록 열기">패밀리 사이트</a>
+            <ul class="familyList" style="display: none;">
+              <li><a href="http://www.kihf.or.kr" target="_blank" title="새창열림">한국건강가정진흥원</a></li>
+              <li><a href="http://www.liveinkorea.kr" target="_blank" title="새창열림">다누리</a></li>
+              <li><a href="https://danurischool.kr" target="_blank" title="새창열림">다누리배움터</a></li>
+              <li><a href="http://idolbom.go.kr" target="_blank" title="새창열림">아이돌봄 지원사업</a></li>
+              <li><a href="http://www.ffsb.kr" target="_blank" title="새창열림">가족친화인증</a></li>
+              <li><a href="http://www.mogef.go.kr" target="_blank" title="새창열림">성평등가족부</a></li>
+              <li><a href="http://women.na.go.kr" target="_blank" title="새창열림">성평등가족위원회</a></li>
+              <li><a href="http://www.kwdi.re.kr" target="_blank" title="새창열림">한국여성정책연구원</a></li>
+              <li><a href="http://www.nypi.re.kr" target="_blank" title="새창열림">한국청소년정책연구원</a></li>
+              <li><a href="http://central.childcare.go.kr" target="_blank" title="새창열림">중앙육아지원종합센터</a></li>
+              <li><a href="http://www.parents.go.kr" target="_blank" title="새창열림">전국학부모지원센터</a></li>
+            </ul>
+          </div>
+          <div class="f_sns">
+            <a href="https://blog.naver.com/pinacho1" target="_blank" title="네이버블로그 새창열림"><img
+                src="https://tst.familynet.or.kr/images/footer/f_blog.png" alt="네이버블로그" /></a>
+            <a href="https://www.facebook.com/kihf7600" target="_blank" title="페이스북 새창열림"><img
+                src="https://tst.familynet.or.kr/images/footer/f_facebook.png" alt="페이스북" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="/lib/js/pgwbrowser.js" async="async"></script>
+    <script type="text/javascript" src="/lib/js/mc.analytics.js" async="async"></script>
+
+  </div>
+
+
+
+  <div id="naviMenu">
+    <div>
+      <p class="navi_tit">전체메뉴</p>
+      <ul class="navi_top">
+        <li class="home"><a href="/web"><span>처음으로</span></a></li>
+
+
+        <li class="login"><a href="/web/lay4/program/S1T2C4/member/login.do"><span>로그인</span></a></li>
+        <li class="join"><a href="/web/lay4/program/S1T2C4/member/join_step1.do"><span>회원가입(sign up)</span></a></li>
+
+
+
+      </ul>
+      <ul class="menuCtg">
+        <li class="menu_1" child-type="1" menu-seq="296">
+          <div class="t_a_line">
+            <a href="/web/lay1/S1T1C296/sublink.do" class="mnTit">주요사업 </a>
+            <span class="arrow"></span>
+          </div>
+          <ul class="side_sub">
+            <li class="" child-type="1" menu-seq="297"> <a href="/web/lay1/S1T296C297/contents.do">사업소개 </a> </li>
+            <li class="" child-type="" menu-seq="337"> <a href="/web/lay1/S1T296C337/contents.do">가족센터는 </a> </li>
+            <li class="" child-type="" menu-seq="339"> <a href="/web/lay1/S1T309C339/contents.do">사업운영 및 사업영역 </a> </li>
+            <li class="" child-type="" menu-seq="338"> <a href="/web/lay1/S1T309C338/contents.do">설립목적 및 방향 </a> </li>
+            <li class="" child-type="" menu-seq="340"> <a href="/web/lay1/S1T309C340/contents.do">전달체계도 </a> </li>
+            <li class="" child-type="2" menu-seq="424"> <a href="/web/lay1/S1T296C424/sublink.do">건강가정사 </a> </li>
+          </ul>
+        </li>
+        <li class="menu_2" child-type="1" menu-seq="299">
+          <div class="t_a_line">
+            <a href="/web/lay1/S1T1C299/sublink.do" class="mnTit">알림마당 </a>
+            <span class="arrow"></span>
+          </div>
+          <ul class="side_sub">
+            <li class="" child-type="1" menu-seq="300"> <a href="/web/lay1/bbs/S1T299C300/A/3/list.do">진흥원소식 </a> </li>
+            <li class="" child-type="1" menu-seq="301"> <a href="/web/lay1/bbs/S1T299C301/A/4/list.do">뉴스링크 </a> </li>
+            <li class="" child-type="1" menu-seq="302"> <a href="/web/lay1/bbs/S1T299C302/A/1/list.do">센터홍보실 </a>
+              <ul>
+                <li class="" child-type="1" menu-seq="472"> <a href="/web/lay1/bbs/S1T302C472/A/21/list.do">홍보영상 </a>
+                </li>
+              </ul>
+            </li>
+            <li class="" child-type="1" menu-seq="303"> <a href="/web/lay1/bbs/S1T299C303/E/2/list.do">자주 묻는 질문 </a>
+            </li>
+            <li class="" child-type="1" menu-seq="416"> <a href="/web/lay1/bbs/S1T299C416/A/15/list.do">채용공고 </a> </li>
+            <li class="" child-type="1" menu-seq="442"> <a href="/web/lay1/bbs/S1T299C442/A/20/list.do">자료실 </a> </li>
+          </ul>
+        </li>
+        <li class="menu_3" child-type="1" menu-seq="304">
+          <div class="t_a_line">
+            <a href="/web/lay1/S1T1C304/sublink.do" class="mnTit">참여마당 </a>
+            <span class="arrow"></span>
+          </div>
+          <ul class="side_sub">
+            <li class="" child-type="1" menu-seq="450"> <a
+                href="/web/lay1/program/S1T304C450/recruitReceipt/list.do">프로그램신청 </a> </li>
+            <li class="" child-type="1" menu-seq="379"> <a href="/web/lay1/bbs/S1T304C379/G/10/list.do">온라인상담실 </a>
+            </li>
+            <li class="" child-type="1" menu-seq="306"> <a href="/web/lay1/program/S1T304C306/poll/list.do">만족도조사 </a>
+            </li>
+            <li class="" child-type="1" menu-seq="423"> <a href="/web/lay1/program/S1T304C423/receipt/list.do">센터홍보 </a>
+            </li>
+            <li class="" child-type="1" menu-seq="305"> <a
+                href="/web/lay1/program/S1T304C305/web/lay1/bbs/S1T304C305/A/5/intro.do">고객제안 </a> </li>
+          </ul>
+        </li>
+        <li class="menu_4" child-type="1" menu-seq="307">
+          <div class="t_a_line">
+            <a href="/web/lay1/program/S1T1C307/info/view.do" class="mnTit">지역센터안내 </a>
+            <span class="arrow"></span>
+          </div>
+          <ul class="side_sub">
+          </ul>
+        </li>
+        <li class="menu_6" child-type="1" menu-seq="431">
+          <div class="t_a_line">
+            <a href="/web/lay1/S1T1C431/sublink.do" class="mnTit">돌봄지원 (부모교육) </a>
+            <span class="arrow"></span>
+          </div>
+          <ul class="side_sub">
+            <li class="" child-type="1" menu-seq="456"> <a href="/web/lay1/S1T431C456/contents.do">법적근거 / 사업 주체별 역할 </a>
+            </li>
+            <li class="" child-type="1" menu-seq="432"> <a href="/web/lay1/S1T431C432/contents.do">돌봄공동체 </a> </li>
+          </ul>
+        </li>
+
+      </ul>
+      <div class="navi_bottom">
+        <a href="http://www.kihf.or.kr" class="kihf_link" target="_blank" title="한국건강가정진흥원 홈페이지 링크"><span><img
+              src="https://tst.familynet.or.kr/images/header/kihf_logo.png" alt="" /></span></a>
+        <div class="select clearfix">
+          <select id="site_link" title="패밀리 사이트 보기">
+            <option>패밀리 사이트</option>
+            <option value="http://www.kihf.or.kr">한국건강가정진흥원</option>
+            <option value="http://www.liveinkorea.kr">다누리</option>
+            <option value="http://idolbom.go.kr">아이돌봄 지원사업</option>
+            <option value="http://www.ffsb.kr">가족친화인증</option>
+            <option value="http://www.mogef.go.kr">여성가족부</option>
+            <option value="http://women.na.go.kr">여성가족위원회</option>
+            <option value="http://www.kwdi.re.kr">한국여성정책연구원</option>
+            <option value="http://www.nypi.re.kr">한국청소년정책연구원</option>
+            <option value="http://central.childcare.go.kr">중앙육아지원종합센터</option>
+            <option value="http://www.parents.go.kr">전국학부모지원센터</option>
+          </select>
+          <a href="javascript:void(0);" class="btn_go">이동</a>
+          <script type="text/javascript">
+            $(function () {
+              $(".btn_go").click(function () {
+                var url = $("#site_link").attr('value');
+                window.open(url);
+              });
+            });
+          </script>
+        </div>
+      </div>
+      <p class="closeArea"><a class="close" title="메뉴 닫기">메뉴 닫기</a></p>
+    </div>
+  </div>
+
+</body>
+
+</html>
