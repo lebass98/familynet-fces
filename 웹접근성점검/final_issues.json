@@ -1,0 +1,702 @@
+[
+ {
+  "id": "ISSUE-01",
+  "kwcag": "6.4.1 반복 영역 건너뛰기",
+  "wcag": "2.4.1",
+  "severity": "심각",
+  "title": "건너뛰기 링크가 tabindex=\"-1\"로 무력화되고 이동 대상 앵커도 존재하지 않음",
+  "problem": "공통 헤더의 건너뛰기 링크 3개(본문으로 바로가기 2개, 메뉴로 바로가기)에 모두 tabindex=\"-1\"이 지정되어 Tab 키 초점 순서에서 완전히 제외됩니다. 키보드·스크린리더 사용자가 매 페이지 반복되는 헤더와 메뉴를 건너뛸 수단이 사실상 없는 상태입니다. 또한 첫 번째 링크의 목적지인 id=\"container\" 요소가 서브 페이지 어디에도 존재하지 않고, 메인 페이지에는 두 번째 링크의 목적지인 id=\"sub\"가 없어 링크가 동작하더라도 이동할 곳이 없습니다. 반복 영역 건너뛰기 기능이 완전히 무력화된 상태로 접근성 인증 심사 탈락 사유에 해당하며, 전 페이지 공통 템플릿에서 동일하게 반복됩니다.",
+  "fix": "tabindex=\"-1\"을 모두 제거해 문서의 첫 초점 대상이 되도록 하고, 본문 시작 지점에 실제 앵커를 연결하세요. 수정 전: <a href=\"#container\" tabindex=\"-1\" class=\"main_skip\">본문으로 바로가기</a> → 수정 후: <a href=\"#container\" class=\"main_skip\">본문으로 바로가기</a> + 본문 컨테이너에 <main id=\"container\" tabindex=\"-1\"> 추가. 초점을 받았을 때 화면에 표시되도록 CSS(.main_skip:focus 시 노출)를 함께 점검하고, 페이지 유형별로 실재하는 앵커만 출력해야 합니다.",
+  "evidence": "<div id=\"skipNavi\"><a href=\"#container\" tabindex=\"-1\" class=\"main_skip\">본문으로 바로가기</a><a href=\"#sub\" tabindex=\"-1\" class=\"sub_skip\">본문으로 바로가기</a><a href=\"#gnavi\" tabindex=\"-1\">메뉴로 바로가기</a></div> — 서브 페이지에서 id=\"container\" 검색 결과 0건, 메인 페이지에는 id=\"sub\" 0건",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-01.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-02",
+  "kwcag": "7.3.1 오류 정정",
+  "wcag": "3.3.1",
+  "severity": "심각",
+  "title": "로그인 페이지가 500 서버 오류로 응답되어 로그인 기능 자체를 이용할 수 없음",
+  "problem": "로그인 URL(/web/lay4/program/S1T2C4/member/login.do) 접속 시 실제 로그인 폼이 아닌 eGovFrame 기본 500 Internal Server Error 페이지가 반환됩니다. 오류 안내가 영문 한 줄(\"500 Internal Server error\")뿐이며 오류의 원인, 해결 방법, 대체 경로(고객센터 연락처 등)를 전혀 제공하지 않아 모든 사용자가 로그인 기능을 이용할 수 없고, 특히 스크린리더 사용자는 무슨 문제가 발생했는지조차 파악하기 어렵습니다. 실제 로그인 폼(입력 필드 레이블, 접근 가능한 인증 등)은 이 상태로는 점검이 불가능하므로 서버 오류 해결 후 재점검이 필요합니다.",
+  "fix": "1) 서버 오류를 해결하여 로그인 페이지가 정상 렌더링되도록 조치합니다. 2) 오류 페이지 자체도 개선합니다. 수정 전: <td class=\"lt_text2\">500 Internal Server error</td> → 수정 후: <h1>서비스 오류 안내</h1><p>일시적인 서버 오류가 발생했습니다. 잠시 후 다시 시도하시거나 고객센터(전화번호)로 문의해 주세요.</p> 와 같이 한국어 안내문과 대체 이용 수단을 제공합니다.",
+  "evidence": "<td width=\"399\" align=\"left\" class=\"lt_text2\">500 Internal Server error</td> — 페이지 전체가 eGovFrame 오류 템플릿(er_logo.jpg, danger.jpg)으로 구성됨",
+  "scope": "특정 페이지",
+  "pages": [
+   "05-login"
+  ],
+  "screenshots": [
+   {
+    "page": "05-login",
+    "file": "viewport.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-03",
+  "kwcag": "6.1.1 기본 언어 표시 외 (5.1.1 대체 텍스트, 6.4.2 제목 제공, 6.4.3 적절한 링크 텍스트)",
+  "wcag": "3.1.1, 1.1.1, 2.4.2, 2.4.4",
+  "severity": "심각",
+  "title": "로그인 오류 화면이 접근성이 전무한 구형 eGovFrame 템플릿으로 노출됨",
+  "problem": "로그인 URL에서 노출되는 구형 전자정부프레임워크 오류 템플릿은 기본 접근성 요건이 전무합니다. <html>에 lang 속성이 없어 스크린리더가 문서 언어를 판단할 수 없고, 페이지 내 이미지 3개(로고 er_logo.jpg, 경고 아이콘 danger.jpg, 돌아가기 버튼 go_history.jpg) 전부에 alt가 없으며, 유일한 조작 요소인 '돌아가기' 링크는 alt 없는 이미지만 담고 있어 이름 없이 낭독되고 javascript: URI로만 동작합니다. <title>은 사이트명만 표기되고 h1~h6 헤딩이 하나도 없으며, 전체가 6중첩 레이아웃 테이블로 구성되고 body에 overflow:hidden이 지정되어 화면 확대 시 잘린 콘텐츠에 접근할 수도 없습니다. 시각장애 사용자는 오류가 발생했다는 사실 자체를 인지할 수 없습니다.",
+  "fix": "오류 템플릿을 서비스 공통 템플릿과 동일한 접근성 기준으로 재작성하세요. 수정 전: <html xmlns=\"http://www.w3.org/1999/xhtml\"> ... <img src=\".../er_logo.jpg\" width=\"379\" height=\"57\"> → 수정 후: <html lang=\"ko\"> ... <title>서비스 오류 안내 - 가족센터</title> <main><h1>서비스 오류 안내</h1> <img src=\".../er_logo.jpg\" alt=\"건강가정지원센터\"> <a href=\"#\" onclick=\"fncGoAfterErrorPage();return false;\">이전 페이지로 돌아가기</a></main>. 레이아웃 테이블은 시맨틱 마크업으로 교체(불가피하면 role=\"presentation\" 부여)하고 body의 overflow:hidden, script language 속성, history.back(-2) 등 구식 마크업·스크립트도 함께 정비하세요.",
+  "evidence": "<html xmlns=\"http://www.w3.org/1999/xhtml\"> (lang 없음) / <img src=\"/images/egovframework/com/cmm/danger.jpg\" width=\"74\"> 등 alt 없는 이미지 3건 / <a href=\"javascript:fncGoAfterErrorPage();\"><img src=\".../go_history.jpg\"></a> / 헤딩 0건, 중첩 테이블 6개",
+  "scope": "특정 페이지",
+  "pages": [
+   "05-login"
+  ],
+  "screenshots": [
+   {
+    "page": "05-login",
+    "file": "shot-00-html-has-lang.png"
+   },
+   {
+    "page": "05-login",
+    "file": "shot-01-image-alt.png"
+   },
+   {
+    "page": "05-login",
+    "file": "shot-05-link-name.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-04",
+  "kwcag": "6.1.1 키보드 사용 보장",
+  "wcag": "2.1.1",
+  "severity": "심각",
+  "title": "href 없는 <a>로 구현된 '메뉴 닫기' 버튼이 키보드 초점을 받지 못함",
+  "problem": "모바일 전체메뉴(#naviMenu) 하단의 '메뉴 닫기' 컨트롤이 href 속성이 없는 <a> 요소로 구현되어 있습니다. href가 없는 앵커는 키보드 초점을 받지 못하므로 키보드 사용자는 이 컨트롤에 도달할 수 없고, 메뉴를 연 뒤 닫지 못해 조작이 차단됩니다. 마우스 클릭(JS 이벤트)으로만 메뉴를 닫을 수 있으며, 모바일 공통 템플릿에 포함되어 여러 페이지에서 동일하게 반복됩니다.",
+  "fix": "버튼 역할 요소는 <button>으로 교체하는 것이 원칙입니다. 수정 전: <a class=\"close\" title=\"메뉴 닫기\">메뉴 닫기</a> → 수정 후: <button type=\"button\" class=\"close\">메뉴 닫기</button>. 같은 메뉴 상단의 <button class=\"close_btn\">은 올바르게 구현되어 있으므로 동일한 방식으로 통일하면 됩니다. 부득이 <a>를 유지해야 하면 href=\"#\"과 role=\"button\", 키보드 이벤트 처리를 함께 제공하세요.",
+  "evidence": "<p class=\"closeArea\"><a class=\"close\" title=\"메뉴 닫기\">메뉴 닫기</a></p> — href 속성 부재로 Tab 초점 불가",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "04-notice-view",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-04.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-05",
+  "kwcag": "7.2.1 웹 애플리케이션 접근성",
+  "wcag": "2.1.1",
+  "severity": "심각",
+  "title": "어린이 회원가입의 생년월일 달력 버튼이 키보드로 조작 불가",
+  "problem": "자녀 생년월일 입력란(#birth)이 readonly로 직접 입력이 차단되어 있고, 달력을 여는 유일한 수단이 초점을 받을 수 없는 img 요소(#birth_calendar)에 마우스 클릭 핸들러를 건 것입니다. 키보드 사용자와 스크린리더 사용자는 생년월일을 입력할 방법이 없어 어린이 회원가입 절차 진행이 불가능합니다.",
+  "fix": "달력 트리거를 실제 버튼으로 교체하고 readonly를 해제해 직접 입력도 허용하세요. 수정 전: <img src=\"/images/sub/cert_date.gif\" alt=\"생년월일 선택버튼\" id=\"birth_calendar\" style=\"cursor:pointer;\"> → 수정 후: <button type=\"button\" id=\"birth_calendar\"><img src=\"/images/sub/cert_date.gif\" alt=\"\">생년월일 선택</button> 및 <input id=\"birth\">에서 readonly 제거(입력 형식 안내 제공).",
+  "evidence": "<input type=\"text\" id=\"birth\" title=\"생년월일 선택 및 입력란\" onchange=\"setBirth(this)\" readonly=\"readonly\" class=\"hasDatepicker\"><img src=\"/images/sub/cert_date.gif\" alt=\"생년월일 선택버튼\" id=\"birth_calendar\" style=\"cursor:pointer;\">",
+  "scope": "특정 페이지",
+  "pages": [
+   "06-join"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-05.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-06",
+  "kwcag": "5.3.2 콘텐츠의 선형 구조 (랜드마크 구조)",
+  "wcag": "1.3.1",
+  "severity": "중요",
+  "title": "전 페이지에 main·header·nav·footer 랜드마크가 전혀 없음",
+  "problem": "점검한 10개 페이지 모두 <main>, <header>, <nav>, <footer> 요소와 landmark role(banner, main, contentinfo 등)이 0건이며 전체가 <div>로만 구성되어 있습니다(전 페이지 hasMain: 0, axe landmark-one-main 위반 및 랜드마크 밖 콘텐츠 16~28건이 전 페이지 반복). 스크린리더 사용자가 랜드마크 단축키로 본문·메뉴·푸터로 곧바로 이동할 수 없어 모든 페이지를 처음부터 순차 탐색해야 합니다.",
+  "fix": "공통 템플릿의 구조 div를 시맨틱 요소로 교체합니다. 수정 전: <div class=\"h_wrap\">...</div> <div class=\"gnb\">...</div> <div id=\"container\">...</div> → 수정 후: <header class=\"h_wrap\">...</header> <nav class=\"gnb\" aria-label=\"주 메뉴\">...</nav> <main id=\"container\">...</main> <footer>...</footer>. 기존 CSS 선택자가 클래스 기반이므로 요소명 교체만으로 시각적 영향 없이 적용 가능하며, main을 추가하면 건너뛰기 링크 대상 문제도 함께 해결됩니다.",
+  "evidence": "전 10개 페이지에서 <main|<header|<nav|<footer 및 role=\"banner|navigation|main|contentinfo\" 검색 결과 0건, meta.json hasMain: 0. region 위반: <div class=\"official_gov_banner\">, <h1><a href=\" /\"><img ... alt=\"건강가정지원센터\"></a></h1> 등",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "05-login",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "01-main",
+    "file": "shot-06-landmark-one-main.png"
+   },
+   {
+    "page": "02-contents",
+    "file": "shot-02-landmark-one-main.png"
+   },
+   {
+    "page": "08-receipt",
+    "file": "shot-07-landmark-one-main.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-07",
+  "kwcag": "6.4.2 제목 제공",
+  "wcag": "1.3.1, 2.4.6",
+  "severity": "중요",
+  "title": "제목 구조 붕괴 — 빈 H1(구명칭 로고)과 H2 직후 H6 사용이 전 페이지 반복",
+  "problem": "전 페이지에서 H1이 텍스트 없이 로고 이미지만 담고 있고 그 alt마저 현재 사이트명이 아닌 구명칭 '건강가정지원센터'입니다. 또한 LNB 하단 상담 안내 위젯이 H2(2차 메뉴명) 바로 다음에 H6(전화상담/온라인상담)을 사용해 H3~H5를 건너뛰는 위반이 점검한 모든 서브 페이지에서 반복되며, 본문 제목(H3)이 사이드 위젯 제목(H6)보다 뒤에 옵니다. 메인 페이지는 H2 섹션 제목 아래 개별 게시물 제목에 H6을 16건 사용하고, 회원가입 페이지는 H1에서 바로 H4로 건너뜁니다. 스크린리더의 제목 단위 탐색 시 문서 개요가 왜곡되어 콘텐츠 위계를 파악할 수 없습니다.",
+  "fix": "공통 템플릿의 제목 레벨을 재정비합니다. 수정 전: <h1><a href=\"/\"><img src=\"/images/header/logo.png\" alt=\"건강가정지원센터\"></a></h1> ... <div class=\"call\"><h6>전화상담</h6> → 수정 후: <h1><a href=\"/\"><img src=\"/images/header/logo.png\" alt=\"가족센터\"></a></h1> ... <div class=\"call\"><h3>전화상담</h3> (또는 제목 성격이 아닌 항목은 <strong> 등 비제목 요소로 변경). 메인 게시물 제목의 H6도 H3 수준으로, 회원가입의 H4도 순차 위계로 조정하고 시각적 크기는 CSS로 처리하세요.",
+  "evidence": "<h1><a href=\" /\"><img src=\"/images/header/logo.png\" alt=\"건강가정지원센터\"></a></h1> / <div class=\"call\"><h6>전화상담</h6><p>1577-9337</p> — 전 페이지 meta.json에서 \"H1: \" 빈 텍스트, H2→H6 건너뜀 반복, 메인 H6 16건",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "02-contents",
+    "file": "shot-01-heading-order.png"
+   },
+   {
+    "page": "01-main",
+    "file": "shot-05-heading-order.png"
+   },
+   {
+    "page": "06-join",
+    "file": "shot-03-heading-order.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-08",
+  "kwcag": "5.4.3 텍스트 콘텐츠의 명도 대비",
+  "wcag": "1.4.3",
+  "severity": "중요",
+  "title": "푸터 '개인정보처리방침' 링크의 명도 대비 4.37:1로 기준(4.5:1) 미달",
+  "problem": "공통 푸터의 개인정보처리방침 링크(<b> 강조)가 전경색 #177e8b, 배경색 #f4f5f6으로 명도 대비 4.37:1에 그쳐 기준치 4.5:1에 미달합니다. 17px 굵은 글씨는 대형 텍스트(18.66px 볼드 이상) 기준에 해당하지 않아 4.5:1이 적용됩니다. 개인정보처리방침은 법적으로 중요한 링크인데 저시력 사용자가 식별하기 어렵고, 이 위반이 로그인 오류 페이지를 제외한 9개 전 페이지 푸터에서 동일하게 반복됩니다. 이 외에도 배경 이미지 위 텍스트 등 axe 판정 보류(incomplete) 요소가 페이지당 4~25건 있어 수동 대비 측정이 필요합니다.",
+  "fix": "푸터 링크 색상만 소폭 어둡게 조정하면 됩니다. 수정 전: color: #177e8b; (배경 #f4f5f6 기준 4.37:1) → 수정 후: color: #146e79; (약 5.0:1) 또는 #11616b 등 4.5:1 이상을 만족하는 색으로 공통 CSS에서 일괄 변경합니다. 판정 보류 요소들도 컬러피커로 실측 확인을 권장합니다.",
+  "evidence": "<a href=\"https://www.kihf.or.kr/web/lay1/S1T252C253/contents.do\" target=\"_blank\"><b>개인정보처리방침</b></a> — axe: contrast 4.37 (fg #177e8b / bg #f4f5f6, 17px bold, 기준 4.5:1), 9개 페이지 반복",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "01-main",
+    "file": "shot-04-color-contrast.png"
+   },
+   {
+    "page": "02-contents",
+    "file": "shot-00-color-contrast.png"
+   },
+   {
+    "page": "10-guide",
+    "file": "shot-00-color-contrast.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-09",
+  "kwcag": "5.4.3 텍스트 콘텐츠의 명도 대비",
+  "wcag": "1.4.3",
+  "severity": "중요",
+  "title": "본문 안내문·메뉴·단계 표시 등 페이지별 텍스트의 명도 대비 미달",
+  "problem": "푸터 공통 이슈 외에 페이지별 본문 텍스트에서도 명도 대비 미달이 다수 확인됩니다. 게시글 상세의 '이전 글이 없습니다.' 안내(#888888/흰 배경, 3.54:1), 회원가입의 언어 선택 레이블(#e85327, 3.68:1)과 가입 단계 표시 3건(#777777, 4.47:1), 사이트맵 1뎁스 메뉴 링크 5건(#3d7a99/#f5f5f5, 4.33:1), 프로그램 목록의 빨간 안내 문구(#ff0000, 3.99:1)와 지역명 텍스트(#3d7a99, 4.33:1) 등 총 20여 건이 4.5:1 기준에 미달해 저시력 사용자가 핵심 안내와 내비게이션을 읽기 어렵습니다.",
+  "fix": "각 텍스트의 전경색을 4.5:1 이상이 되도록 어둡게 조정하세요. 예: 순수 빨강 안내문 color: red → color:#c62828(약 5.4:1), 회색 계열 #888888 → #767676 이하 및 #777777 → #6b6b6b, 주황 강조 #e85327 → #c9421c(4.55:1), 청록 메뉴 #3d7a99 → #33667f(약 5.3:1). 사이트 공통 팔레트(CSS 변수) 차원에서 일괄 교체하는 것이 효율적입니다. CSS 예시 — 수정 전: .sitemap ol .title a { color:#3d7a99; } → 수정 후: .sitemap ol .title a { color:#33667f; }",
+  "evidence": "<td>이전 글이 없습니다.</td> 3.54:1 / <b style=\"color:#e85327\">언어(language)</b> 3.68:1 / <p style=\"color: red;\">※ 센터 사업 홍보…</p> 3.99:1 / <a href=\"/web/lay1/S1T1C296/sublink.do\">사업소개</a> 4.33:1 등",
+  "scope": "특정 페이지",
+  "pages": [
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt"
+  ],
+  "screenshots": [
+   {
+    "page": "06-join",
+    "file": "shot-00-color-contrast.png"
+   },
+   {
+    "page": "07-sitemap",
+    "file": "shot-00-color-contrast.png"
+   },
+   {
+    "page": "08-receipt",
+    "file": "shot-00-color-contrast.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-10",
+  "kwcag": "6.5.2 새 창·팝업 사전 알림",
+  "wcag": "3.2.2",
+  "severity": "중요",
+  "title": "헤더 SNS·개인정보처리방침 등 새 창으로 열리는 링크에 사전 안내 없음",
+  "problem": "target=\"_blank\"로 새 창을 여는 링크 중 헤더 SNS 링크(블로그·페이스북·인스타그램·유튜브)와 푸터 개인정보처리방침 링크에는 새 창 열림을 알리는 title이나 텍스트가 전혀 없습니다(페이지당 4~5건, 메인 페이지는 회원가입 안내 팝업의 유튜브 링크 4건과 본문 챗봇·블로그·유튜브 카드를 포함해 12건). 같은 페이지의 패밀리사이트 링크 11건에는 title=\"새창열림\"이 제공되어 있어 사이트 내에서도 처리가 일관되지 않으며, 스크린리더 사용자는 예고 없이 새 창으로 이동해 맥락을 잃고 뒤로 가기가 동작하지 않는 이유를 알기 어렵습니다.",
+  "fix": "새 창 안내를 title 또는 대체 텍스트에 포함해 누락된 링크 전부에 적용하세요. 수정 전: <a href=\"https://blog.naver.com/kihfkorea\" target=\"_blank\"><img src=\"/images/header/icon_blog.png\" alt=\"건강가정진흥원 블로그\"></a> → 수정 후: <a href=\"https://blog.naver.com/kihfkorea\" target=\"_blank\" title=\"새창열림\"><img src=\"/images/header/icon_blog.png\" alt=\"건강가정진흥원 블로그(새창열림)\"></a>. 개인정보처리방침 링크에도 title=\"새창열림\" 또는 숨김 텍스트를 추가하세요.",
+  "evidence": "<a href=\"https://blog.naver.com/kihfkorea\" target=\"_blank\">, <a href=\"https://www.facebook.com/kihf7600\" target=\"_blank\">, <a href=\"https://www.youtube.com/@kihfkorea\" target=\"_blank\">, <a href=\"https://www.kihf.or.kr/...contents.do\" target=\"_blank\"><b>개인정보처리방침</b></a> — 전 페이지 반복 (title=\"새창열림\" 제공 링크와 혼재)",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-10.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-11",
+  "kwcag": "5.1.1 적절한 대체 텍스트 제공",
+  "wcag": "1.1.1",
+  "severity": "중요",
+  "title": "모바일 회원가입 아이콘 등 alt 속성 자체가 없는 이미지 존재",
+  "problem": "공통 헤더(모바일 메뉴)의 회원가입 아이콘 <img>에 alt 속성이 아예 없어 로그인 오류 페이지를 제외한 전 페이지에서 반복되며, 일부 스크린리더가 파일명 'icon_mob_join.svg'를 그대로 읽어 불필요한 정보를 전달합니다. alt 속성 누락은 인증 심사 지적 항목입니다. 회원가입 페이지에는 AJAX 처리 중 표시되는 loading.png(정보성 이미지)에도 alt가 없어 로딩 상태를 인지할 수 없고, 프로그램 목록 페이지의 페이징 화살표 3건은 img alt=\"\"를 비운 채 링크 title에만 이름을 의존해 일부 보조기술·모바일 환경에서 전달되지 않을 수 있습니다.",
+  "fix": "인접 텍스트(회원가입)가 있는 장식 아이콘에는 빈 alt를, 정보성 이미지에는 의미 있는 alt를 부여하세요. 수정 전: <img src=\"/images/header/icon_mob_join.svg\"> → 수정 후: <img src=\"/images/header/icon_mob_join.svg\" alt=\"\">. 수정 전: <img src=\"/images/sub/loading.png\"> → 수정 후: <img src=\"/images/sub/loading.png\" alt=\"처리 중입니다\">. 페이징은 title 대신 이미지 alt로 제공: <a href=\"…cpage=1\"><img src=\"paging_fst_arr.png\" alt=\"첫 페이지로 이동\"></a>",
+  "evidence": "<li class=\"mob-join-mypage\"><a href=\" /web/lay4/program/S1T2C4/member/join_step1.do\"><img src=\"/images/header/icon_mob_join.svg\"> 회원가입</a></li> — 전 9개 페이지 meta.json imgsNoAlt에 동일 경로 반복",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-11.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-12",
+  "kwcag": "7.2.1 웹 애플리케이션 접근성",
+  "wcag": "1.3.1, 4.1.2",
+  "severity": "중요",
+  "title": "탭 UI의 ARIA 구조 오류 및 역할 미제공 (메인 공지사항 탭·회원가입 유형 탭)",
+  "problem": "메인 공지사항 탭은 <ul role=\"tablist\"> 바로 아래의 <li>에 role=\"presentation\"이 없어 role=\"tab\"인 <a>의 부모가 tablist로 인식되지 않고(axe aria-required-parent·aria-required-children critical), 동시에 ul의 목록 의미가 깨져 listitem 오류 4건도 함께 발생하며 <a>에 표준이 아닌 alt=\"선택됨\" 속성까지 사용되었습니다. 회원가입 페이지의 일반/어린이 가입 전환 탭은 반대로 role=\"tablist\"/\"tab\"/\"tabpanel\", aria-selected, aria-controls가 전혀 없고 href=\"javascript:show_tab(n);\" 링크로만 구현되어 있습니다. 두 경우 모두 보조기술이 탭 개수·현재 선택 상태를 올바르게 안내하지 못합니다.",
+  "fix": "메인 탭 — 수정 전: <ul class=\"tabs...\" role=\"tablist\" aria-label=\"공지사항\"><li id=\"tab1\" class=\"active\"><a href=\"#tab-1\" alt=\"선택됨\" role=\"tab\" ...> → 수정 후: <ul class=\"tabs...\" role=\"tablist\" aria-label=\"공지사항\"><li id=\"tab1\" class=\"active\" role=\"presentation\"><a href=\"#tab-1\" role=\"tab\" aria-selected=\"true\" aria-controls=\"tab-1\">가족센터 소식</a> (alt 속성 제거, 각 패널에 role=\"tabpanel\"과 aria-labelledby 지정. 화살표 키 스크립트는 이미 있으므로 구조만 교정). 회원가입 탭 — 수정 전: <li id=\"tab0\" class=\"on\"><a href=\"javascript:show_tab(0);\">일반 회원가입...</a></li> → 수정 후: <ul role=\"tablist\"><li role=\"presentation\"><button role=\"tab\" aria-selected=\"true\" aria-controls=\"cont0\">일반 회원가입 (만 14세 이상 내국인/외국인)</button></li></ul>, 패널에 role=\"tabpanel\" 부여.",
+  "evidence": "<li id=\"tab1\" class=\"active\"><a href=\"#tab-1\" alt=\"선택됨\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-1\" aria-selected=\"true\">가족센터 소식</a></li> / <ul id=\"tabList\"><li id=\"tab0\" class=\"on\"><a href=\"javascript:show_tab(0);\">일반 회원가입 ...</a></li>",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main",
+   "06-join"
+  ],
+  "screenshots": [
+   {
+    "page": "01-main",
+    "file": "shot-00-aria-required-children.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-13",
+  "kwcag": "8.2.1 웹 애플리케이션 접근성 준수",
+  "wcag": "4.1.2",
+  "severity": "중요",
+  "title": "GNB 드롭다운·FAQ 아코디언·커스텀 셀렉트·모달에 펼침/상태 정보(aria-expanded 등) 미제공",
+  "problem": "동적으로 열리고 닫히는 UI 전반에 상태 속성이 전무합니다. GNB(#gnavi)의 하위 메뉴(.lnb_sub)는 display:none으로 숨겨진 채 스크립트로만 표시되는데 상위 메뉴 링크에 aria-expanded·aria-haspopup이 전 페이지 0건이고, 인라인 스크립트가 초점 진입 시 하위 메뉴를 강제로 숨기는 등 마우스 사용을 전제로 동작합니다. 메인의 지역센터 커스텀 셀렉트 트리거 버튼, FAQ 아코디언의 질문 링크(<a href=\"javascript:;\">, AJAX로 답변 삽입/제거), 비밀번호 입력 모달(#backPage, role=\"dialog\"·aria-modal·초점 트랩 없음)과 전체메뉴·공유 토글까지 모두 같은 문제로, 스크린리더 사용자는 요소를 눌렀을 때 무엇이 열렸는지 알 수 없습니다.",
+  "fix": "각 트리거에 상태 속성을 부여하고 스크립트에서 갱신하세요. GNB — 수정 전: <li class=\"l_title1\"><a href=\"...\">사업소개</a><div class=\"lnb_sub\" style=\"display: none;\"> → 수정 후: <a href=\"...\" aria-haspopup=\"true\" aria-expanded=\"false\">사업소개</a><div class=\"lnb_sub\" hidden> (열 때 aria-expanded=\"true\", focusin/focusout에서도 mouseenter/mouseleave와 동일하게 동작). 아코디언 — <a href=\"javascript:;\" class=\"faq_click\">질문</a> → <button type=\"button\" class=\"faq_click\" aria-expanded=\"false\">질문</button>. 커스텀 셀렉트 — <button class=\"select-trigger\" aria-haspopup=\"listbox\" aria-expanded=\"false\">. 모달 — <div id=\"frontPage\" role=\"dialog\" aria-modal=\"true\" aria-label=\"비밀번호 입력\"> + 열릴 때 초점 이동·트랩.",
+  "evidence": "<div class=\"lnb_sub\" style=\"display: none;\"> (aria-expanded·aria-haspopup 전 페이지 0건) / $(\"#allMenu_link, .kihf_link\").focus(function () { $(\".lnb_sub, .lnb_bg\").hide(); }); / <a href=\"javascript:;\" class=\"faq_click\" data-seq=\"224202\"> / <button type=\"button\" class=\"select-trigger\"><span>시·도 선택</span></button>",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-13.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-14",
+  "kwcag": "5.3.1 표의 구성",
+  "wcag": "1.3.1",
+  "severity": "중요",
+  "title": "게시판 목록 표에 caption·th·scope가 전혀 없음",
+  "problem": "공지사항 목록과 FAQ 목록을 담은 table.list_style_1이 colgroup·tbody·td만으로 구성되어 있고 caption(표 제목), th(머리글 셀), scope 속성이 하나도 없습니다. 스크린리더 사용자는 표의 용도와 각 열의 의미(제목/첨부파일 여부)를 파악할 수 없습니다. 특히 FAQ 목록은 질문 링크가 세로로 나열된 1열 구조여서 표로 마크업할 이유도 없는 형태입니다.",
+  "fix": "표 상단에 <caption>진흥원 소식 목록 : 제목, 첨부파일 제공</caption>을 추가하고, 머리 행을 <thead><tr><th scope=\"col\">제목</th><th scope=\"col\">첨부</th></tr></thead>로 마크업하세요. 시각 디자인상 머리 행을 숨겨야 하면 화면 밖 배치(blind 클래스)를 사용하되 caption은 유지합니다. FAQ처럼 1열 목록은 표 대신 목록 요소를 권장합니다. 수정 전: <table class=\"list_style_1\"><tbody><tr class=\"question\"><td><a ...>제목</a></td></tr> → 수정 후: <ul class=\"list_style_1\"><li class=\"question\"><a ...>제목</a></li>",
+  "evidence": "<table class=\"list_style_1\"><colgroup><col><col style=\"width:75px;\"></colgroup><tbody><tr><td class=\"tit clearfix\">... — <caption>, <th>, scope= 검색 결과 0건 (03·09 공통)",
+  "scope": "사이트 공통",
+  "pages": [
+   "03-notice-list",
+   "09-gallery"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-14.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-15",
+  "kwcag": "7.2.1 웹 애플리케이션 접근성 (링크 동작)",
+  "wcag": "2.4.4",
+  "severity": "중요",
+  "title": "목적지 없는 링크 다수 — 브레드크럼 홈·모바일 SNS는 href=\"#\", 목록·버튼 링크는 javascript:에 의존",
+  "problem": "위치 안내(브레드크럼)의 '홈' 링크와 모바일 전체메뉴의 SNS 링크 4건(네이버 블로그·페이스북·인스타그램·유투브)이 href=\"#\"으로 되어 있어 활성화해도 이동 없이 페이지 최상단으로 초점만 이동합니다(공통 템플릿 반복). 프로그램 목록의 제목·썸네일 링크 40여 건은 href=\"javascript:void(0);\"에 onclick으로만 동작해 스크립트 비활성 환경, 새 탭 열기, 링크 복사가 모두 불가능하며, 건별보기 확인·비밀번호 팝업 확인/닫기도 <a href=\"javascript:...\"> 또는 <a href=\"#\">로 구현되어 있습니다. 링크로 안내되지만 실제로는 동작하지 않거나 부작용을 일으키는 요소들입니다.",
+  "fix": "실제 URL을 지정하세요. 수정 전: <li><a href=\"#\"><img src=\"/images/sub/state_home.png\" alt=\"홈\"></a></li> → 수정 후: <li><a href=\"/web/index.do\"><img src=\"/images/sub/state_home.png\" alt=\"홈\"></a></li>. 모바일 SNS 링크는 헤더와 동일한 실제 채널 주소(https://blog.naver.com/kihfkorea 등)를 연결하고 미사용 항목이면 제거하세요. 목록 링크 — 수정 전: <a href=\"javascript:void(0);\" onclick=\"showProgramView('195774','A014','D239');\"> → 수정 후: <a href=\"/web/lay1/program/S1T304C423/receipt/view.do?seq=195774…\">. 버튼 용도는 <a href=\"#\" id=\"check_btn\" onclick=\"...\">확인</a> → <button type=\"button\" onclick=\"myPageIntercept();\">확인</button>으로 교체하세요.",
+  "evidence": "<li><a href=\"#\"><img src=\"/images/sub/state_home.png\" alt=\"홈\"></a></li> / <ul class=\"mob-sns\"><li><a href=\"#\">네이버 블로그</a></li>… / <a href=\"javascript:void(0);\" onclick=\"showProgramView('195774', 'A014', 'D239');\"> / <a href=\"javascript:go_board_list();\">확인</a>",
+  "scope": "사이트 공통",
+  "pages": [
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "08-receipt",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-15.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-16",
+  "kwcag": "6.1.2 초점 이동과 표시",
+  "wcag": "2.4.3",
+  "severity": "중요",
+  "title": "회원가입 안내 팝업 링크에 양수 tabindex=\"99\" 사용으로 초점 순서 왜곡",
+  "problem": "메인 페이지 로드 시 노출되는 회원가입방법안내 레이어 팝업 안의 유튜브 링크 4건에 tabindex=\"99\"가 지정되어 있습니다. 양수 tabindex는 문서의 논리적 초점 순서를 깨뜨려 키보드 사용자의 초점이 시각적·논리적 순서와 다르게 이동하며, 같은 팝업 안의 tabindex=\"0\"인 요소(체크박스·닫기)와 뒤섞여 초점 이동이 예측 불가능해집니다.",
+  "fix": "tabindex=\"99\"를 모두 제거하거나 tabindex=\"0\"으로 변경하여 DOM 순서대로 초점이 이동하게 하세요. 수정 전: <a tabindex=\"99\" href=\"https://youtu.be/9wPymJwliRs\" target=\"_blank\">일반회원가입</a> → 수정 후: <a href=\"https://youtu.be/9wPymJwliRs\" target=\"_blank\" title=\"새창열림\">일반회원가입</a>",
+  "evidence": "<a tabindex=\"99\" href=\"https://youtu.be/9wPymJwliRs\" target=\"_blank\" ...>일반회원가입</a> 등 tabindex=\"99\" 4건 (#divpop19341 팝업 내)",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-16.png"
+   }
+  ]
+ },
+ {
+  "kwcag": "5.1.1 적절한 대체 텍스트 제공",
+  "wcag": "1.1.1",
+  "severity": "중요",
+  "title": "메인 비주얼 배너의 대체 텍스트가 \"기본이미지\"로 무의미함",
+  "problem": "메인 비주얼 슬라이더 배너에는 \"온 가족이 웃을 수 있는 행복한 세상을 만드는 가족센터\"라는 핵심 홍보 문구가 포함되어 있으나, 이미지 alt는 템플릿 기본값인 \"기본이미지\"로 출력됩니다. 스크린리더 사용자는 메인 페이지의 가장 큰 홍보 영역에서 아무 정보도 얻지 못합니다. 배너 등록 시 입력한 대체 텍스트가 템플릿에 반영되지 않는 구조적 결함으로 보입니다.",
+  "fix": "수정 전: <img src=\"/upload/popup/2026/07/2d8e41aa-….png\" alt=\"기본이미지\"> → 수정 후: <img src=\"…\" alt=\"온 가족이 웃을 수 있는 행복한 세상을 만드는 가족센터\">. 배너 관리 화면에 대체 텍스트 필수 입력 필드를 두고 템플릿이 그 값을 alt로 출력하도록 수정하세요.",
+  "evidence": "<li class=\"visual-item\" aria-hidden=\"false\"><div class=\"visual-img-box\"><img src=\"/upload/popup/2026/07/2d8e41aa-….png\" alt=\"기본이미지\"></div></li>",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-banner-alt.png"
+   }
+  ],
+  "id": "ISSUE-17"
+ },
+ {
+  "kwcag": "5.4.2 정지 기능 제공",
+  "wcag": "2.2.2",
+  "severity": "중요",
+  "title": "자동재생 슬라이더에 aria-live=\"polite\"가 설정되어 전환마다 낭독 발생",
+  "problem": "메인 슬라이더(bxSlider)가 auto:true, pause:5000으로 5초마다 자동 전환되는데 슬라이더 뷰포트(.bx-viewport)에 aria-live=\"polite\"가 설정되어 있습니다. 슬라이드가 2장 이상 등록되면 자동 전환 때마다 스크린리더가 변경 내용을 반복 낭독하여 본문 탐색을 지속적으로 방해합니다. 정지 버튼은 제공되지만 WAI-ARIA 캐러셀 패턴상 자동재생 중에는 라이브 영역을 꺼야 합니다.",
+  "fix": "자동재생 중에는 aria-live=\"off\"로 두고 사용자가 정지 버튼을 눌렀을 때만 polite로 전환하세요. 예: stopAuto() 시 $(\".bx-viewport\").attr(\"aria-live\",\"polite\"); startAuto() 시 attr(\"aria-live\",\"off\");",
+  "evidence": "<div class=\"bx-viewport\" aria-live=\"polite\" …> / $(\".main-visual-slider\").bxSlider({ auto: true, speed: 800, pause: 5000, …",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-pager.png"
+   }
+  ],
+  "id": "ISSUE-18"
+ },
+ {
+  "kwcag": "7.2.1 웹 애플리케이션 접근성 (대화상자)",
+  "wcag": "4.1.2",
+  "severity": "중요",
+  "title": "레이어 팝업 2종에 role=\"dialog\"·aria-modal·초점 관리 전무",
+  "problem": "회원가입 안내 팝업(#divpop19341)과 비밀번호 입력 팝업(#backPage) 모두 role=\"dialog\"와 aria-modal이 없고 팝업 제목이 헤딩이 아닌 p 요소여서 스크린리더가 팝업 진입을 인지할 수 없습니다. 열릴 때 초점 이동, Tab 초점 가두기, 닫힐 때 초점 복귀 처리도 전혀 없습니다. 특히 #divpop19341은 DOM상 본문보다 앞에 있어 노출 상태에서는 선형 탐색 시 본문 도달 전에 매번 먼저 만나게 됩니다.",
+  "fix": "수정 전: <div class=\"divpop\" id=\"divpop19341\"><div class=\"divpopt\"><p>회원가입방법안내</p></div> → 수정 후: <div class=\"divpop\" id=\"divpop19341\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"divpop19341_tit\"><div class=\"divpopt\"><h2 id=\"divpop19341_tit\">회원가입방법안내</h2></div>. 열릴 때 팝업으로 초점 이동, Tab 초점 가두기, 닫힐 때 호출 요소로 초점 복귀 스크립트를 추가하세요. #backPage도 동일하게 적용합니다.",
+  "evidence": "<div class=\"divpop ui-draggable\" id=\"divpop19341\" style=\"z-index: 9999;\"><div class=\"divpopt\"><p>회원가입방법안내 How to sign up</p></div> — role/aria-modal 0건",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-16.png"
+   }
+  ],
+  "id": "ISSUE-19"
+ },
+ {
+  "kwcag": "6.4.3 적절한 링크 텍스트",
+  "wcag": "2.4.4",
+  "severity": "중요",
+  "title": "공지 탭 4개 패널의 \"더보기\" 링크가 모두 동일 텍스트로 구분 불가",
+  "problem": "가족센터 소식·센터채용공고·진흥원 소식·타기관 소식 4개 탭 패널 하단의 더보기 링크가 전부 \"더보기\"라는 동일 텍스트입니다. 스크린리더의 링크 목록 탐색 시 \"더보기\" 4개가 나열되어 각각 무엇의 더보기인지 판별할 수 없습니다.",
+  "fix": "수정 전: <a href=\"…/list.do\" class=\"more new_more\">더보기</a> → 수정 후: <a href=\"…/list.do\" class=\"more new_more\">더보기<span class=\"blind\"> — 가족센터 소식</span></a> (패널별로 채용공고·진흥원 소식·타기관 소식 숨김 텍스트 추가)",
+  "evidence": "class=\"more new_more\">더보기</a> 4건 — 4개 탭 패널 하단 동일 텍스트",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-more.png"
+   }
+  ],
+  "id": "ISSUE-20"
+ },
+ {
+  "id": "ISSUE-21",
+  "kwcag": "7.3.1 레이블 제공",
+  "wcag": "3.3.2",
+  "severity": "권고",
+  "title": "검색 폼 등 입력 서식이 label 연결 없이 title 속성에만 의존",
+  "problem": "통합검색 입력란, 게시판 공통 검색 폼(검색조건 select, 검색어 input, 건별보기 select), 마이페이지 비밀번호 확인 입력란, 만족도조사 기타의견 textarea가 <label> 요소와 연결되지 않고 title(및 placeholder)만으로 용도를 전달합니다(axe label-title-only serious, 여러 페이지 반복). 특히 프로그램 목록 페이지는 센터구분·행사기간·제목 항목에 화면에 보이는 <label>이 있는데도 for 속성이 빈 값(for=\"\")이라 프로그래밍적으로 연결되지 않습니다. title 대체는 KWCAG상 최소 기준은 충족할 수 있으나 시각적 레이블이 없거나 연결이 끊겨 음성인식·저시력 사용자에게 불리하고 일부 환경에서 안내가 누락될 수 있습니다.",
+  "fix": "숨김 레이블을 공통 템플릿에 추가하고, 보이는 레이블은 for에 실제 컨트롤 id를 연결하세요. 수정 전: <select name=\"condition\" title=\"검색조건 선택\">...<input type=\"text\" name=\"keyword\" placeholder=\"검색어를 입력해주세요.\" title=\"검색어 입력\"> → 수정 후: <label for=\"searchCondition\" class=\"blind\">검색조건 선택</label><select id=\"searchCondition\" name=\"condition\">... <label for=\"searchKeyword\" class=\"blind\">검색어 입력</label><input type=\"text\" id=\"searchKeyword\" name=\"keyword\">. <label for=\"\">제목</label>은 <label for=\"keyword\">제목</label>으로 수정 (이미 존재하는 .blind 클래스 활용).",
+  "evidence": "<input type=\"text\" name=\"total_keyword\" title=\"검색어 입력란\"> / <input type=\"password\" id=\"myPage_pw\" title=\"비밀번호\"> / <textarea id=\"eval_etc_text\" title=\"기타의견 작성\"> / <label for=\"\">제목</label>, <label for=\"\">센터구분</label> (for 빈 값)",
+  "scope": "사이트 공통",
+  "pages": [
+   "01-main",
+   "02-contents",
+   "03-notice-list",
+   "04-notice-view",
+   "06-join",
+   "07-sitemap",
+   "08-receipt",
+   "09-gallery",
+   "10-guide"
+  ],
+  "screenshots": [
+   {
+    "page": "03-notice-list",
+    "file": "shot-02-label-title-only.png"
+   },
+   {
+    "page": "08-receipt",
+    "file": "shot-04-label-title-only.png"
+   },
+   {
+    "page": "09-gallery",
+    "file": "shot-02-label-title-only.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-22",
+  "kwcag": "5.1.1 적절한 대체 텍스트 제공",
+  "wcag": "1.1.1",
+  "severity": "권고",
+  "title": "본문 카드 아이콘의 대체 텍스트에 임시 문구 '샘플' 잔존",
+  "problem": "메인 본문 SNS 배너 카드의 아이콘 이미지 alt에 '전화 상담 아이콘 샘플', '챗봇 아이콘 샘플' 등 제작 단계의 임시 문구 '샘플'이 그대로 남아 있습니다. 스크린리더 사용자에게 무의미한 '샘플'이라는 단어가 낭독되어 혼란을 줍니다. 인접한 링크 텍스트가 이미 의미를 전달하므로 아이콘은 장식 이미지에 해당합니다.",
+  "fix": "장식용 아이콘이므로 빈 alt로 처리하세요. 수정 전: <img src=\"/images/main/icon_main_tel.svg\" alt=\"전화 상담 아이콘 샘플\"> → 수정 후: <img src=\"/images/main/icon_main_tel.svg\" alt=\"\"> (4건 동일 적용)",
+  "evidence": "alt=\"전화 상담 아이콘 샘플\", alt=\"챗봇 아이콘 샘플\", alt=\"블로그 아이콘 샘플\", alt=\"유튜브 아이콘 샘플\" — sns_banner_wrap 내 4건",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-18.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-23",
+  "kwcag": "8.2.1 마크업 오류 방지",
+  "wcag": "4.1.1",
+  "severity": "권고",
+  "title": "비표준 속성과 깨진 태그 등 마크업 문법 오류",
+  "problem": "메인 본문에 테스트용으로 보이는 비표준 속성의 빈 요소 <div aaa=\"test\">가 남아 있고, a 요소에 허용되지 않는 alt=\"선택됨\", value=\"확인\" 속성이 사용되었습니다. a 요소의 alt는 어떤 보조기기에서도 낭독되지 않아 의도한 상태 전달이 되지 않습니다. 또한 FAQ 답변으로 삽입되는 에디터 콘텐츠에 <br=\"\" style=\"clear:both;\">, </br=\"\">처럼 속성명이 깨진 비정상 태그가 포함되어 AJAX로 본문에 그대로 삽입되면 브라우저·보조기기의 파싱 결과가 달라질 수 있습니다.",
+  "fix": "<div aaa=\"test\"></div>는 삭제하고, a의 alt 속성은 제거 후 aria-selected로 상태를 전달하며, 확인 버튼은 <a href=\"#\" value=\"확인\" onclick=\"...\"> 대신 <button type=\"button\" onclick=\"myPageIntercept();\">확인</button>으로 변경하세요. 게시물 콘텐츠의 오류 태그도 정정: 수정 전: <br=\"\" style=\"clear:both;\"><br></br=\"\"> → 수정 후: <br style=\"clear:both;\">. 에디터 저장 시 HTML 정합성 검사(태그 열고 닫음, 속성 형식)를 거치도록 백엔드 필터 보완을 권장합니다.",
+  "evidence": "<div aaa=\"test\"></div>, <a href=\"#tab-1\" alt=\"선택됨\" class=\"tabtab\" role=\"tab\">, <a href=\"#\" id=\"check_btn\" value=\"확인\">확인</a> / FAQ 답변 내 &lt;br=\"\" style=\"clear:both;\"&gt;&lt;/br=\"\"&gt; (게시물 224202 등)",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main",
+   "09-gallery"
+  ]
+ },
+ {
+  "id": "ISSUE-24",
+  "kwcag": "6.4.2 제목 제공 (페이지 제목)",
+  "wcag": "2.4.2",
+  "severity": "권고",
+  "title": "게시글 상세 페이지의 title에 게시글 제목이 반영되지 않음",
+  "problem": "상세 페이지의 <title>이 '가족센터>알림마당>진흥원 소식'으로 목록 페이지와 동일하며 현재 열람 중인 게시글 제목이 포함되지 않습니다. 여러 게시글을 탭으로 열거나 히스토리를 탐색할 때 스크린리더 사용자가 페이지를 구별할 수 없습니다. title 요소 안에 불필요한 줄바꿈도 포함되어 있습니다.",
+  "fix": "게시글 제목을 title 앞부분에 포함합니다. 수정 전: <title>가족센터&gt;알림마당&gt;진흥원 소식</title> → 수정 후: <title>「다누리포털과 한국생활안내」3.3.3 챌린지 - 진흥원 소식 - 가족센터</title>. 구분자로 '>' 같은 특수기호 반복 대신 '-' 사용을 권장합니다.",
+  "evidence": "<title>가족센터&gt;알림마당&gt;진흥원 소식</title> — 게시글 「다누리포털과 한국생활안내」3.3.3 챌린지 제목 미포함",
+  "scope": "특정 페이지",
+  "pages": [
+   "04-notice-view"
+  ],
+  "screenshots": [
+   {
+    "page": "04-notice-view",
+    "file": "viewport.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-25",
+  "kwcag": "5.3.1 표의 구성",
+  "wcag": "1.3.1",
+  "severity": "권고",
+  "title": "게시글 상세 표의 th가 대응하는 데이터 셀 없이 단독으로 사용됨",
+  "problem": "게시글 상세를 표(view_style_1)로 마크업하면서 thead 안의 <th scope=\"row\">에 제목·작성일·작성자를 모두 넣고 해당 행에 대응하는 데이터 셀(td)이 없습니다(axe th-has-data-cells 판정보류). 머리글 셀과 데이터 셀의 관계가 성립하지 않아 표 탐색 시 셀 관계 정보가 무의미하게 전달됩니다.",
+  "fix": "1행 1열의 게시글 상세는 표가 아닌 일반 구조로 마크업하는 것이 적절합니다. 수정 전: <table class=\"view_style_1\">…<th scope=\"row\" class=\"tit\">…</th> → 수정 후: <article><h4>「다누리포털과 한국생활안내」3.3.3 챌린지</h4><ul>(작성일·작성자·조회수)</ul><div class=\"contents\">본문</div></article>. 표를 유지한다면 th 행에 대응 td를 두거나 th를 td로 변경하세요.",
+  "evidence": "view_style_1 <thead><tr><th scope=\"row\" class=\"tit\"> 행에 대응 td 없음 (axe th-has-data-cells 판정보류 1건)",
+  "scope": "특정 페이지",
+  "pages": [
+   "04-notice-view"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-21.png"
+   }
+  ]
+ },
+ {
+  "id": "ISSUE-26",
+  "kwcag": "5.4.1 색에 무관한 콘텐츠 인식",
+  "wcag": "1.4.1",
+  "severity": "권고",
+  "title": "가입 단계 표시와 탭의 현재 항목이 시각 스타일(class=\"on\")로만 구분됨",
+  "problem": "회원가입 절차 4단계 표시(step1 ol)와 회원가입 유형 탭(#tabList)에서 현재 위치가 class=\"on\"에 따른 색상·굵기 변화로만 표현되고, aria-current, aria-selected, 숨김 텍스트 같은 비시각적 단서가 없습니다. 스크린리더 사용자는 현재 어느 단계, 어느 탭에 있는지 알 수 없습니다.",
+  "fix": "현재 단계 li에 aria-current=\"step\"을, 현재 탭에 aria-selected와 숨김 텍스트를 추가하세요. 수정 전: <li class=\"on\"><span>01.</span><p>실명인증</p></li> → 수정 후: <li class=\"on\" aria-current=\"step\"><span>01.</span><p>실명인증<span class=\"blind\">(현재 단계)</span></p></li>",
+  "evidence": "<div class=\"step1\"><ol><li class=\"on\"><span>01.</span><p>실명인증</p></li><li><span>02.</span><p>약관동의</p></li>...</ol></div> / <ul id=\"tabList\"><li id=\"tab0\" class=\"on\">...",
+  "scope": "특정 페이지",
+  "pages": [
+   "06-join"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "ISSUE-22.png"
+   }
+  ]
+ },
+ {
+  "kwcag": "6.4.3 적절한 링크 텍스트",
+  "wcag": "2.4.4",
+  "severity": "권고",
+  "title": "슬라이더 페이저가 빈 href=\"\"에 텍스트 \"1\"뿐인 링크로 구현됨",
+  "problem": "메인 비주얼 페이저가 href=\"\"(빈 값)인 a 요소로 구현되어 스크립트 실패 시 활성화하면 페이지가 재로딩되고, 링크 텍스트가 숫자 \"1\"뿐이라 용도를 알 수 없습니다. 현재 슬라이드 표시도 class=\"active\" 시각 스타일로만 전달됩니다.",
+  "fix": "수정 전: <a data-slide-index=\"0\" href=\"\" class=\"active\">1</a> → 수정 후: <button type=\"button\" data-slide-index=\"0\" class=\"active\" aria-current=\"true\"><span class=\"blind\">1번째 슬라이드 보기</span>1</button>",
+  "evidence": "<div class=\"pager-wrap\"><a data-slide-index=\"0\" href=\"\" class=\"active\">1</a></div>",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-pager.png"
+   }
+  ],
+  "id": "ISSUE-27"
+ },
+ {
+  "kwcag": "6.4.2 제목 제공",
+  "wcag": "2.4.6",
+  "severity": "권고",
+  "title": "탭 패널 숨김 제목이 display:none이고 첫 패널 제목은 내용과 불일치",
+  "problem": "각 탭 패널의 h2 제목이 display:none으로 숨겨져 있어 스크린리더에도 전달되지 않아 제목 기능을 하지 못합니다. 또한 \"가족센터 소식\" 탭의 첫 패널(#tab-1) 숨김 제목은 \"센터홍보실\"로 실제 패널 내용과 일치하지 않습니다.",
+  "fix": "수정 전: <div id=\"tab-1\" aria-labelledby=\"tab1\"><h2 style=\"display:none\">센터홍보실</h2> → 수정 후: <div id=\"tab-1\" aria-labelledby=\"tab1\"><h2 class=\"blind\">가족센터 소식</h2> (blind = position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0) 방식 숨김 클래스)",
+  "evidence": "<div id=\"tab-1\" class=\"tab_content new_tab_content active\" role=\"tabpanel\" aria-labelledby=\"tab1\"><h2 style=\"display:none\">센터홍보실</h2> — 탭 명칭은 \"가족센터 소식\"",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-tabpanel.png"
+   }
+  ],
+  "id": "ISSUE-28"
+ },
+ {
+  "kwcag": "5.1.1 적절한 대체 텍스트 제공",
+  "wcag": "1.1.1",
+  "severity": "권고",
+  "title": "인접 텍스트와 중복되는 장식 아이콘 alt(\"지도찾기아이콘\" 등)",
+  "problem": "링크 내부에 이미 텍스트가 있는데 장식 아이콘에 \"지도찾기아이콘\", \"프로그램 신청 아이콘\", \"온라인상담실 아이콘\" 같은 alt가 지정되어 스크린리더가 \"지도찾기아이콘 지도로 찾기\"처럼 같은 정보를 중복 낭독합니다. 인접 텍스트가 의미를 전달하는 장식 이미지는 빈 alt로 처리해야 합니다.",
+  "fix": "수정 전: <img src=\"/images/main/icon_map_search.svg\" alt=\"지도찾기아이콘\">지도로 찾기 → 수정 후: <img src=\"/images/main/icon_map_search.svg\" alt=\"\">지도로 찾기 (icon_prgm_1.png, icon_prgm_2.png도 alt=\"\"로 변경)",
+  "evidence": "<a href=\"…/info/view.do\" class=\"map-link\"><img src=\"/images/main/icon_map_search.svg\" alt=\"지도찾기아이콘\">지도로 찾기</a> 외 2건",
+  "scope": "특정 페이지",
+  "pages": [
+   "01-main"
+  ],
+  "screenshots": [
+   {
+    "page": "extra",
+    "file": "MAIN-mapicon.png"
+   }
+  ],
+  "id": "ISSUE-29"
+ }
+]

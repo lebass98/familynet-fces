@@ -1,0 +1,34 @@
+{
+  "title": "실명인증 | 가족센터>사용자>회원가입",
+  "lang": "ko",
+  "headings": [
+    "H1: ",
+    "H4: 일반 회원가입",
+    "H4: 어린이 회원가입",
+    "H4: 법인/단체 회원가입"
+  ],
+  "imgsTotal": 15,
+  "imgsNoAlt": [
+    "/images/sub/loading.png",
+    "/images/header/icon_mob_join.svg"
+  ],
+  "imgsEmptyAlt": 0,
+  "iframesNoTitle": [],
+  "inputsTotal": 7,
+  "inputsNoLabel": [],
+  "emptyLinks": [],
+  "skipLinks": [
+    "본문으로 바로가기",
+    "본문으로 바로가기",
+    "메뉴로 바로가기",
+    "확인",
+    "닫기",
+    "네이버 블로그",
+    "페이스북"
+  ],
+  "tablesNoCaption": 0,
+  "tablesNoTh": 0,
+  "hasMain": 0,
+  "onclickNonInteractive": 0,
+  "markupSample": "html"
+}

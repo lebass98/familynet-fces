@@ -1,0 +1,24 @@
+{
+  "title": "건강가정지원센터",
+  "lang": null,
+  "headings": [],
+  "imgsTotal": 3,
+  "imgsNoAlt": [
+    "/images/egovframework/com/cmm/er_logo.jpg",
+    "/images/egovframework/com/cmm/danger.jpg",
+    "/images/egovframework/com/cmm/go_history.jpg"
+  ],
+  "imgsEmptyAlt": 0,
+  "iframesNoTitle": [],
+  "inputsTotal": 0,
+  "inputsNoLabel": [],
+  "emptyLinks": [
+    "javascript:fncGoAfterErrorPage();"
+  ],
+  "skipLinks": [],
+  "tablesNoCaption": 6,
+  "tablesNoTh": 6,
+  "hasMain": 0,
+  "onclickNonInteractive": 0,
+  "markupSample": "html"
+}

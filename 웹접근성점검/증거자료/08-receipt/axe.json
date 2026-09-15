@@ -1,0 +1,257 @@
+{
+  "url": "https://familynet.or.kr/web/lay1/program/S1T304C423/receipt/list.do",
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".sub_contents > p"
+          ],
+          "html": "<p style=\"color: red; margin-bottom: 5px;\">※ 센터 사업 홍보 페이지입니다. 프로그램 신청은 프로그램안내&gt;프로그램 신청 메뉴에서 가능합니다.</p>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(1) > .util > .loc > b"
+          ],
+          "html": "<b>해운대구 다문화</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(2) > .util > .loc > b"
+          ],
+          "html": "<b>창원시</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(3) > .util > .loc > b"
+          ],
+          "html": "<b>성남시</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(4) > .util > .loc > b"
+          ],
+          "html": "<b>관악구</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(5) > .util > .loc > b"
+          ],
+          "html": "<b>안동시</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(6) > .util > .loc > b"
+          ],
+          "html": "<b>마포구</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".clearfix:nth-child(7) > .util > .loc > b"
+          ],
+          "html": "<b>보령시</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 9.8pt (13px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 12
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".call > h6"
+          ],
+          "html": "<h6>전화상담</h6>",
+          "failureSummary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "label-title-only",
+      "impact": "serious",
+      "help": "Form elements should have a visible label",
+      "description": "Ensure that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/label-title-only?application=axeAPI",
+      "tags": [
+        "cat.forms",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "#area"
+          ],
+          "html": "<select title=\"시/도 선택\" name=\"area\" id=\"area\" onchange=\"changeAreaDetail();\">",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        },
+        {
+          "target": [
+            "#area_detail"
+          ],
+          "html": "<select title=\"지역 선택\" name=\"area_detail\" id=\"area_detail\">",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        },
+        {
+          "target": [
+            "#program_start_date"
+          ],
+          "html": "<input type=\"text\" id=\"program_start_date\" title=\"행사시작 날짜\" name=\"program_start_date\" autocomplete=\"off\" value=\"2026-09-15\" class=\"hasDatepicker\">",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        },
+        {
+          "target": [
+            "#program_end_date"
+          ],
+          "html": "<input type=\"text\" id=\"program_end_date\" title=\"행사종료 날짜\" name=\"program_end_date\" autocomplete=\"off\" value=\"2027-09-15\" class=\"hasDatepicker\">",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        },
+        {
+          "target": [
+            "input[title=\"검색어를 입력하세요.\"]"
+          ],
+          "html": "<input type=\"text\" title=\"검색어를 입력하세요.\" name=\"keyword\" style=\"width:100%;\" placeholder=\"검색어를 입력하세요.\" value=\"\">",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        },
+        {
+          "target": [
+            "#rowsSel"
+          ],
+          "html": "<select title=\"건별보기를 선택하시면 해당 페이지 리스트 갯수를 설정하실 수 있습니다.\" id=\"rowsSel\">\t\t\t\t\n\t\t\t<option value=\"10\" selected=\"selected\">10건씩 보기</option>\n\t\t\t<option value=\"20\">20건씩 보기</option>\n\t\t\t<option value=\"30\">30건씩 보기</option>\n\t\t</select>",
+          "failureSummary": "Fix all of the following:\n  Only title used to generate label for form element"
+        }
+      ],
+      "nodeCount": 6
+    },
+    {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "help": "Document should have one main landmark",
+      "description": "Ensure the document has a main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "html": "<html lang=\"ko\">",
+          "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI",
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".official_gov_banner"
+          ],
+          "html": "<div class=\"official_gov_banner\">",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            "h1"
+          ],
+          "html": "<h1><a href=\" /\"><img src=\"/images/header/logo.png\" alt=\"건강가정지원센터\"></a></h1>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".utill_menu > ul"
+          ],
+          "html": "<ul>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title1 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C296/sublink.do\">사업소개 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title2 > a"
+          ],
+          "html": "<a href=\"/web/lay1/program/S1T1C307/info/view.do\">지역센터 안내 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title3 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C304/sublink.do\">참여마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title4 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C299/sublink.do\">알림마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title5 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C431/sublink.do\">가족교육 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ],
+      "nodeCount": 28
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodeCount": 25
+    }
+  ]
+}

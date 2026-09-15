@@ -1,0 +1,34 @@
+{
+  "title": "가족센터>사이트정보>이메일무단수집거부",
+  "lang": "ko",
+  "headings": [
+    "H1: ",
+    "H2: 사이트정보",
+    "H6: 전화상담",
+    "H6: 온라인상담",
+    "H3: 이메일무단수집거부",
+    "H4: 건강가정지원센터는 이메일무단수집을 거부합니다."
+  ],
+  "imgsTotal": 14,
+  "imgsNoAlt": [
+    "/images/header/icon_mob_join.svg"
+  ],
+  "imgsEmptyAlt": 0,
+  "iframesNoTitle": [],
+  "inputsTotal": 10,
+  "inputsNoLabel": [],
+  "emptyLinks": [],
+  "skipLinks": [
+    "본문으로 바로가기",
+    "본문으로 바로가기",
+    "메뉴로 바로가기",
+    "확인",
+    "닫기",
+    "네이버 블로그"
+  ],
+  "tablesNoCaption": 0,
+  "tablesNoTh": 0,
+  "hasMain": 0,
+  "onclickNonInteractive": 0,
+  "markupSample": "html"
+}

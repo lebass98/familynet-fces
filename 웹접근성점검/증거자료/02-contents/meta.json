@@ -1,0 +1,43 @@
+{
+  "title": "가족센터>사업소개>법적근거 / 사업체계",
+  "lang": "ko",
+  "headings": [
+    "H1: ",
+    "H2: 사업소개",
+    "H6: 전화상담",
+    "H6: 온라인상담",
+    "H3: 법적근거 / 사업체계",
+    "H4: 법적 근거",
+    "H5: 1. 건강가정기본법",
+    "H5: 2. 다문화가족지원법",
+    "H4: 설치현황",
+    "H4: 사업 주체별 역할",
+    "H5: 성평등가족부",
+    "H5: 시·도와 시·군·구",
+    "H5: 한국건강가정진흥원",
+    "H5: 시·도 가족센터",
+    "H5: 시·군·구 가족센터"
+  ],
+  "imgsTotal": 17,
+  "imgsNoAlt": [
+    "/images/header/icon_mob_join.svg"
+  ],
+  "imgsEmptyAlt": 0,
+  "iframesNoTitle": [],
+  "inputsTotal": 10,
+  "inputsNoLabel": [],
+  "emptyLinks": [],
+  "skipLinks": [
+    "본문으로 바로가기",
+    "본문으로 바로가기",
+    "메뉴로 바로가기",
+    "확인",
+    "닫기",
+    "네이버 블로그"
+  ],
+  "tablesNoCaption": 0,
+  "tablesNoTh": 0,
+  "hasMain": 0,
+  "onclickNonInteractive": 0,
+  "markupSample": "html"
+}

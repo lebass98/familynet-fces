@@ -1,0 +1,187 @@
+{
+  "url": "https://familynet.or.kr/web/lay1/program/S1T6C7/sitemap/intro.do",
+  "violations": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".sitemap > ol > .title[menu-seq=\"296\"] > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C296/sublink.do\">사업소개 </a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".sitemap > ol > .title[menu-seq=\"307\"] > a"
+          ],
+          "html": "<a href=\"/web/lay1/program/S1T1C307/info/view.do\">지역센터 안내 </a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".sitemap > ol > .title[menu-seq=\"304\"] > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C304/sublink.do\">참여마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".sitemap > ol > .title[menu-seq=\"299\"] > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C299/sublink.do\">알림마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            ".sitemap > ol > .title[menu-seq=\"431\"] > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C431/sublink.do\">가족교육 </a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #3d7a99, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        {
+          "target": [
+            "a[target=\"_blank\"] > b"
+          ],
+          "html": "<b>개인정보처리방침</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #177e8b, background color: #f4f5f6, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 6
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".call > h6"
+          ],
+          "html": "<h6>전화상담</h6>",
+          "failureSummary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "help": "Document should have one main landmark",
+      "description": "Ensure the document has a main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "html": "<html lang=\"ko\">",
+          "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI",
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".official_gov_banner"
+          ],
+          "html": "<div class=\"official_gov_banner\">",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            "h1"
+          ],
+          "html": "<h1><a href=\" /\"><img src=\"/images/header/logo.png\" alt=\"건강가정지원센터\"></a></h1>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".utill_menu > ul"
+          ],
+          "html": "<ul>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title1 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C296/sublink.do\">사업소개 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title2 > a"
+          ],
+          "html": "<a href=\"/web/lay1/program/S1T1C307/info/view.do\">지역센터 안내 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title3 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C304/sublink.do\">참여마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title4 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C299/sublink.do\">알림마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title5 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C431/sublink.do\">가족교육 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ],
+      "nodeCount": 19
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodeCount": 12
+    }
+  ]
+}

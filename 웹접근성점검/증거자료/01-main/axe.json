@@ -1,0 +1,266 @@
+{
+  "url": "https://familynet.or.kr/web/index.do",
+  "violations": [
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "help": "Certain ARIA roles must contain particular children",
+      "description": "Ensure elements with an ARIA role that require child roles contain them",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-children?application=axeAPI",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".tabs"
+          ],
+          "html": "<ul class=\"tabs clearfix tablist new_tabs\" role=\"tablist\" aria-label=\"공지사항\">",
+          "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: li[tabindex]"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "aria-required-parent",
+      "impact": "critical",
+      "help": "Certain ARIA roles must be contained by particular parents",
+      "description": "Ensure elements with an ARIA role that require parent roles are contained by them",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-required-parent?application=axeAPI",
+      "tags": [
+        "cat.aria",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "a[href$=\"#tab-1\"]"
+          ],
+          "html": "<a href=\"#tab-1\" alt=\"선택됨\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-1\" aria-selected=\"true\">가족센터 소식</a>",
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: tablist"
+        },
+        {
+          "target": [
+            "a[href$=\"#tab-2\"]"
+          ],
+          "html": "<a href=\"#tab-2\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-2\" aria-selected=\"false\" tabindex=\"-1\">센터채용공고</a>",
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: tablist"
+        },
+        {
+          "target": [
+            "a[href$=\"#tab-3\"]"
+          ],
+          "html": "<a href=\"#tab-3\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-3\" aria-selected=\"false\" tabindex=\"-1\">진흥원 소식</a>",
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: tablist"
+        },
+        {
+          "target": [
+            "a[href$=\"#tab-4\"]"
+          ],
+          "html": "<a href=\"#tab-4\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-4\" aria-selected=\"false\" tabindex=\"-1\">타기관 소식</a>",
+          "failureSummary": "Fix any of the following:\n  Required ARIA parent role not present: tablist"
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "a[target=\"_blank\"] > b"
+          ],
+          "html": "<b>개인정보처리방침</b>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #177e8b, background color: #f4f5f6, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "heading-order",
+      "impact": "moderate",
+      "help": "Heading levels should only increase by one",
+      "description": "Ensure the order of headings is semantically correct",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/heading-order?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "#tab-1 > .clearfix > li:nth-child(1) > a > h6"
+          ],
+          "html": "<h6>\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t<img src=\"/images/main/new.gif\" alt=\"새 글\" class=\"new\">\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t센터 휴관 안내(9/17~18)\n\t\t\t\t\t\t\t\t\t\t</h6>",
+          "failureSummary": "Fix any of the following:\n  Heading order invalid"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "landmark-one-main",
+      "impact": "moderate",
+      "help": "Document should have one main landmark",
+      "description": "Ensure the document has a main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/landmark-one-main?application=axeAPI",
+      "tags": [
+        "cat.semantics",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "html"
+          ],
+          "html": "<html lang=\"ko\">",
+          "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+        }
+      ],
+      "nodeCount": 1
+    },
+    {
+      "id": "listitem",
+      "impact": "serious",
+      "help": "<li> elements must be contained in a <ul> or <ol>",
+      "description": "Ensure <li> elements are used semantically",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/listitem?application=axeAPI",
+      "tags": [
+        "cat.structure",
+        "wcag2a",
+        "wcag131",
+        "EN-301-549",
+        "EN-9.1.3.1"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "#tab1"
+          ],
+          "html": "<li id=\"tab1\" class=\"active\"><a href=\"#tab-1\" alt=\"선택됨\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-1\" aria-selected=\"true\">가족센터 소식</a></li>",
+          "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+        },
+        {
+          "target": [
+            "#tab2"
+          ],
+          "html": "<li id=\"tab2\"><a href=\"#tab-2\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-2\" aria-selected=\"false\" tabindex=\"-1\">센터채용공고</a></li>",
+          "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+        },
+        {
+          "target": [
+            "#tab3"
+          ],
+          "html": "<li id=\"tab3\"><a href=\"#tab-3\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-3\" aria-selected=\"false\" tabindex=\"-1\">진흥원 소식</a></li>",
+          "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+        },
+        {
+          "target": [
+            "#tab4"
+          ],
+          "html": "<li id=\"tab4\"><a href=\"#tab-4\" class=\"tabtab\" role=\"tab\" aria-controls=\"tab-4\" aria-selected=\"false\" tabindex=\"-1\">타기관 소식</a></li>",
+          "failureSummary": "Fix any of the following:\n  List item parent element has a role that is not role=\"list\""
+        }
+      ],
+      "nodeCount": 4
+    },
+    {
+      "id": "region",
+      "impact": "moderate",
+      "help": "All page content should be contained by landmarks",
+      "description": "Ensure all page content is contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/region?application=axeAPI",
+      "tags": [
+        "cat.keyboard",
+        "best-practice"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".official_gov_banner"
+          ],
+          "html": "<div class=\"official_gov_banner\">",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            "h1"
+          ],
+          "html": "<h1><a href=\" /\"><img src=\"/images/header/logo.png\" alt=\"건강가정지원센터\"></a></h1>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".utill_menu > ul"
+          ],
+          "html": "<ul>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title1 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C296/sublink.do\">사업소개 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title2 > a"
+          ],
+          "html": "<a href=\"/web/lay1/program/S1T1C307/info/view.do\">지역센터 안내 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title3 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C304/sublink.do\">참여마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title4 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C299/sublink.do\">알림마당 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        },
+        {
+          "target": [
+            ".l_title5 > a[href$=\"sublink.do\"]"
+          ],
+          "html": "<a href=\"/web/lay1/S1T1C431/sublink.do\">가족교육 </a>",
+          "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+        }
+      ],
+      "nodeCount": 16
+    }
+  ],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "nodeCount": 4
+    }
+  ]
+}

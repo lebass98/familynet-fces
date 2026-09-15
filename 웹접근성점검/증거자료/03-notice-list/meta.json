@@ -1,0 +1,33 @@
+{
+  "title": "가족센터>알림마당>진흥원 소식",
+  "lang": "ko",
+  "headings": [
+    "H1: ",
+    "H2: 알림마당",
+    "H6: 전화상담",
+    "H6: 온라인상담",
+    "H3: 진흥원 소식"
+  ],
+  "imgsTotal": 22,
+  "imgsNoAlt": [
+    "/images/header/icon_mob_join.svg"
+  ],
+  "imgsEmptyAlt": 3,
+  "iframesNoTitle": [],
+  "inputsTotal": 12,
+  "inputsNoLabel": [],
+  "emptyLinks": [],
+  "skipLinks": [
+    "본문으로 바로가기",
+    "본문으로 바로가기",
+    "메뉴로 바로가기",
+    "확인",
+    "닫기",
+    "네이버 블로그"
+  ],
+  "tablesNoCaption": 1,
+  "tablesNoTh": 1,
+  "hasMain": 0,
+  "onclickNonInteractive": 0,
+  "markupSample": "html"
+}
